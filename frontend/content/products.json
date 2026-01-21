@@ -1,0 +1,212 @@
+{
+  "kendra-fabric": {
+    "title": "Kendra Fabric",
+    "badge": "The Agentic Operating System",
+    "hero": {
+      "title": "The Unified Nervous System for Autonomous Enterprise AI",
+      "subtitle": "A single, cohesive fabric where intelligent agents share memory, tools, and goals, enabling seamless collaboration and execution across your enterprise."
+    },
+    "features": [
+      {
+        "title": "Unified Intelligence Layer",
+        "desc": "Connects disparate agents into a shared intelligence network, fostering a 'network effect' where every new agent enhances the capabilities of the entire ecosystem."
+      },
+      {
+        "title": "Shared State & Memory",
+        "desc": "Maintain long-running, complex agentic sessions with robust state management and hierarchical memory, allowing agents to recall and build upon past interactions."
+      },
+      {
+        "title": "Protocol-Agnostic Communication",
+        "desc": "Native support for the Model Context Protocol (MCP) ensures seamless data exchange, tool-calling, and interoperability between diverse agents and models."
+      },
+      {
+        "title": "Real-time Orchestration",
+        "desc": "Intelligent routing and choreography of agent workflows, ensuring tasks are executed efficiently and autonomously across the Fabric."
+      }
+    ]
+  },
+  "kendra-identity": {
+    "title": "Kendra Identity",
+    "badge": "SHIELD Governance",
+    "hero": {
+      "title": "Trust is the Currency of Automation",
+      "subtitle": "Fine-grained identity and access management for autonomous agents. Never give an agent more data than it needs."
+    },
+    "features": [
+      {
+        "title": "RBAC for Agents",
+        "desc": "Enforce Role-Based Access Control on agents, restricting their access to specific data sources and tools."
+      },
+      {
+        "title": "Identity Verification",
+        "desc": "Cryptographically verify the identity of every agent in the mesh to prevent unauthorized execution."
+      },
+      {
+        "title": "Audit Logging",
+        "desc": "A tamper-proof ledger of every 'thought' and 'action' taken by your agents, linked to verified identities."
+      }
+    ]
+  },
+  "kendra-workbench": {
+    "title": "Kendra Workbench",
+    "badge": "Developer Experience",
+    "hero": {
+      "title": "Develop at the Speed of Thought",
+      "subtitle": "The first IDE designed specifically for the Agentic lifecycle. Bridge the gap between experimental prototyping and production-grade reliability."
+    },
+    "features": [
+      {
+        "title": "Dual-Interface",
+        "desc": "Bidirectional synchronization between a Visual Builder and Python SDK. No black boxes—your visual map is your code."
+      },
+      {
+        "title": "Real-time Observability",
+        "desc": "Watch data flow through the mesh during execution to identify bottlenecks instantly."
+      },
+      {
+        "title": "Custom Logic",
+        "desc": "Import the kendra library to define custom classes, logic gates, and state persistence directly in Python."
+      }
+    ]
+  },
+  "agentic-mesh": {
+    "title": "Agentic Mesh",
+    "badge": "Infrastructure",
+    "hero": {
+      "title": "The Nervous System of Autonomy",
+      "subtitle": "A shared intelligence layer that enables agent collaboration and tool-calling via the Model Context Protocol (MCP)."
+    },
+    "features": [
+      {
+        "title": "Service Discovery",
+        "desc": "Dynamic agent registry allows agents to discover and collaborate with specialist workers (Analyst, Coder, Manager)."
+      },
+      {
+        "title": "Semantic Routing",
+        "desc": "Intelligent routing of prompts to the most capable agent based on intent and complexity."
+      },
+      {
+        "title": "Resilient Networking",
+        "desc": "Fault-tolerant communication fabric that ensures message delivery even in distributed environments."
+      }
+    ]
+  },
+  "kendra-data-fabric": {
+    "title": "Kendra Data Fabric",
+    "badge": "Context Engineering",
+    "hero": {
+      "title": "Context is Everything",
+      "subtitle": "Manage hierarchical memory and vector traceability to ensure high-fidelity reasoning and prevent context drift."
+    },
+    "features": [
+      {
+        "title": "Vector Traceability",
+        "desc": "See the exact distance between the query and the retrieved chunk to debug relevance ranking."
+      },
+      {
+        "title": "Hierarchical Memory",
+        "desc": "Manage Short-Term, Episodic, and Semantic memory tiers for nuanced agent recall."
+      },
+      {
+        "title": "Data Privacy",
+        "desc": "Automated PII scrubbing and data anonymization before data enters the agent's context window."
+      }
+    ]
+  },
+  "model-engine-management": {
+    "title": "Model Engine Management",
+    "badge": "Model Registry",
+    "hero": {
+      "title": "Model Agnostic Infrastructure",
+      "subtitle": "Virtualize your agentic logic. Swap underlying models (GPT-4, Claude 3, Llama 3) without rewriting a single line of code."
+    },
+    "features": [
+      {
+        "title": "Unified API",
+        "desc": "A single interface to access proprietary and open-weight LLMs, ensuring rigidity against benchmark shifts."
+      },
+      {
+        "title": "Performance Routing",
+        "desc": "Automatically route requests to the most cost-effective or high-performance model based on task requirements."
+      },
+      {
+        "title": "Fine-Tuning Management",
+        "desc": "Manage versions and deployments of fine-tuned models specifically optimized for your domain."
+      }
+    ]
+  },
+  "kendra-evaluation": {
+    "title": "Kendra Evaluation",
+    "badge": "Vibe Engineering",
+    "hero": {
+      "title": "Professionalize Your Intuition",
+      "subtitle": "Transform 'vibes' into deterministic evaluations. Use our Auto-Grader Mesh to score outputs and enforce quality."
+    },
+    "features": [
+      {
+        "title": "The Optimization Loop",
+        "desc": "Automate the Design -> Test -> Evaluate -> Refine cycle for continuous agent improvement."
+      },
+      {
+        "title": "Hallucination Delta",
+        "desc": "Proprietary metric to score outputs based on factual accuracy and grounding."
+      },
+      {
+        "title": "Regression Testing",
+        "desc": "Run automated batch simulations against ground-truth data to identify failure modes before deployment."
+      }
+    ]
+  },
+  "kendra-build": {
+    "title": "Kendra Build",
+    "badge": "The Agentic Framework",
+    "hero": {
+      "title": "Build Your System with Gusto and Sound Engineering Practices",
+      "subtitle": "The first AI-driven agile development framework that adapts to you. Move beyond code generation to full-lifecycle orchestration with 21+ specialized agents."
+    },
+    "features": [
+      {
+        "title": "Scale-Adaptive Intelligence",
+        "desc": "Automatically adjusts planning depth based on project complexity. From a Level 0 bug fix to a Level 4 enterprise platform, Kendra Build scales the rigor to match the risk."
+      },
+      {
+        "title": "Specialized Agent Squads",
+        "desc": "Collaborate with a dedicated team of domain experts—Product Managers, Architects, UX Designers, and Scrum Masters—who guide you through structured workflows."
+      },
+      {
+        "title": "The kBuild Method",
+        "desc": "Don't just write code; engineer solutions. Our framework enforces agile best practices across analysis, planning, architecture, and implementation."
+      },
+      {
+        "title": "Dual-Track Workflows",
+        "desc": "Choose 'Quick Flow' for rapid iterations (~5 min to code) or 'Enterprise Track' for compliance-heavy, architecturally complex systems."
+      },
+      {
+        "title": "Creative Intelligence",
+        "desc": "Leverage the Creative Intelligence Suite (CIS) for innovation, brainstorming, and problem-solving before a single line of code is written."
+      },
+      {
+        "title": "AIOps Runtime",
+        "desc": "Deploy your agents on a scalable, containerized infrastructure optimized for GPU usage and latency, ensuring production readiness from day one."
+      }
+    ],
+    "deepDive": {
+      "title": "Why Kendra Build?",
+      "intro": "Traditional AI coding tools try to do the thinking for you, often resulting in generic, average code. Kendra Build takes a different approach. We believe AI should act as an expert collaborator—challenging your assumptions, enforcing architectural standards, and guiding you through structured workflows to bring out your best engineering.",
+      "sections": [
+        {
+          "title": "The Breakthrough Method",
+          "content": "Kendra Build is grounded in the Breakthrough Method of Agile AI Driven Development. It's not just a set of prompts; it's a rigorous framework that orchestrates 21+ specialized agents to mimic a high-performing software team. From the Product Manager who defines the scope to the Architect who validates the design, every step is deliberate and documented."
+        },
+        {
+          "title": "Scale-Adaptive Rigor",
+          "content": "One size does not fit all. A quick bug fix shouldn't require a 10-page spec, and an enterprise platform shouldn't be built on a napkin. Kendra Build's 'Scale-Adaptive Intelligence' assesses your project's complexity (Levels 0-4) and automatically adjusts the depth of planning, documentation, and testing required."
+        },
+        {
+          "title": "From Brainstorm to Deployment",
+          "content": "We cover the complete lifecycle. Use the 'Creative Intelligence Suite' to ideate on features, move to the 'kBuild Method' for structured agile implementation, and deploy with confidence using our AIOps runtime. It's a cohesive journey from a spark of an idea to a production-ready system."
+        }
+      ]
+    }
+  }
+}

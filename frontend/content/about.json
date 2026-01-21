@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "badge": "Our Philosophy",
+    "title": "Engineering the Future of Human-AI Collaboration",
+    "subtitle": "We believe the next industrial revolution will be powered by orchestrating computers, not chatting with them. Kendra Labs bridges the gap between open-source AI innovation and enterprise demands."
+  },
+  "philosophy": [
+    {
+      "icon": "🎯",
+      "title": "The Pragmatic Visionary",
+      "desc": "We value Engineering Precision over AI Hype. We build robust, deterministic software that leverages probabilistic models. We address senior executives and lead architects as peers who value reliability."
+    },
+    {
+      "icon": "✅",
+      "title": "Safety as a Foundation",
+      "desc": "Innovation without control is liability. Our mission bridges the gap between chaotic open-source AI and rigorous enterprise demands. Trust is the currency of automation."
+    }
+  ],
+  "businessPhilosophy": {
+    "title": "How We Do Business",
+    "description": "Our philosophy has been assembled to focus on our clients’ business needs first, with a set of values that sit at the core of everything we do.",
+    "values": [
+      {
+        "title": "Integrity",
+        "desc": "We always take an open and truthful approach. Our principles focus on making sure we do the best for our clients, employees, associates, partners and society."
+      },
+      {
+        "title": "Honesty and Trust",
+        "desc": "Without honesty and frankness, you cannot build trust. Our services are based on establishing and maintaining trust with our clients to achieve the best results for them."
+      },
+      {
+        "title": "Collaborative",
+        "desc": "No man is an island. With any client project, we’re required to work with our clients’ employees, partners and other internal and external stakeholders. We always aim to collaborate profitably, with a laser focus on regular client outcomes."
+      },
+      {
+        "title": "Independent",
+        "desc": "We approach our work with clients with full independence. Even though we partner with a wide range of vendors, technology firms and other independent parties, our unbiased approach is full responsibility to achieve the best for our clients."
+      },
+      {
+        "title": "Continuous learning and market understanding",
+        "desc": "We want to make sure we are ahead of the game when it comes to innovative thinking, disruptive technologies and new startups that can help deliver successful outcomes for our clients."
+      }
+    ]
+  },
+  "commercialSection": {
+    "title": "Commercial Focus",
+    "paragraphs": [
+      "Kendra Labs is a product and solutions company focused on building an \"Agentic OS\" for the enterprise. We deliver opinionated platform components, accelerators, and services that help organisations move from static systems of record to live, intelligent systems of work.",
+      "Our product stack includes agentic platforms, decision copilots, and GenBI experiences that sit on top of your existing data and systems. On top of this, we provide architecture, design, and implementation services to shape use cases, integrate with your estate, and get to production quickly.",
+      "We work with leadership teams, investors, and operators in complex, regulated environments such as financial services and insurance. The outcome is not just \"experiments with AI\", but live products: evaluated, governed, and embedded into day‑to‑day operations."
+    ]
+  },
+  "technicalSection": {
+    "title": "Technical Focus",
+    "intro": "Kendra Labs builds platform products and delivery capabilities for enterprise agentic systems.",
+    "listIntro": "Our work centres on:",
+    "features": [
+      {
+        "title": "Agentic platform components",
+        "desc": "Execution graph and multi‑agent orchestration, tool / MCP integration, memory and state management, and runtime control surfaces that can be embedded into your environment."
+      },
+      {
+        "title": "Universal RAG and context products",
+        "desc": "Components for modality‑ and granularity‑aware retrieval, semantic layers, and \"data molecule\" patterns that preserve provenance, policy, and meaning across your knowledge estate."
+      },
+      {
+        "title": "Evaluation, safety, and governance services",
+        "desc": "Design and implementation of evaluation pipelines (LLM‑as‑a‑judge and metric-based), continuous regression testing, and runtime guardrails tailored to regulated enterprises."
+      },
+      {
+        "title": "GenBI and decision applications",
+        "desc": "Productised patterns for generative interfaces over analytics and operational data, enabling agents that can navigate data, reason over it, and trigger real actions."
+      }
+    ],
+    "outro": "We engage with architecture and engineering teams to deploy these products into existing clouds and data platforms, and to co‑deliver the first set of mission‑critical use cases so they are observable, debuggable, and sustainable in real‑world operations."
+  },
+  "story": {
+    "title": "Our Story",
+    "paragraphs": [
+      "Kendra Labs comprises systems engineers, distributed systems experts, and AI researchers dedicated to building the \"Nervous System\" for the enterprise.",
+      "We observed enterprises struggling with \"Zombie Pilots\" and \"Shadow AI\" risks. We built the platform we wished we had: a unified OS abstracting complexity while enforcing security boundaries."
+    ],
+    "stats": [
+      {"value": "20+", "label": "Researchers"},
+      {"value": "100k+", "label": "Files Ingested"},
+      {"value": "50+", "label": "Deployments"}
+    ]
+  },
+  "careersCta": {
+    "title": "Join the Mission",
+    "subtitle": "We're building the operating system for the next industrial revolution. Interested in shaping the future of autonomy?",
+    "buttonText": "View Openings"
+  }
+}

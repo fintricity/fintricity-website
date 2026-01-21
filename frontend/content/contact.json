@@ -1,0 +1,17 @@
+{
+  "hero": {
+    "badge": "Get In Touch",
+    "title": "Let's Build the Future of Autonomy Together",
+    "subtitle": "We're eager to hear from you. Reach out to learn more about Kendra Labs, explore partnership opportunities, or discuss your enterprise AI needs."
+  },
+  "form": {
+    "title": "Send us a message",
+    "fields": [
+      { "label": "First Name", "placeholder": "Jane", "type": "text", "id": "firstname" },
+      { "label": "Last Name", "placeholder": "Doe", "type": "text", "id": "lastname" },
+      { "label": "Email", "placeholder": "jane@company.com", "type": "email", "id": "email" },
+      { "label": "Message", "placeholder": "Tell us about your project...", "type": "textarea", "id": "message", "rows": 6 }
+    ],
+    "buttonText": "Send Message"
+  }
+}

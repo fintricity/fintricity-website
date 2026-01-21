@@ -1,0 +1,61 @@
+{
+  "_index": {
+    "badge": "Industry Solutions",
+    "title": "Transforming Every Sector with Autonomous Intelligence",
+    "subtitle": "Kendra Labs delivers specialized agentic architectures tailored to the unique regulatory, data, and operational needs of your industry."
+  },
+  "financial-services": {
+    "title": "Financial Services",
+    "hero": {
+      "badge": "Finance AI",
+      "title": "Autonomous Finance",
+      "subtitle": "Revolutionize banking, insurance, and asset management with compliant, high-speed agentic workflows."
+    },
+    "description": "Secure, compliant, and high-frequency autonomous agents for the financial sector."
+  },
+  "healthcare": {
+    "title": "Healthcare & Life Sciences",
+    "hero": {
+      "badge": "HealthTech",
+      "title": "Accelerating Discovery",
+      "subtitle": "From drug discovery to patient care, deploy agents that understand complex biological and medical data."
+    },
+    "description": "Accelerating drug discovery and improving patient outcomes with AI."
+  },
+  "technology": {
+    "title": "Technology & Software",
+    "hero": {
+      "badge": "Tech",
+      "title": "Self-Evolving Code",
+      "subtitle": "Automate devops, code generation, and QA with agents that understand your codebase."
+    },
+    "description": "Next-gen DevOps and autonomous software engineering."
+  },
+  "retail": {
+    "title": "Retail & E-Commerce",
+    "hero": {
+      "badge": "Commerce",
+      "title": "Hyper-Personalized Retail",
+      "subtitle": "Orchestrate supply chains and customer experiences with predictive autonomous agents."
+    },
+    "description": "Supply chain optimization and personalized shopping experiences."
+  },
+  "media": {
+    "title": "Media & Telecommunications",
+    "hero": {
+      "badge": "Media",
+      "title": "Content at Scale",
+      "subtitle": "Automate content generation, moderation, and network optimization."
+    },
+    "description": "Automated content creation and network optimization."
+  },
+  "industrial": {
+    "title": "Industrial",
+    "hero": {
+      "badge": "Industry 4.0",
+      "title": "Autonomous Manufacturing",
+      "subtitle": "Predictive maintenance and autonomous factory operations powered by edge AI."
+    },
+    "description": "Smart manufacturing and predictive maintenance."
+  }
+}

@@ -1,0 +1,15 @@
+# HubSpot Integration
+NEXT_PUBLIC_HUBSPOT_PORTAL_ID=5484629
+
+# PostHog Analytics
+NEXT_PUBLIC_POSTHOG_KEY=phc_fi26iFM99lnWkNiTolemTzstIer5S9BFPiAspsDLYXt
+NEXT_PUBLIC_POSTHOG_HOST=https://app.posthog.com
+
+# Sentry Monitoring (Add your DSN here)
+NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn_here
+
+# Cloudflare Turnstile (Add your Site Key here)
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=your_site_key_here
+
+# Environment
+NODE_ENV=production

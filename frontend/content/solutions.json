@@ -1,0 +1,59 @@
+{
+  "_index": {
+    "hero": {
+      "badge": "Enterprise Solutions",
+      "title": "Translate Autonomy into Economic Outcomes",
+      "subtitle": "Defend, Extend, and Upend your enterprise operations. Discover how our agentic solutions drive efficiency, optimization, and transformation."
+    },
+    "solutionsByFunction": [
+      {
+        "icon": "💻",
+        "title": "Autonomous Engineering",
+        "desc": "Scale software development with agentic coders and automated migration.",
+        "slug": "/solutions/engineering"
+      },
+      {
+        "icon": "⚡",
+        "title": "Intelligent Operations",
+        "desc": "Automate complex logistics, supply chain reasoning, and generative BI.",
+        "slug": "/solutions/operations"
+      },
+      {
+        "icon": "✅",
+        "title": "Compliance & Risk",
+        "desc": "Real-time monitoring and automated regulatory reporting.",
+        "slug": "/solutions/compliance"
+      }
+    ],
+    "solutionsByIndustry": [
+      { "icon": "🏦", "title": "Financial Services", "desc": "Autonomous AML investigations.", "slug": "/industries/financial-services" },
+      { "icon": "🧪", "title": "Life Sciences", "desc": "Accelerate drug discovery.", "slug": "/industries/healthcare" },
+      { "icon": "🏭", "title": "Manufacturing", "desc": "Supply chain optimization.", "slug": "/industries/industrial" }
+    ],
+    "economicImpact": {
+      "title": "Economic Imperative",
+      "subtitle": "Transforming cost centers into profit drivers. Our ROI framework highlights tangible business value.",
+      "roiFormula": "ROI = (Value Generated - Cost of Ownership) / Cost of Ownership",
+      "pricingModel": "Outcome-Based Pricing: Don't pay for effort; pay for impact.",
+      "cta": {
+        "primaryButton": "Calculate Your ROI",
+        "secondaryButton": "Explore Pricing Models"
+      }
+    }
+  },
+  "engineering": {
+    "title": "Autonomous Engineering",
+    "badge": "R&D Acceleration",
+    "description": "Scale software development with agentic coders. Kendra Labs provides a suite of specialized agents that can read, write, and refactor code autonomously, achieving 89% code equivalence in legacy migration tasks."
+  },
+  "operations": {
+    "title": "Intelligent Operations",
+    "badge": "Generative BI",
+    "description": "Replace static dashboards with real-time analysis. Our Analyst Agents connect directly to your data warehouse to answer complex queries, generate reports, and optimize supply chain logistics without human intervention."
+  },
+  "compliance": {
+    "title": "Compliance & Risk",
+    "badge": "Fincrime Guardian",
+    "description": "Deploy the 'Fincrime Guardian' to autonomously investigate AML alerts. It constructs knowledge graphs, analyzes transaction patterns, and drafts Suspicious Activity Reports (SARs) for human review, reducing investigation time by 40%."
+  }
+}

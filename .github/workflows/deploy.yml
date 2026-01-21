@@ -1,0 +1,109 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: './frontend/package-lock.json'
+
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install --legacy-peer-deps
+
+      - name: Build Next.js app
+        env:
+          NEXT_PUBLIC_HUBSPOT_PORTAL_ID: ${{ secrets.NEXT_PUBLIC_HUBSPOT_PORTAL_ID }}
+          NEXT_PUBLIC_HUBSPOT_FORM_GUID: ${{ secrets.NEXT_PUBLIC_HUBSPOT_FORM_GUID }}
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+          NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+          NEXT_PUBLIC_POSTHOG_KEY: ${{ secrets.NEXT_PUBLIC_POSTHOG_KEY }}
+          NEXT_PUBLIC_POSTHOG_HOST: ${{ secrets.NEXT_PUBLIC_POSTHOG_HOST }}
+        run: |
+          cd frontend
+          npm run build
+          # Prepare standalone output
+          cp -r public .next/standalone/
+          cp -r .next/static .next/standalone/.next/
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.HOSTINGER_SSH_KEY }}
+          known_hosts: 'unnecessary'
+          if_key_exists: fail
+
+      - name: Deploy with rsync
+        run: |
+          # Sync the standalone output
+          rsync -avz --delete \
+            -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
+            ./frontend/.next/standalone/ \
+            ${{ secrets.HOSTINGER_SSH_USER }}@${{ secrets.HOSTINGER_SSH_HOST }}:${{ secrets.HOSTINGER_DEPLOY_PATH }}
+          
+          # Sync the monitor script
+          rsync -avz \
+            -e "ssh -p 65002 -o StrictHostKeyChecking=no" \
+            ./frontend/scripts/ \
+            ${{ secrets.HOSTINGER_SSH_USER }}@${{ secrets.HOSTINGER_SSH_HOST }}:${{ secrets.HOSTINGER_DEPLOY_PATH }}/../scripts/
+
+      - name: Restart Node.js Process
+        run: |
+          ssh -p 65002 -o StrictHostKeyChecking=no ${{ secrets.HOSTINGER_SSH_USER }}@${{ secrets.HOSTINGER_SSH_HOST }} bash -l << 'EOF'
+            export PATH=/opt/alt/alt-nodejs20/root/usr/bin:$PATH
+            
+            # Setup Cron Watchdog (Runs every minute)
+            SCRIPT_PATH="${{ secrets.HOSTINGER_DEPLOY_PATH }}/../scripts/monitor.sh"
+            chmod +x "$SCRIPT_PATH"
+            (crontab -l 2>/dev/null | grep -v "monitor.sh"; echo "* * * * * $SCRIPT_PATH") | crontab -
+            
+            # Configure proxy in public_html - OVERWRITE to avoid duplicate rules
+            HT_PATH="${{ secrets.HOSTINGER_DEPLOY_PATH }}/../public_html/.htaccess"
+            echo "Configuring proxy at $HT_PATH"
+            mkdir -p "$(dirname "$HT_PATH")"
+            echo "RewriteEngine On" > "$HT_PATH"
+            echo "RewriteRule ^$ http://127.0.0.1:3001/ [P,L]" >> "$HT_PATH"
+            echo "RewriteRule ^(.*)$ http://127.0.0.1:3001/\$1 [P,L]" >> "$HT_PATH"
+
+            # Cleanup old files
+            WP_INDEX="${{ secrets.HOSTINGER_DEPLOY_PATH }}/../public_html/index.php"
+            [ -f "$WP_INDEX" ] && mv "$WP_INDEX" "${WP_INDEX}.bak"
+            DEF_PHP="${{ secrets.HOSTINGER_DEPLOY_PATH }}/../public_html/default.php"
+            [ -f "$DEF_PHP" ] && mv "$DEF_PHP" "${DEF_PHP}.bak"
+            
+            cd "${{ secrets.HOSTINGER_DEPLOY_PATH }}"
+            NODE_BIN=$(which node)
+            APP_PORT="3001"
+            
+            # Kill existing processes precisely
+            echo "Cleaning up existing processes on port $APP_PORT..."
+            pkill -9 -f "node server.js" || true
+            pkill -9 -f "run-app.sh" || true
+            
+            # Start the application - Bind to 127.0.0.1 with Memory Limit
+            echo "Starting application on port $APP_PORT..."
+            HOSTNAME=127.0.0.1 PORT=$APP_PORT nohup $NODE_BIN --max-old-space-size=512 server.js > output.log 2> error.log &
+            
+            # Wait and Verify
+            sleep 15
+            if ps auxww | grep -E "server\.js|next-server" | grep -v grep > /dev/null; then
+              echo "Success: Process is running."
+            else
+              echo "Error: Application failed to start."
+              exit 1
+            fi
+          EOF
