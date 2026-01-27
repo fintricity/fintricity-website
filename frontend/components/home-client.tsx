@@ -14,7 +14,7 @@ function AccordionItem({ title, content, isOpen, onClick }: { title: string, con
         className="w-full py-6 flex justify-between items-center text-left group"
         onClick={onClick}
       >
-        <span className={`text-xl font-bold transition-colors ${isOpen ? 'text-kendra-blue' : 'text-gray-700 group-hover:text-kendra-blue'}`}>
+        <span className={`text-xl font-bold transition-colors ${isOpen ? 'text-fintricity-navy' : 'text-fintricity-charcoal group-hover:text-fintricity-navy'}`}>
           {title}
         </span>
         <span className={`text-2xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
@@ -30,7 +30,7 @@ function AccordionItem({ title, content, isOpen, onClick }: { title: string, con
             transition={{ duration: 0.3 }}
             className="overflow-hidden"
           >
-            <div className="pb-6 text-gray-600 leading-relaxed text-lg">
+            <div className="pb-6 text-fintricity-charcoal leading-relaxed text-lg">
               {content}
             </div>
           </motion.div>
@@ -43,51 +43,37 @@ function AccordionItem({ title, content, isOpen, onClick }: { title: string, con
 export function HomeClient({ content }: { content: any }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  // Map homepage features to specific internal pages
-  const featureLinks = [
-    "/platform/kendra-fabric",
-    "/platform/kendra-identity", // SHIELD is part of Identity/Governance
-    "/platform/model-engine-management" // Mesh Agnosticism
-  ];
-
   return (
     <>
-      {/* Webify Architect inspired Hero Section */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-white">
+      {/* Sleek Modern Hero Section with Animated Background */}
+      <section className="relative py-24 md:py-40 overflow-hidden bg-white bg-mesh-gradient animate-gradient-background">
+          <div className="absolute inset-0 bg-grid-pattern opacity-40"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                className="mb-8 flex justify-center"
-              >
-                <img src="/logo.svg" alt="Kendra Labs" className="h-20 w-auto" />
-              </motion.div>
-              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.6 }}
               >
-                <Badge variant="outline" className="mb-6 px-4 py-1 border-kendra-blue text-kendra-blue font-medium">
-                  {content.hero.badge}
+                <Badge variant="cyan" className="mb-8 px-4 py-1 text-xs uppercase tracking-widest">
+                  {content.hero?.badge}
                 </Badge>
               </motion.div>
 
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-5xl md:text-7xl font-bold tracking-tight text-kendra-blue mb-8"
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-h1-mobile md:text-h1"
               >
-                The Operating System for the <span className="text-kendra-plum">Agentic Enterprise</span>
+                {content.hero?.title}
               </motion.h1>
 
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-12 max-w-2xl mx-auto text-fintricity-charcoal font-medium text-body-primary"
               >
                 {content.hero.subtitle}
               </motion.p>
@@ -95,58 +81,67 @@ export function HomeClient({ content }: { content: any }) {
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row gap-6 justify-center"
               >
-                <Button size="lg" variant="plum" className="group" asChild>
+                <Button size="lg" variant="cyan" className="group px-10 shadow-xl shadow-fintricity-cyan/20" asChild>
                   <Link href="/contact">
-                    Contact Us <span className="ml-2 transition-transform group-hover:translate-x-1">&#8594;</span>
+                    {content.hero?.primaryCTA} <span className="ml-2 transition-transform group-hover:translate-x-1">&#8594;</span>
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link href="/platform">Explore the Platform</Link>
+                <Button size="lg" variant="outline" className="px-10 border-2" asChild>
+                  <Link href="/case-studies">{content.hero?.secondaryCTA}</Link>
                 </Button>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Features Grid - The Problem/Solution */}
-        <section className="py-24 bg-gray-50 border-t border-gray-200">
-          <div className="container mx-auto px-4">
-            <motion.div 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-kendra-blue mb-4">{content.cognitiveTurn.title}</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                {content.cognitiveTurn.subtitle}
-              </p>
-            </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {content.cognitiveTurn.features.map((feature: any, i: number) => (
-                <motion.div
+        {/* The Problem Section */}
+        <section className="py-32 bg-fintricity-navy text-white relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.h2 
+                initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+                className="text-white mb-12 font-bold"
+              >
+                {content.theProblem?.title}
+              </motion.h2>
+              <div className="grid md:grid-cols-2 gap-8 text-left">
+                {content.theProblem?.points?.map((point: string, i: number) => (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10"
+                  >
+                    <div className="text-fintricity-cyan text-2xl font-bold">0{i+1}</div>
+                    <p className="text-gray-300 font-medium mb-0">{point}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Solution / Pillars */}
+        <section className="py-32 bg-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="mb-20 font-bold">{content.theSolution?.title}</h2>
+            <div className="grid md:grid-cols-3 gap-10">
+              {content.theSolution?.pillars?.map((pillar: any, i: number) => (
+                <motion.div 
                   key={i}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  transition={{ delay: i * 0.1 }}
                 >
-                  <GlassCard className="h-full">
-                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center text-3xl mb-6 
-                      ${i === 0 ? 'bg-kendra-orange/10 text-kendra-orange' : i === 1 ? 'bg-kendra-plum/10 text-kendra-plum' : 'bg-kendra-blue/10 text-kendra-blue'}`}>
-                      {feature.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-kendra-blue mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 leading-relaxed mb-6">
-                      {feature.desc}
-                    </p>
-                    <Link href={featureLinks[i] || "/platform"} className="text-kendra-blue font-semibold text-sm hover:underline">
-                      Learn how we solve it →
-                    </Link>
+                  <GlassCard className="border-0 shadow-xl bg-fintricity-light-gray/30">
+                    <div className="w-12 h-1 bg-fintricity-cyan mb-6 mx-auto rounded-full"></div>
+                    <h3 className="mb-4 text-fintricity-navy font-semibold">{pillar.title}</h3>
+                    <p className="text-fintricity-charcoal">{pillar.desc}</p>
                   </GlassCard>
                 </motion.div>
               ))}
@@ -154,48 +149,67 @@ export function HomeClient({ content }: { content: any }) {
           </div>
         </section>
 
-        {/* Platform Key Points Accordion */}
-        <section className="py-24 bg-white">
+        {/* How We Work */}
+        <section className="py-32 bg-fintricity-light-gray/50 border-y border-gray-100">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-kendra-blue">Platform Deep Dive</h2>
-                <p className="text-gray-600 mt-4">Key pillars of the Kendra Labs architecture.</p>
-              </div>
-              <div className="border-t border-gray-200">
-                {content.platformKeyPoints.map((item: any, i: number) => (
-                  <AccordionItem 
-                    key={i}
-                    title={item.title}
-                    content={item.content}
-                    isOpen={openIndex === i}
-                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  />
-                ))}
-              </div>
+            <div className="text-center mb-20">
+              <h2 className="font-bold">{content.howWeWork?.title}</h2>
+            </div>
+            <div className="grid md:grid-cols-4 gap-6">
+              {content.howWeWork?.phases?.map((phase: any, i: number) => (
+                <div key={i} className="relative">
+                  <div className="mb-6 text-fintricity-teal font-bold text-sm uppercase tracking-widest">{phase.duration}</div>
+                  <h4 className="mb-4 font-semibold">{phase.title}</h4>
+                  <p className="text-fintricity-charcoal text-sm">{phase.desc}</p>
+                  {i < 3 && <div className="hidden md:block absolute top-1/2 -right-3 text-gray-200 text-3xl">→</div>}
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Impact / CTA Section */}
-        <section className="py-24 bg-kendra-blue">
+        {/* Proof Points / Metrics */}
+        <section className="py-32 bg-white">
           <div className="container mx-auto px-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+              {content.proofPoints?.metrics?.map((metric: any, i: number) => (
+                <motion.div 
+                  key={i}
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: i * 0.1 }}
+                >
+                  <div className="text-5xl md:text-6xl font-bold text-fintricity-navy mb-2">{metric.value}</div>
+                  <div className="text-xs font-bold text-fintricity-teal uppercase tracking-widest">{metric.label}</div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* High-Impact CTA Section */}
+        <section className="py-24 bg-white px-4">
+          <div className="container mx-auto">
             <motion.div 
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-kendra-blue/90 rounded-2xl p-12 md:p-16 text-center relative overflow-hidden shadow-xl border border-kendra-blue/50"
+              className="bg-fintricity-navy rounded-[2.5rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 relative z-10">{content.cta.title}</h2>
-              <p className="text-lg text-kendra-blue/20 mb-10 max-w-2xl mx-auto relative z-10 leading-relaxed">
-                {content.cta.subtitle}
+              {/* Decorative Glow */}
+              <div className="absolute top-0 right-0 w-96 h-96 bg-fintricity-teal/20 blur-[120px] rounded-full -mr-48 -mt-48"></div>
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-fintricity-cyan/10 blur-[120px] rounded-full -ml-48 -mb-48"></div>
+
+              <h2 className="text-white mb-8 relative z-10 max-w-3xl mx-auto font-bold">{content.cta?.title}</h2>
+              <p className="text-fintricity-light-gray/70 mb-12 max-w-xl mx-auto relative z-10 text-lg">
+                {content.cta?.subtitle}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-                <Button size="lg" variant="plum" asChild>
-                  <Link href="/contact">{content.cta.primaryButton}</Link>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
+                <Button size="lg" variant="cyan" className="px-12 py-7 text-lg" asChild>
+                  <Link href="/contact">{content.cta?.primaryButton}</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
-                  <Link href="/platform">{content.cta.secondaryButton}</Link>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-12 py-7 text-lg" asChild>
+                  <Link href="/solutions">{content.cta?.secondaryButton}</Link>
                 </Button>
               </div>
             </motion.div>

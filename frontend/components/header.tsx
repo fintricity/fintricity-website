@@ -1,176 +1,156 @@
 "use client"
 
-import * as React from "react"
 import Link from "next/link"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/button"
-import { Badge } from "@/components/badge"
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import BuildIcon from '@mui/icons-material/Build';
+import CodeIcon from '@mui/icons-material/Code';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import ExtensionIcon from '@mui/icons-material/Extension';
+import ShieldIcon from '@mui/icons-material/Shield';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import FactoryIcon from '@mui/icons-material/Factory';
+import ArticleIcon from '@mui/icons-material/Article';
+import DescriptionIcon from '@mui/icons-material/Description';
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
-// Placeholder for icons if not using lucide-react
-const ChevronDown = ({ className, ...props }: any) => <span className={`inline-block ml-1 h-4 w-4 transition-transform ${className}`} {...props}>&#9662;</span>;
-const X = ({ className, ...props }: any) => <span className={`inline-block ${className}`}>✕</span>;
-const Menu = ({ className, ...props }: any) => <span className={`inline-block ${className}`}>☰</span>;
+const menuItems = {
+  solutions: [
+    { title: "AI Strategy & Roadmap", href: "/solutions/ai-strategy", icon: LightbulbIcon, desc: "Define your path from opportunity to production." },
+    { title: "AI Architecture", href: "/solutions/ai-architecture", icon: BuildIcon, desc: "Build a robust foundation for scalable AI systems." },
+    { title: "ML Engineering", href: "/solutions/ai-engineering", icon: CodeIcon, desc: "Production-grade MLOps and model deployment." },
+    { title: "Data Science", href: "/solutions/data-science", icon: BarChartIcon, desc: "Uncover insights with advanced custom models." },
+    { title: "Agentic AI", href: "/solutions/agentic-ai", icon: ExtensionIcon, desc: "Multi-agent systems and autonomous workflows." },
+    { title: "Compliance", href: "/solutions/ai-governance", icon: ShieldIcon, desc: "Ensure your AI is audit-ready and compliant." },
+  ],
+  industries: [
+    { title: "Financial Services", href: "/industries/financial-services", icon: AccountBalanceIcon, desc: "Fraud detection, decision support, and RegTech." },
+    { title: "Insurance", href: "/industries/insurance", icon: BusinessCenterIcon, desc: "Intelligent underwriting and predictive modeling." },
+    { title: "Healthcare", href: "/industries/healthcare", icon: LocalHospitalIcon, desc: "Clinical AI and administrative automation." },
+    { title: "Industrials", href: "/industries/industrials", icon: FactoryIcon, desc: "Supply chain optimization and predictive maintenance." },
+  ],
+  insights: [
+    { title: "Articles & Blog", href: "/insights", icon: ArticleIcon, desc: "Latest thinking on Agentic AI and engineering." },
+    { title: "Research Hub", href: "/applied-research", icon: DescriptionIcon, desc: "Fintricity Labs: Pushing the AI frontier." },
+    { title: "Case Studies", href: "/case-studies", icon: PlayCircleIcon, desc: "Measurable outcomes across industries." },
+  ]
+}
 
-const navItems = [
-  {
-    label: "Platform",
-    href: "/platform",
-    children: [
-      { label: "Kendra Fabric", href: "/platform/kendra-fabric", description: "The orchestration engine for autonomous agents." },
-      { label: "Kendra Identity", href: "/platform/kendra-identity", description: "Secure identity management for AI agents." },
-      { label: "Kendra Workbench", href: "/platform/kendra-workbench", description: "Development environment for building workflows." },
-      { label: "Kendra Data Fabric", href: "/platform/kendra-data-fabric", description: "Unified data layer for context-aware AI." },
-      { label: "Model Engine", href: "/platform/model-engine-management", description: "Optimize and manage LLM inference at scale." },
-      { label: "Kendra Evaluation", href: "/platform/kendra-evaluation", description: "Continuous testing for AI reliability." },
-      { label: "Kendra Build", href: "/platform/kendra-build", description: "CI/CD pipelines for agentic systems." },
-    ],
-  },
-  {
-    label: "Solutions",
-    href: "/solutions",
-    children: [
-      { label: "Agentic Mesh", href: "/platform/agentic-mesh", description: "Decentralized agent communication network." },
-      { label: "Autonomous Engineering", href: "/solutions/engineering", description: "Automate code generation and system maintenance." },
-      { label: "Intelligent Operations", href: "/solutions/operations", description: "AI-driven IT and business operations." },
-      { label: "Compliance & Risk", href: "/solutions/compliance", description: "Automated governance and risk monitoring." },
-    ],
-  },
-  {
-    label: "Industries",
-    href: "/industries",
-    children: [
-      { label: "Financial Services", href: "/industries/financial-services", description: "Fraud detection and algorithmic trading agents." },
-      { label: "Healthcare & Life Sciences", href: "/industries/healthcare", description: "Patient data analysis and drug discovery." },
-      { label: "Technology & Software", href: "/industries/technology", description: "Accelerate development and QA cycles." },
-      { label: "Retail & E-Commerce", href: "/industries/retail", description: "Personalized shopping and inventory management." },
-      { label: "Media & Telecom", href: "/industries/media", description: "Content generation and network optimization." },
-      { label: "Industrial", href: "/industries/industrial", description: "Predictive maintenance and supply chain automation." },
-    ],
-  },
-  {
-    label: "Insights",
-    href: "/insights",
-    children: [
-      { label: "The Blueprint (Blog)", href: "/insights/blog", description: "Strategic thinking on the future of AI." },
-      { label: "Newsroom", href: "/insights/news", description: "Latest company announcements and press." },
-      { label: "Research Hub", href: "/insights", description: "Deep dives into agentic architecture." },
-      { label: "Lab Notes", href: "/insights", description: "Technical engineering logs and experiments." },
-    ],
-  },
-  { label: "Pricing", href: "/pricing" },
-  {
-    label: "About Us",
-    href: "/about",
-    children: [
-      { label: "Company", href: "/about/company", description: "Our mission, vision, and team." },
-      { label: "Careers", href: "/about/careers", description: "Join us in building the Agentic OS." },
-    ],
-  },
-];
+function Megamenu({ items, isOpen, onClose, onMouseEnter }: { items: any[], isOpen: boolean, onClose: () => void, onMouseEnter: () => void }) {
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 z-50 py-16"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onClose}
+        >
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-3 gap-8">
+              {items.map((item) => (
+                <Link 
+                  key={item.href + item.title} 
+                  href={item.href}
+                  className="flex items-start gap-4 p-4 rounded-xl hover:bg-fintricity-light-gray transition-colors group"
+                  onClick={onClose}
+                >
+		  <div className="text-3xl"><item.icon /></div>
+                  <div>
+                    <div className="font-bold text-fintricity-navy group-hover:text-fintricity-teal transition-colors">
+                      {item.title}
+                    </div>
+                    {item.desc && <div className="text-sm text-fintricity-charcoal mt-1">{item.desc}</div>}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
 
 export function Header() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  let timeoutId: any = null;
+
+  const handleMouseEnter = (menu: string) => {
+    if (timeoutId) clearTimeout(timeoutId);
+    setActiveMenu(menu);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutId = setTimeout(() => {
+      setActiveMenu(null);
+    }, 100);
+  };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-lg supports-[backdrop-filter]:bg-white/60 border-b border-gray-200 shadow-sm">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
+      <div className="container mx-auto flex h-20 items-center justify-between px-6 relative">
         <div className="flex items-center gap-2">
-          <Link href="/" className="flex items-center space-x-2">
-            <img src="/logo.svg" alt="Kendra Labs Logo" className="h-10 w-auto" />
+          <Link href="/" className="text-2xl font-bold text-brand-primary tracking-tight">
+            Fintricity
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <div key={item.label} className="group relative h-full flex items-center">
-              <Link
-                href={item.href}
-                className="flex items-center text-sm font-medium text-gray-700 hover:text-kendra-blue transition-colors py-2"
-              >
-                {item.label}
-                {item.children && <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />}
-              </Link>
-              {item.children && (
-                <div className="absolute left-0 top-full hidden w-[600px] pt-4 group-hover:block transition-all duration-200 opacity-0 group-hover:opacity-100">
-                  <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-xl grid grid-cols-2 gap-x-8 gap-y-6">
-                    {item.children.map((child: any) => (
-                      <Link
-                        key={child.label}
-                        href={child.href}
-                        className="group/item block space-y-1 rounded-lg p-2 -m-2 hover:bg-gray-50 transition-colors"
-                      >
-                        <div className="font-medium text-gray-900 group-hover/item:text-kendra-blue transition-colors">
-                          {child.label}
-                        </div>
-                        <p className="text-xs text-gray-500 line-clamp-2">
-                          {child.description}
-                        </p>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+        <nav className="hidden md:flex items-center gap-10">
+          <div 
+            className="relative h-20 flex items-center"
+            onMouseEnter={() => handleMouseEnter('solutions')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors flex items-center gap-1">
+              Solutions <span className="text-xs opacity-50">▼</span>
+            </button>
+          </div>
+
+          <div 
+            className="relative h-20 flex items-center"
+            onMouseEnter={() => handleMouseEnter('industries')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors flex items-center gap-1">
+              Industries <span className="text-xs opacity-50">▼</span>
+            </button>
+          </div>
+
+          <div 
+            className="relative h-20 flex items-center"
+            onMouseEnter={() => handleMouseEnter('insights')}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors flex items-center gap-1">
+              Insights <span className="text-xs opacity-50">▼</span>
+            </button>
+          </div>
+
+          <Link href="/about" className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors">About</Link>
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/login" className="text-kendra-blue hover:text-kendra-blue/80">Log in</Link>
-          </Button>
-          <Button size="sm" variant="plum">
-            Book a Demo
+        <div className="flex items-center gap-4">
+          <Button variant="cyan" size="sm" asChild>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
 
-        {/* Mobile Toggle */}
-        <button
-          className="md:hidden text-gray-700 hover:text-kendra-blue transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
+        <Megamenu 
+          items={activeMenu ? (menuItems as any)[activeMenu] : []} 
+          isOpen={!!activeMenu} 
+          onClose={handleMouseLeave}
+          onMouseEnter={() => {
+            if (timeoutId) clearTimeout(timeoutId);
+          }}
+        />
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-white p-4 space-y-4 max-h-[80vh] overflow-y-auto">
-          {navItems.map((item) => (
-            <div key={item.label} className="space-y-2">
-              <Link
-                href={item.href}
-                className="block text-lg font-medium text-gray-800 hover:text-kendra-blue"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
-              {item.children && (
-                <div className="ml-4 space-y-4 border-l border-gray-200 pl-4 py-2">
-                  {item.children.map((child: any) => (
-                    <Link
-                      key={child.label}
-                      href={child.href}
-                      className="block space-y-1"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="text-sm font-medium text-gray-700">{child.label}</div>
-                      <div className="text-xs text-gray-500">{child.description}</div>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-          <div className="pt-4 flex flex-col gap-2">
-            <Button variant="outline" className="w-full border-kendra-blue text-kendra-blue hover:bg-kendra-blue/5">
-              <Link href="/login">Log in</Link>
-            </Button>
-            <Button variant="plum" className="w-full">
-              Book a Demo
-            </Button>
-          </div>
-        </div>
-      )}
     </header>
   )
 }

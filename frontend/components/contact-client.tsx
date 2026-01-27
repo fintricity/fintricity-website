@@ -89,19 +89,19 @@ export function ContactClient({ content }: { content: any }) {
       <section className="relative py-24 md:py-32 overflow-hidden bg-white">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <Badge variant="outline" className="mb-6 px-4 py-1 border-kendra-blue text-kendra-blue font-medium">
+            <Badge variant="outline" className="mb-6 px-4 py-1 border-fintricity-navy text-fintricity-navy font-medium">
               {content.hero.badge}
             </Badge>
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-kendra-blue mb-8"
+            className="text-5xl md:text-7xl font-bold tracking-tight text-fintricity-navy mb-8"
           >
-            Let's Build the Future <br className="hidden md:block" /> of <span className="text-kendra-orange">Autonomy</span> Together
+            Let's Build the Future <br className="hidden md:block" /> of <span className="text-fintricity-cyan">Autonomy</span> Together
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-fintricity-charcoal mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             {content.hero.subtitle}
           </motion.p>
@@ -111,7 +111,7 @@ export function ContactClient({ content }: { content: any }) {
       <section className="py-24 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto p-8 border border-gray-200 rounded-xl shadow-lg bg-white">
-            <h2 className="text-4xl font-bold text-kendra-blue mb-8 text-center">{content.form.title}</h2>
+            <h2 className="text-4xl font-bold text-fintricity-navy mb-8 text-center">{content.form.title}</h2>
             
             {status === 'success' ? (
               <motion.div 
@@ -128,7 +128,7 @@ export function ContactClient({ content }: { content: any }) {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {content.form.fields.map((field: any, index: number) => (
                   <div key={field.id}>
-                    <label htmlFor={field.id} className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor={field.id} className="block text-sm font-medium text-fintricity-charcoal mb-2">
                       {field.label}
                     </label>
                     {field.type === 'textarea' ? (
@@ -140,7 +140,7 @@ export function ContactClient({ content }: { content: any }) {
                         placeholder={field.placeholder}
                         value={formData[field.id] || ''}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-kendra-plum focus:border-kendra-plum resize-none"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-fintricity-teal focus:border-fintricity-teal resize-none"
                       />
                     ) : (
                       <input
@@ -151,7 +151,7 @@ export function ContactClient({ content }: { content: any }) {
                         placeholder={field.placeholder}
                         value={formData[field.id] || ''}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-kendra-plum focus:border-kendra-plum"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-fintricity-teal focus:border-fintricity-teal"
                       />
                     )}
                   </div>
@@ -174,7 +174,7 @@ export function ContactClient({ content }: { content: any }) {
                   type="submit" 
                   disabled={status === 'submitting'}
                   className="w-full py-3 text-lg"
-                  variant="plum"
+                  variant="cyan"
                 >
                   {status === 'submitting' ? 'Sending...' : content.form.buttonText}
                 </Button>

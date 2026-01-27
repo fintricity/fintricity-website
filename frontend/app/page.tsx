@@ -3,12 +3,15 @@ import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
 import { HomeClient } from "@/components/home-client"
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
-  const content = await getContent('homepage');
+  const content = await getContent('home');
+  console.log('Homepage content:', JSON.stringify(content, null, 2)); // Debug log
   
   if (!content) return (
     <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="h-8 w-8 border-4 border-kendra-plum border-t-transparent rounded-full animate-spin" />
+      <div className="h-8 w-8 border-4 border-fintricity-teal border-t-transparent rounded-full animate-spin" />
     </div>
   );
 

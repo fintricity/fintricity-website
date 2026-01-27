@@ -3,53 +3,41 @@ import { Button } from "@/components/button" // Import Button from its new locat
 
 const footerLinks = [
   {
-    title: "Platform",
-    links: [
-      { label: "Kendra Fabric", href: "/platform/kendra-fabric" },
-      { label: "Kendra Identity", href: "/platform/kendra-identity" },
-      { label: "Kendra Workbench", href: "/platform/kendra-workbench" },
-      { label: "Kendra Data Fabric", href: "/platform/kendra-data-fabric" },
-      { label: "Model Engine Management", href: "/platform/model-engine-management" },
-      { label: "Kendra Evaluation", href: "/platform/kendra-evaluation" },
-      { label: "Kendra Build", href: "/platform/kendra-build" },
-    ],
-  },
-  {
     title: "Solutions",
     links: [
-      { label: "Agentic Mesh", href: "/platform/agentic-mesh" },
-      { label: "Autonomous Engineering", href: "/solutions" },
-      { label: "Intelligent Operations", href: "/solutions" },
-      { label: "Compliance & Risk", href: "/solutions" },
+      { label: "AI Strategy", href: "/solutions/ai-strategy" },
+      { label: "AI Architecture", href: "/solutions/ai-architecture" },
+      { label: "ML Engineering", href: "/solutions/ai-engineering" },
+      { label: "Data Science", href: "/solutions/data-science" },
+      { label: "Agentic AI", href: "/solutions/agentic-ai" },
+      { label: "Governance", href: "/solutions/ai-governance" },
     ],
   },
   {
     title: "Industries",
     links: [
       { label: "Financial Services", href: "/industries/financial-services" },
+      { label: "Insurance", href: "/industries/insurance" },
       { label: "Healthcare", href: "/industries/healthcare" },
-      { label: "Technology", href: "/industries/technology" },
-      { label: "Retail", href: "/industries/retail" },
-      { label: "Industrial", href: "/industries/industrial" },
+      { label: "Industrials", href: "/industries/industrials" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Blog", href: "/insights/blog" },
-      { label: "News", href: "/insights/news" },
-      { label: "Research Hub", href: "/insights" },
-      { label: "Lab Notes", href: "/insights" },
-      { label: "Documentation", href: "/" },
+      { label: "Insights & Blog", href: "/insights" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Research Hub", href: "/applied-research" },
+      { label: "Newsletter", href: "/contact" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "/about" },
-      { label: "Careers", href: "/" },
+      { label: "Our Story", href: "/about" },
+      { label: "Careers", href: "/about/careers" },
+      { label: "Leadership", href: "/about" },
       { label: "Contact", href: "/contact" },
-      { label: "Privacy Policy", href: "/" },
     ],
   },
 ]
@@ -60,8 +48,8 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <img src="/logo.svg" alt="Kendra Labs Logo" className="h-10 w-auto brightness-0 invert" />
+            <Link href="/" className="flex items-center space-x-2 mb-6 text-2xl font-bold text-white tracking-tight">
+              Fintricity
             </Link>
             <p className="text-gray-400 max-w-sm mb-6">
               The Operating System for the Agentic Enterprise. Build, deploy, and govern autonomous AI agents that reason, collaborate, and execute at scale.
@@ -73,7 +61,7 @@ export function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-gray-400 hover:text-kendra-blue transition-colors text-sm">
+                    <Link href={link.href} className="text-gray-400 hover:text-fintricity-teal transition-colors text-sm">
                       {link.label}
                     </Link>
                   </li>
@@ -83,7 +71,7 @@ export function Footer() {
           ))}
         </div>
         <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} Kendra Labs. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Fintricity. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/" className="hover:text-white">LinkedIn</Link>
             <Link href="/" className="hover:text-white">Twitter</Link>

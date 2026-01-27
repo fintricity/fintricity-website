@@ -51,22 +51,99 @@
         "author": "Alpesh Doshi",
         "tags": ["Strategy", "Agentic AI", "Enterprise"],
         "readTime": "15 min"
+      },
+      {
+        "title": "Everything Has Changed.",
+        "date": "Jul 29, 2020",
+        "excerpt": "The accelerated pace of change due to COVID-19 and the evolving landscape of data technologies and AI adoption in enterprises.",
+        "slug": "everything-has-changed",
+        "author": "Alpesh Doshi",
+        "tags": ["Digital Transformation", "AI Adoption", "Data Strategy"],
+        "readTime": "8 min"
+      },
+      {
+        "title": "Data, The Lifeblood of a Brand?",
+        "date": "Jul 08, 2020",
+        "excerpt": "Revisiting the critical role of data in shaping a brand, from positioning to social media engagement.",
+        "slug": "data-lifeblood-of-brand",
+        "author": "News",
+        "tags": ["Data Strategy", "Branding", "Big Data"],
+        "readTime": "6 min"
+      },
+      {
+        "title": "Welfare Payments Beyond Bitcoin",
+        "date": "Jun 13, 2017",
+        "excerpt": "Exploring the feasibility of using blockchain technology for welfare payments and the associated privacy concerns.",
+        "slug": "welfare-payments-beyond-bitcoin",
+        "author": "Nemitari Ajienka",
+        "tags": ["Blockchain", "Fintech", "Public Sector"],
+        "readTime": "7 min"
+      },
+      {
+        "title": "The Past, Present and Future of Blockchain",
+        "date": "May 23, 2017",
+        "excerpt": "Demystifying blockchain technology and exploring its potential impact on financial services and beyond.",
+        "slug": "past-present-future-blockchain",
+        "author": "Estelle Roiena",
+        "tags": ["Blockchain", "DLT", "Future Tech"],
+        "readTime": "9 min"
+      },
+      {
+        "title": "Blockchain in Financial Markets and Beyond",
+        "date": "Nov 10, 2017",
+        "excerpt": "Alpesh Doshi's published chapter exploring the challenges and applications of DLT in finance.",
+        "slug": "blockchain-financial-markets",
+        "author": "Alpesh Doshi",
+        "tags": ["Blockchain", "Finance", "Research"],
+        "readTime": "12 min"
+      },
+      {
+        "title": "Fintricity feature in Gartner's Market Guide for Blockchain Consulting and POC Development Services",
+        "date": "Aug 09, 2017",
+        "excerpt": "Fintricity recognized in Gartner's Market Guide for Blockchain Consulting for their work in data and AI.",
+        "slug": "gartner-blockchain-2017",
+        "author": "News",
+        "tags": ["Gartner", "Blockchain", "Recognition"],
+        "readTime": "5 min"
+      },
+       {
+        "title": "On-Demand Webinar: GDPR – Less Than 1 Year To Go",
+        "date": "Jun 12, 2017",
+        "excerpt": "Discussing GDPR compliance preparations with less than a year until enforcement.",
+        "slug": "webinar-gdpr-countdown",
+        "author": "News",
+        "tags": ["Webinar", "GDPR", "Compliance"],
+        "readTime": "5 min"
       }
     ],
     "newsEntries": [
       {
         "title": "Inside the Build: Engineering the Agentic OS Alpha",
         "date": "Jan 21, 2026",
-        "excerpt": "Kendra Labs releases a technical breakdown of the infrastructure powering the next generation of autonomous enterprise AI.",
+        "excerpt": "Fintricity releases a technical breakdown of the infrastructure powering the next generation of autonomous enterprise AI.",
         "slug": "agentic-os-alpha",
         "tags": ["Technical", "Alpha", "Engineering"]
       },
       {
-        "title": "Kendra Labs Unveils the Operating System for the Agentic Enterprise",
+        "title": "Fintricity Unveils the Operating System for the Agentic Enterprise",
         "date": "Jan 15, 2026",
-        "excerpt": "A major milestone in production-grade AI: Kendra Labs launches its unified communication fabric and governance layer.",
+        "excerpt": "A major milestone in production-grade AI: Fintricity launches its unified communication fabric and governance layer.",
         "slug": "os-launch",
         "tags": ["Product", "Launch"]
+      },
+      {
+        "title": "Fintricity in Gartner Report 2020",
+        "date": "Sep 22, 2020",
+        "excerpt": "Fintricity featured in Gartner's Market Guide for Blockchain Consulting 2020 for the third consecutive year.",
+        "slug": "fintricity-gartner-2020",
+        "tags": ["News", "Recognition", "Gartner"]
+      },
+      {
+        "title": "On-Demand Webinar: Behaving Digitally",
+        "date": "Aug 10, 2017",
+        "excerpt": "Explore how digital behaviors impact organizational transformation in this 45-minute webinar.",
+        "slug": "webinar-behaving-digitally",
+        "tags": ["Webinar", "Digital Transformation"]
       }
     ],
     "knowledgeBase": {
@@ -80,8 +157,8 @@
     "date": "Jan 17, 2026",
     "readTime": "12 min",
     "tags": ["AI Engineering", "Productivity", "kBuild", "Next.js"],
-    "description": "This website is more than just a landing page—it is a testament to the speed and precision of AI-native engineering. Here is the technical breakdown of how we built it today.",
-    "content": "<p>Today, we executed an ambitious mission: to build the digital home for Kendra Labs from scratch. We didn't use a drag-and-drop builder. We didn't spend weeks in design sprints. We used the <strong>kBuild Method</strong> to orchestrate an autonomous AI agent into a full-stack engineering team.</p><br /><h3>The Architecture of Speed</h3><p>The core philosophy was <strong>Intent over Implementation</strong>. By providing the AI with a strategic blueprint and high-level architectural requirements, the human 'Lead Architect' could focus on defining the vision, while the agent handled the mechanical heavy lifting.</p><ul><li><strong>Next.js 15 Foundation:</strong> We utilized the cutting-edge App Router and Server Components to ensure the site is as fast as the agents we build.</li><li><strong>Data-Driven Content:</strong> Every word on this site is served from a JSON-based content layer. This decoupled architecture allowed the AI to refine product descriptions for 'Kendra Build' and 'Agentic Mesh' without touching a single line of UI code.</li><li><strong>The Collaborative Loop:</strong> The process was a tight feedback cycle. The Lead Architect provided documentation from Google Workspace, and the AI agent analyzed, structured, and implemented it across dozens of routes in minutes.</li></ul><hr /><br /><h3>Enterprise-Grade Infrastructure</h3><p>Building fast is easy; building <em>responsibly</em> is hard. We integrated professional monitoring and analytics from the start:</p><ul><li><strong>Sentry Monitoring:</strong> Full-stack error tracking to ensure 99.9% uptime.</li><li><strong>PostHog Analytics:</strong> Deep insights into user behavior and product engagement.</li><li><strong>Automated E2E Testing:</strong> A Playwright-powered smoke test suite that verifies every page before it hits production.</li><li><strong>CI/CD Pipeline:</strong> A GitHub Actions workflow that builds and syncs production-ready code to Hostinger via secure SSH/Rsync.</li></ul><br /><hr /><br /><h3>Conclusion: Engineering Precision over AI Hype</h3><p>By moving beyond the 'experimentation' phase and treating AI as a core engineering capability, we've demonstrated that enterprise-grade infrastructure can be deployed at unprecedented speeds. This is just the beginning of the Kendra Labs journey.</p>"
+    "description": "This website is more than just a landing page—it is a testament to the speed and precision of AI-native engineering.",
+    "content": "<p>Today, we executed an ambitious mission: to build the digital home for Fintricity from scratch. We used the <strong>kBuild Method</strong> to orchestrate an autonomous AI agent into a full-stack engineering team.</p><br /><h3>The Architecture of Speed</h3><p>The core philosophy was <strong>Intent over Implementation</strong>. By providing the AI with a strategic blueprint, the human 'Lead Architect' could focus on vision, while the agent handled the mechanical heavy lifting.</p><ul><li><strong>Next.js 15 Foundation:</strong> We utilized the cutting-edge App Router and Server Components to ensure the site is as fast as the agents we build.</li><li><strong>Data-Driven Content:</strong> Every word on this site is served from a JSON-based content layer.</li></ul>"
   },
   "cognitive-turn": {
     "title": "The Cognitive Turn: Why Agency Matters in the Enterprise",
@@ -91,16 +168,16 @@
     "readTime": "15 min",
     "tags": ["Strategy", "Agentic AI", "Enterprise", "Architecture"],
     "description": "The transition from Generative AI to Agentic AI represents the most significant structural transformation in software architecture since the cloud migration.",
-    "content": "<h3>The Macro-Structural Shift: From Generative to Agentic</h3><p>The enterprise technology landscape is currently navigating a pivotal inflection point, a transition described as the <strong>'Cognitive Turn.'</strong> We are witnessing the end of the initial 'Generative AI' era—characterized by the passive generation of text, code, and media—and the dawn of the 'Agentic AI' era.</p><p>For the past three years, the market has been saturated with 'Copilots'—systems designed to assist human operators but ultimately dependent on continuous human prompting. These systems function as stateless reasoning engines. They respond to a single prompt with a probabilistic prediction, but they lack the capacity to maintain state, pursue multi-step goals, or reflect on their own performance. The burden of intelligence remains firmly on the human user.</p><br /><hr /><br /><h3>The Rise of Autonomous Agents</h3><p>Kendra Labs is positioned to lead the next phase: the deployment of <strong>Autonomous Agents.</strong> Unlike their predecessors, these intelligent digital workers possess agency. They perceive their environment, decompose high-level business objectives into granular tasks, and orchestrate tool usage to achieve specific goals with minimal human oversight.</p><p>This transition moves the locus of intelligence from the human operator to the system itself, enabling a fundamental rewiring of enterprise operations.</p><br /><hr /><br /><h3>The 'Box of Parts' Problem</h3><p>Enterprises attempting to build agentic capabilities today face a fragmented infrastructure landscape. They are forced to cobble together disparate components: vector databases for memory, open-source orchestration frameworks for logic, and diverse model APIs for reasoning. This leads to 'Shadow AI' risks, integration fragility, and massive technical debt.</p><p>Kendra Labs differentiates itself as the definitive <strong>Operating System for the Agentic Enterprise</strong>. We abstract this complexity, providing the Agentic Mesh, the Data Fabric, and the Governance SHIELD, so organizations can focus on business value.</p><br /><hr /><br /><h3>The Economic Imperative: Build vs. Buy</h3><p>The decision to adopt an Agentic OS is as much financial as it is technological. Research indicates that building a proprietary agentic platform from scratch involves substantial CAPEX and high operational risk:</p><ul><li><strong>Initial Development:</strong> Costs range from $115,000 to $1.27 million for the initial build alone.</li><li><strong>Talent Scarcity:</strong> Senior specialists required to build orchestration engines command $200+ per hour.</li><li><strong>Failure Rate:</strong> DIY projects suffer from an 85% failure rate at the pilot stage.</li></ul><p>Kendra Labs converts these risks into predictable OPEX value, reducing development time by 50-70% and inference costs by up to 60% through intelligent model routing.</p><br /><br /><div style='background-color: #f9fafb; padding: 3rem; border-radius: 1rem; border: 1px solid #e5e7eb; margin-top: 4rem; text-align: center;'><h3 style='margin-top: 0; color: #0F172A;'>Speak to an Architect</h3><p style='color: #4b5563; margin-bottom: 2.5rem; font-size: 1.125rem;'>Analyze the economic and technical case for an Agentic OS in your organization.</p><div style='display: flex; justify-content: center; gap: 1.5rem;'><a href='/contact' style='background-color: #a21caf; color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none;'>Book a Strategy Session</a><a href='/platform' style='border: 1.5px solid #0F172A; color: #0F172A; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none;'>Explore the Stack</a></div></div>"
+    "content": "<h3>The Macro-Structural Shift: From Generative to Agentic</h3><p>The enterprise technology landscape is currently navigating a pivotal inflection point, described as the <strong>'Cognitive Turn.'</strong> We are witnessing the end of the initial 'Generative AI' era and the dawn of the 'Agentic AI' era.</p><p>For the past three years, the market has been saturated with 'Copilots'—systems designed to assist human operators. These systems function as stateless reasoning engines. They lack the capacity to maintain state or pursue multi-step goals.</p><br /><hr /><br /><h3>The Rise of Autonomous Agents</h3><p>Fintricity is positioned to lead the next phase: the deployment of <strong>Autonomous Agents.</strong> Unlike their predecessors, these intelligent digital workers possess agency. They perceive their environment, decompose high-level business objectives into granular tasks, and orchestrate tool usage to achieve specific goals.</p>"
   },
   "os-launch": {
-    "title": "Kendra Labs Unveils the Operating System for the Agentic Enterprise",
+    "title": "Fintricity Unveils the Operating System for the Agentic Enterprise",
     "badge": "Product News",
     "author": "Press Office",
     "date": "Jan 15, 2026",
     "tags": ["Product", "Launch"],
-    "description": "Kendra Labs officially launches its core platform to address the shift from experimental 'Chat' to production-grade 'Agency.'",
-    "content": "<p>Today, Kendra Labs introduced the <strong>Kendra Fabric</strong>, the industry's first unified nervous system for autonomous AI agents.</p><p>Key launch components include the <strong>Kendra Workbench</strong> and <strong>SHIELD Governance</strong>, providing the deterministic guardrails required for enterprise scale.</p>"
+    "description": "Fintricity officially launches its core platform to address the shift from experimental 'Chat' to production-grade 'Agency.'",
+    "content": "<p>Today, Fintricity introduced the <strong>Kendra Fabric</strong>, the industry's first unified nervous system for autonomous AI agents.</p><p>Key launch components include the <strong>Kendra Workbench</strong> and <strong>SHIELD Governance</strong>, providing the deterministic guardrails required for enterprise scale.</p>"
   },
   "agentic-os-alpha": {
     "title": "Engineering the Agentic OS: From Vision to Alpha-Stage Reliability",
@@ -110,7 +187,7 @@
     "readTime": "15 min",
     "tags": ["Agentic AI", "Operating System", "Alpha", "Enterprise AI", "Systems Engineering", "Agentic Systems"],
     "description": "The history of our journey from vision to a self-healing, alpha-stage Agentic OS platform.",
-    "content": "<br /><h3>The Shift: From Chat to Agency</h3><p>On January 15th, Kendra Labs officially unveiled the <strong>Agentic OS</strong>—a unified communication and governance fabric designed to move enterprises beyond experimental 'chatbots' toward autonomous, reliable AI agents. But as any systems engineer knows, a vision is only as good as the infrastructure it runs on.</p><p>While the world was focused on the launch, our engineering team was deep in the trenches, solving the exact problem Kendra Labs was built to address: <strong>How do you make complex, AI-native systems deterministic and reliable in a chaotic real-world environment?</strong></p><br /><hr /><br /><h3>The Engineering Journey: A Case Study in Reliability</h3><p>Building the digital home for Kendra Labs wasn't a standard web project. It was a high-speed engineering loop between a Lead Architect and an autonomous agent, navigating the cutting edge of Next.js 15 and React 19.</p><p>Here is the technical history of how we moved from a '503 Service Unavailable' to a self-healing, alpha-stage platform.</p><br /><h4>1. The Build Boundary</h4><p>We leveraged the <strong>Next.js 15 Standalone Mode</strong> to ensure our production artifact was as lean as possible. However, we quickly encountered the 'Module Not Found' trap. While local environments are forgiving, the Linux-based build runners required explicit path resolution. By implementing a strict <code>baseUrl</code> in our TypeScript configuration, we bridged the gap between local speed and server-side precision.</p><br /><h4>2. The Startup Paradox</h4><p>Our initial deployment hit a wall: the infamous <strong>503 Error</strong>. The diagnosis? We had the right tools but hadn't yet defined the secrets required for their heartbeat. In the Agentic era, even a single missing environment variable like <code>PAYLOAD_SECRET</code> can halt an entire system. We learned that 'shipping the minimum' often means removing unconfigured power-tools to let the core engine breathe.</p><br /><h4>3. Resource Stewardship</h4><p>Shared environments act as a microcosm of the enterprise estate—resources are finite, and the host is aggressive. We saw our Node.js process being terminated during memory spikes. Our fix was twofold:<ul><li><strong>Port Discipline:</strong> Moving to Port 3001 to avoid system-level conflicts.</li><li><strong>Memory Capping:</strong> Using <code>--max-old-space-size=512</code> to force Node.js into a more efficient garbage collection cycle, staying 'under the radar' of the system's resource monitor.</li></ul></p><br /><h4>4. The Watchdog Pattern: Self-Healing Systems</h4><p>The defining characteristic of an 'Operating System' is its ability to manage itself. To solve the 'intermittent downtime' problem, we implemented a <strong>Server-Side Watchdog</strong>. Every 60 seconds, a cron-driven monitor checks the site's health. If the process has been killed, the monitor brings it back up instantly. This shift from 'Manual Ops' to 'Autonomous Observability' is at the heart of the Kendra Labs thesis.</p><br /><hr /><br /><h3>The Outcome</h3><p>Kendra Labs is now <strong>in alpha</strong>. Not just as a set of static pages, but as a resilient, observable system that demonstrates our core philosophy: <strong>Engineering Precision over AI Hype.</strong></p><p>We’ve integrated:<ul><li><strong>Outcome-Based Pricing:</strong> Disrupting SaaS by charging for impact, not seats.</li><li><strong>Commercial & Technical Bifurcation:</strong> Addressing the needs of both the CFO and the Lead Architect.</li><li><strong>Agentic Visualization:</strong> An interactive look into the 'Nervous System' we are building for the global enterprise.</li></ul></p><br /><hr /><br /><h3>What’s Next?</h3><p>The Agentic OS alpha is just the beginning. We are now expanding our industry-specific accelerators for Healthcare and Finance, and hardening our <strong>SHIELD Governance</strong> framework to ensure every agentic execution is as reliable as the website you are reading right now.</p><br /><br /><div style='background-color: #f9fafb; padding: 3rem; border-radius: 1rem; border: 1px solid #e5e7eb; margin-top: 4rem; text-align: center;'><h3 style='margin-top: 0; color: #0F172A;'>Ready to architect the future?</h3><p style='color: #4b5563; margin-bottom: 2.5rem; font-size: 1.125rem;'>Join the alpha and start building production-ready agentic systems today.</p><div style='display: flex; justify-content: center; gap: 1.5rem;'><a href='/contact' style='background-color: #a21caf; color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.2s;'>Request Alpha Access</a><a href='/platform' style='border: 1.5px solid #0F172A; color: #0F172A; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; transition: all 0.2s;'>Explore the Platform</a></div></div>"
+    "content": "<h3>The Shift: From Chat to Agency</h3><p>On January 15th, Fintricity officially unveiled the <strong>Agentic OS</strong>—a unified communication and governance fabric designed to move enterprises beyond experimental 'chatbots' toward autonomous, reliable AI agents.</p><br /><h4>1. The Build Boundary</h4><p>We leveraged the <strong>Next.js 15 Standalone Mode</strong> to ensure our production artifact was as lean as possible. By implementing a strict <code>baseUrl</code> in our TypeScript configuration, we bridged the gap between local speed and server-side precision.</p>"
   },
   "philosophy-of-autonomy": {
     "title": "The Philosophy of Autonomy: Engineering the Agentic Enterprise",
@@ -120,6 +197,189 @@
     "readTime": "10 min",
     "tags": ["Philosophy", "Systems Thinking", "Agentic OS", "Engineering"],
     "description": "Moving beyond AI hype toward engineering precision. Why we are building a unified nervous system for autonomous agents.",
-    "content": "<h3>Intent over Implementation</h3><p>At Kendra Labs, we believe the next industrial revolution will be powered by orchestrating computers, not chatting with them. Our core philosophy centers on the transition from 'Linear Scripting' to 'Systems Thinking.' We don't build models; we build the infrastructure that allows models to function as reliable, autonomous workers.</p><br /><hr /><br /><h3>Engineering Precision over AI Hype</h3><p>The market is currently flooded with probabilistic experiments. While 'Generative' is interesting, 'Agentic' is operational. We value deterministic outcomes over creative unpredictability. This is why we address lead architects and senior executives as peers—they understand that in a regulated enterprise, a hallucination is a liability, not a feature.</p><p>Our work centers on making AI-native systems <strong>observable, debuggable, and sustainable</strong> in real-world operations. We provide the essential 'plumbing'—the Agentic Mesh, the Data Fabric, and the SHIELD Governance layer—so that firms can focus on application logic and business value.</p><br /><hr /><br /><h3>The Modular Mandate</h3><p>True agility comes from composability. The Kendra Labs platform is not a monolith; it is an ecosystem of independent, reusable components. This allows organizations to adopt the platform progressively, implementing only what is immediately valuable—such as the Data Fabric for better RAG—without being forced into a 'big bang' replacement of their existing infrastructure.</p><br /><hr /><br /><h3>A Unified Nervous System</h3><p>Just as a biological nervous system coordinates complex actions across disparate limbs, the <strong>Agentic Mesh</strong> coordinates multi-agent collaboration across the enterprise. It provides the memory, state management, and communication protocols required for agents to register, discover capabilities, and execute mission-critical tasks autonomously.</p><p>We are not just building software; we are defining the future architecture of the enterprise. We are building the Operating System for the Agentic Era.</p><br /><br /><div style='background-color: #f9fafb; padding: 3rem; border-radius: 1rem; border: 1px solid #e5e7eb; margin-top: 4rem; text-align: center;'><h3 style='margin-top: 0; color: #0F172A;'>Join the Alpha</h3><p style='color: #4b5563; margin-bottom: 2.5rem; font-size: 1.125rem;'>Be a part of the team redefining enterprise architecture.</p><div style='display: flex; justify-content: center; gap: 1.5rem;'><a href='/contact' style='background-color: #a21caf; color: white; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none;'>Get in Touch</a><a href='/about/careers' style='border: 1.5px solid #0F172A; color: #0F172A; padding: 1rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none;'>View Careers</a></div></div>"
+    "content": "<h3>Intent over Implementation</h3><p>At Fintricity, we believe the next industrial revolution will be powered by orchestrating computers, not chatting with them. Our core philosophy centers on the transition from 'Linear Scripting' to 'Systems Thinking.'</p><br /><hr /><br /><h3>Engineering Precision over AI Hype</h3><p>We value deterministic outcomes over creative unpredictability. This is why we address lead architects and senior executives as peers—they understand that in a regulated enterprise, a hallucination is a liability, not a feature.</p>"
+  },
+  "fintricity-gartner-2020": {
+    "title": "Fintricity in Gartner Report 2020",
+    "badge": "News",
+    "author": "News",
+    "date": "Sep 22, 2020",
+    "tags": ["Gartner", "Blockchain", "Recognition"],
+    "description": "Fintricity has been featured in Gartner's Market Guide for Blockchain Consulting 2020 for the third consecutive year.",
+    "content": "<p>Fintricity is proud to announce its inclusion in Gartner’s Market Guide for Blockchain Consulting 2020 for the third consecutive year. This achievement follows a busy and volatile year where Fintricity has been actively involved in developing projects and collaborating with various new companies on data and artificial intelligence.</p><p>Gartner, a renowned global research and advisory firm, provides crucial insights and tools for leaders across industries. Fintricity was listed among 162 blockchain consultancy and managed service providers, enabling management leaders to identify Fintricity for blockchain-related projects.</p>"
+  },
+  "everything-has-changed": {
+    "title": "Everything Has Changed.",
+    "badge": "Strategy",
+    "author": "Alpesh Doshi",
+    "date": "Jul 29, 2020",
+    "readTime": "8 min",
+    "tags": ["Digital Transformation", "AI Adoption", "Data Strategy"],
+    "description": "The accelerated pace of change due to COVID-19 and the evolving landscape of data technologies and AI adoption in enterprises.",
+    "content": "<p>The rapidly changing times, further accelerated by COVID-19, have prompted enterprises to seriously consider their Digital Transformation. Over the past decade, there has been an early adoption of data technologies, with Artificial Intelligence (AI) generating significant hype.</p><p>Despite this, the reality of adoption shows that leveraging these technologies for company-wide transformation is still in its early stages, with less than 2% of businesses successfully deploying AI at scale. Fintricity's vision is for every enterprise to undergo Digital Transformation driven by Data.</p>"
+  },
+  "data-lifeblood-of-brand": {
+    "title": "Data, The Lifeblood of a Brand?",
+    "badge": "Analysis",
+    "author": "News",
+    "date": "Jul 08, 2020",
+    "readTime": "6 min",
+    "tags": ["Data Strategy", "Branding", "Big Data"],
+    "description": "Revisiting the critical role of data in shaping a brand, from positioning to social media engagement.",
+    "content": "<p>In 2013, Alpesh Doshi emphasized the transformative power of data in shaping a brand's lifecycle. He asserted that data was, and continues to be, a key asset for building brand value.</p><p>The article notes that deep learning, AI, and data science have been subjects of extensive research over the last decade, solidifying data's status as a unique and valuable enterprise asset. Data is now central to how brands interact with consumers.</p>"
+  },
+  "webinar-behaving-digitally": {
+    "title": "On-Demand Webinar: Behaving Digitally",
+    "badge": "Webinar",
+    "author": "News",
+    "date": "Aug 10, 2017",
+    "tags": ["Webinar", "Digital Transformation", "AI", "Blockchain"],
+    "description": "This webinar explores how digital behaviors in the workplace impact organizational transformation.",
+    "content": "<p>There’s no room for complacency in the fast moving digital world. Whether it’s emerging technologies such as AI changing the shape of work, new tools such as blockchain disrupting supply chains, or robotics enhancing customers lives, digitalisation will change your organisation profoundly.</p><p>At the heart of this transformation is the need to engage your employees in behaviour change while redefining your operations and delivering value for customers.</p>"
+  },
+  "infographic-blockchain-technology": {
+    "title": "[Infographic] Blockchain Technology",
+    "badge": "Infographic",
+    "author": "News",
+    "date": "Jul 14, 2017",
+    "tags": ["Blockchain", "KPMG", "Partnership"],
+    "description": "A summary of a talk by Alpesh Doshi with KPMG on blockchain technology.",
+    "content": "<p>Alpesh Doshi recently held a talk with Fintricity’s consulting partner, KPMG. The presentation covered topics such as: What is blockchain technology? Blockchain use cases, Platform models, and Adoption of blockchain technology.</p><p>KPMG have chosen to work with Fintricity within the Asset Management space to enhance their consulting offering in providing innovative, transformational strategies and solutions, specifically around the adoption of blockchain technology within their client base.</p>"
+  },
+  "welfare-payments-beyond-bitcoin": {
+    "title": "Welfare Payments Beyond Bitcoin",
+    "badge": "Case Study",
+    "author": "Nemitari Ajienka",
+    "date": "Jun 13, 2017",
+    "readTime": "7 min",
+    "tags": ["Blockchain", "Fintech", "Public Sector"],
+    "description": "Exploring the feasibility of using blockchain technology for welfare payments and the associated privacy concerns.",
+    "content": "<p>Bitcoin was introduced as a public participant-managed financial shared ledger network. However, central banks and Governments have come to terms with the downsides of such a decentralised model, including a lack of control over monetary policies.</p><p>One use case for blockchain technology is welfare payments. Recently, the UK’s Department of Work and Pensions (DWP) trialled the use of the blockchain to pay welfare benefits to the unemployed and disabled.</p>"
+  },
+  "past-present-future-blockchain": {
+    "title": "The Past, Present and Future of Blockchain",
+    "badge": "Analysis",
+    "author": "Estelle Roiena",
+    "date": "May 23, 2017",
+    "readTime": "9 min",
+    "tags": ["Blockchain", "DLT", "Future Tech", "Finance"],
+    "description": "Demystifying blockchain technology and exploring its potential impact on financial services and beyond.",
+    "content": "<h3>Demystifying Blockchain</h3><p>Blockchain is a giant, decentralized, shared, replicated, synchronized, and distributed database that securely records immutable electronic transactions. Transactions are chronologically entered, shared, replicated, and secured by cryptographic sealing, making them difficult to falsify.</p>"
+  },
+  "blockchain-financial-markets": {
+    "title": "Blockchain in Financial Markets and Beyond",
+    "badge": "Research",
+    "author": "Alpesh Doshi",
+    "date": "Nov 10, 2017",
+    "readTime": "12 min",
+    "tags": ["Blockchain", "Finance", "Research"],
+    "description": "Alpesh Doshi's published chapter exploring the challenges and applications of DLT in finance.",
+    "content": "<p>Alpesh Doshi, Founder and CEO of Fintricity, published a chapter titled 'Blockchain in Financial Markets and Beyond' in Risk Books. The chapter explores the fundamental challenges and diverse applications of Distributed Ledger Technology (DLT) across financial ecosystems.</p>"
+  },
+  "arabnet-riyadh-2017": {
+    "title": "ArabNet Riyadh 2017: The Digital Future",
+    "badge": "News",
+    "author": "News",
+    "date": "Nov 20, 2017",
+    "readTime": "5 min",
+    "tags": ["Conference", "MENA", "Digital Future"],
+    "description": "Alpesh Doshi speaks at ArabNet Riyadh on the digital future and commerce forum.",
+    "content": "<p>Alpesh Doshi from Fintricity was a featured speaker at the Digital Commerce Forum during ArabNet Riyadh 2017. The conference gathered over 1,600 digital professionals to discuss the evolving landscape of digital innovation in the MENA region.</p>"
+  },
+  "fintricity-gartner-2020": {
+    "title": "Fintricity in Gartner Report 2020",
+    "badge": "News",
+    "author": "News",
+    "date": "Sep 22, 2020",
+    "tags": ["Gartner", "Blockchain", "Recognition"],
+    "description": "Fintricity has been featured in Gartner's Market Guide for Blockchain Consulting 2020 for the third consecutive year.",
+    "content": "<p>Fintricity is proud to announce its inclusion in Gartner’s Market Guide for Blockchain Consulting 2020 for the third consecutive year. This achievement follows a busy and volatile year where Fintricity has been actively involved in developing projects and collaborating with various new companies on data and artificial intelligence.</p><p>Gartner, a renowned global research and advisory firm, provides crucial insights and tools for leaders across industries. Fintricity was listed among 162 blockchain consultancy and managed service providers, enabling management leaders to identify Fintricity for blockchain-related projects.</p>"
+  },
+  "everything-has-changed": {
+    "title": "Everything Has Changed.",
+    "badge": "Strategy",
+    "author": "Alpesh Doshi",
+    "date": "Jul 29, 2020",
+    "readTime": "8 min",
+    "tags": ["Digital Transformation", "AI Adoption", "Data Strategy"],
+    "description": "The accelerated pace of change due to COVID-19 and the evolving landscape of data technologies and AI adoption in enterprises.",
+    "content": "<p>The rapidly changing times, further accelerated by COVID-19, have prompted enterprises to seriously consider their Digital Transformation. Over the past decade, there has been an early adoption of data technologies, with Artificial Intelligence (AI) generating significant hype.</p><p>Despite this, the reality of adoption shows that leveraging these technologies for company-wide transformation is still in its early stages, with less than 2% of businesses successfully deploying AI at scale. Fintricity's vision is for every enterprise to undergo Digital Transformation driven by Data.</p>"
+  },
+  "data-lifeblood-of-brand": {
+    "title": "Data, The Lifeblood of a Brand?",
+    "badge": "Analysis",
+    "author": "News",
+    "date": "Jul 08, 2020",
+    "readTime": "6 min",
+    "tags": ["Data Strategy", "Branding", "Big Data"],
+    "description": "Revisiting the critical role of data in shaping a brand, from positioning to social media engagement.",
+    "content": "<p>In 2013, Alpesh Doshi emphasized the transformative power of data in shaping a brand's lifecycle. He asserted that data was, and continues to be, a key asset for building brand value.</p><p>The article notes that deep learning, AI, and data science have been subjects of extensive research over the last decade, solidifying data's status as a unique and valuable enterprise asset. Data is now central to how brands interact with consumers.</p>"
+  },
+  "webinar-behaving-digitally": {
+    "title": "On-Demand Webinar: Behaving Digitally",
+    "badge": "Webinar",
+    "author": "News",
+    "date": "Aug 10, 2017",
+    "tags": ["Webinar", "Digital Transformation", "AI", "Blockchain"],
+    "description": "This webinar explores how digital behaviors in the workplace impact organizational transformation.",
+    "content": "<p>There’s no room for complacency in the fast moving digital world. Whether it’s emerging technologies such as AI changing the shape of work, new tools such as blockchain disrupting supply chains, or robotics enhancing customers lives, digitalisation will change your organisation profoundly.</p><p>At the heart of this transformation is the need to engage your employees in behaviour change while redefining your operations and delivering value for customers.</p>"
+  },
+  "infographic-blockchain-technology": {
+    "title": "[Infographic] Blockchain Technology",
+    "badge": "Infographic",
+    "author": "News",
+    "date": "Jul 14, 2017",
+    "tags": ["Blockchain", "KPMG", "Partnership"],
+    "description": "A summary of a talk by Alpesh Doshi with KPMG on blockchain technology.",
+    "content": "<p>Alpesh Doshi recently held a talk with Fintricity’s consulting partner, KPMG. The presentation covered topics such as: What is blockchain technology? Blockchain use cases, Platform models, and Adoption of blockchain technology.</p><p>KPMG have chosen to work with Fintricity within the Asset Management space to enhance their consulting offering in providing innovative, transformational strategies and solutions, specifically around the adoption of blockchain technology within their client base.</p>"
+  },
+  "welfare-payments-beyond-bitcoin": {
+    "title": "Welfare Payments Beyond Bitcoin",
+    "badge": "Case Study",
+    "author": "Nemitari Ajienka",
+    "date": "Jun 13, 2017",
+    "readTime": "7 min",
+    "tags": ["Blockchain", "Fintech", "Public Sector"],
+    "description": "Exploring the feasibility of using blockchain technology for welfare payments and the associated privacy concerns.",
+    "content": "<p>Bitcoin was introduced as a public participant-managed financial shared ledger network. However, central banks and Governments have come to terms with the downsides of such a decentralised model, including a lack of control over monetary policies.</p><p>One use case for blockchain technology is welfare payments. Recently, the UK’s Department of Work and Pensions (DWP) trialled the use of the blockchain to pay welfare benefits to the unemployed and disabled.</p>"
+  },
+  "past-present-future-blockchain": {
+    "title": "The Past, Present and Future of Blockchain",
+    "badge": "Analysis",
+    "author": "Estelle Roiena",
+    "date": "May 23, 2017",
+    "readTime": "9 min",
+    "tags": ["Blockchain", "DLT", "Future Tech", "Finance"],
+    "description": "Demystifying blockchain technology and exploring its potential impact on financial services and beyond.",
+    "content": "<h3>Demystifying Blockchain</h3><p>Blockchain is a giant, decentralized, shared, replicated, synchronized, and distributed database that securely records immutable electronic transactions. Transactions are chronologically entered, shared, replicated, and secured by cryptographic sealing, making them difficult to falsify.</p>"
+  },
+  "blockchain-financial-markets": {
+    "title": "Blockchain in Financial Markets and Beyond",
+    "badge": "Research",
+    "author": "Alpesh Doshi",
+    "date": "Nov 10, 2017",
+    "readTime": "12 min",
+    "tags": ["Blockchain", "Finance", "Research"],
+    "description": "Alpesh Doshi's published chapter exploring the challenges and applications of DLT in finance.",
+    "content": "<p>Alpesh Doshi, Founder and CEO of Fintricity, published a chapter titled 'Blockchain in Financial Markets and Beyond' in Risk Books. The chapter explores the fundamental challenges and diverse applications of Distributed Ledger Technology (DLT) across financial ecosystems.</p>"
+  },
+  "arabnet-riyadh-2017": {
+    "title": "ArabNet Riyadh 2017: The Digital Future",
+    "badge": "News",
+    "author": "News",
+    "date": "Nov 20, 2017",
+    "readTime": "5 min",
+    "tags": ["Conference", "MENA", "Digital Future"],
+    "description": "Alpesh Doshi speaks at ArabNet Riyadh on the digital future and commerce forum.",
+    "content": "<p>Alpesh Doshi from Fintricity was a featured speaker at the Digital Commerce Forum during ArabNet Riyadh 2017. The conference gathered over 1,600 digital professionals to discuss the evolving landscape of digital innovation in the MENA region.</p>"
+  },
+  "gdpr-less-than-1-year-to-go": {
+    "title": "On-Demand Webinar: GDPR – Less Than 1 Year To Go",
+    "badge": "Webinar",
+    "author": "News",
+    "date": "Jun 12, 2017",
+    "tags": ["Webinar", "GDPR", "Compliance"],
+    "description": "Discussing GDPR compliance preparations with less than a year until enforcement.",
+    "content": "<p>There’s no room for complacency in the fast moving digital world. Whether it’s emerging technologies such as AI changing the shape of work, new tools such as blockchain disrupting supply chains, or robotics enhancing customers lives, digitalisation will change your organisation profoundly.</p><p>At the heart of this transformation is the need to engage your employees in behaviour change while redefining your operations and delivering value for customers.</p>"
   }
 }

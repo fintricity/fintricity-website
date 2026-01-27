@@ -1,20 +1,20 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
-import { PlatformClient } from "@/components/platform-client"
+import { ServicesClient } from "@/components/services-client"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "The Platform",
-  description: "A composable ecosystem of integrated components designed to solve the 'Box of Parts' problem in enterprise AI.",
+  title: "Services",
+  description: "Expert AI consulting and implementation services.",
 }
 
-export default async function PlatformPage() {
-  const content = await getContent('platform'); // Fetch platform content
+export default async function ServicesPage() {
+  const content = await getContent('services');
 
   if (!content) return (
     <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="text-foreground">Platform content not found.</div>
+      <div className="text-foreground">Content not found.</div>
     </div>
   );
 
@@ -23,7 +23,7 @@ export default async function PlatformPage() {
       <Header />
       
       <main className="flex-1">
-        <PlatformClient content={content} /> {/* Use the PlatformClient */}
+        <ServicesClient content={content._index} />
       </main>
 
       <Footer />

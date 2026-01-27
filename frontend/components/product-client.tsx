@@ -14,19 +14,19 @@ export function ProductClient({ content }: { content: any }) {
       <section className="relative py-24 md:py-32 overflow-hidden bg-white">
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <Badge variant="plum" className="mb-6 px-4 py-1 text-kendra-plum font-medium bg-kendra-plum/10 border-transparent">
+            <Badge variant="cyan" className="mb-6 px-4 py-1 text-fintricity-teal font-medium bg-fintricity-teal/10 border-transparent">
               {content.badge}
             </Badge>
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-kendra-blue mb-8 max-w-4xl mx-auto"
+            className="text-5xl md:text-7xl font-bold tracking-tight text-fintricity-navy mb-8 max-w-4xl mx-auto"
           >
             {content.hero.title}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-fintricity-charcoal mb-10 max-w-2xl mx-auto leading-relaxed"
           >
             {content.hero.subtitle}
           </motion.p>
@@ -34,7 +34,7 @@ export function ProductClient({ content }: { content: any }) {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }} 
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button size="lg" variant="plum">
+            <Button size="lg" variant="cyan">
               Start Building
             </Button>
             <Button size="lg" variant="outline">
@@ -57,8 +57,8 @@ export function ProductClient({ content }: { content: any }) {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <GlassCard className="h-full">
-                  <h3 className="text-xl font-bold text-kendra-blue mb-3">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.desc}</p>
+                  <h3 className="text-xl font-bold text-fintricity-navy mb-3">{feature.title}</h3>
+                  <p className="text-fintricity-charcoal leading-relaxed">{feature.desc}</p>
                 </GlassCard>
               </motion.div>
             ))}
@@ -77,8 +77,8 @@ export function ProductClient({ content }: { content: any }) {
                 viewport={{ once: true }}
                 className="text-center mb-16"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-kendra-blue mb-6">{content.deepDive.title}</h2>
-                <p className="text-lg text-gray-700 leading-relaxed">{content.deepDive.intro}</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-fintricity-navy mb-6">{content.deepDive.title}</h2>
+                <p className="text-lg text-fintricity-charcoal leading-relaxed">{content.deepDive.intro}</p>
               </motion.div>
 
               <div className="space-y-12">
@@ -92,11 +92,11 @@ export function ProductClient({ content }: { content: any }) {
                     className="flex flex-col md:flex-row gap-8 items-start"
                   >
                     <div className="md:w-1/3">
-                      <h3 className="text-2xl font-bold text-kendra-plum mb-2">{section.title}</h3>
-                      <div className="h-1 w-12 bg-kendra-orange rounded-full"></div>
+                      <h3 className="text-2xl font-bold text-fintricity-teal mb-2">{section.title}</h3>
+                      <div className="h-1 w-12 bg-fintricity-cyan rounded-full"></div>
                     </div>
                     <div className="md:w-2/3">
-                      <p className="text-lg text-gray-600 leading-relaxed">{section.content}</p>
+                      <p className="text-lg text-fintricity-charcoal leading-relaxed">{section.content}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -114,9 +114,9 @@ export function ProductClient({ content }: { content: any }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-kendra-blue mb-6">Ready to deploy {content.title}?</h2>
+            <h2 className="text-3xl font-bold text-fintricity-navy mb-6">Ready to deploy {content.title}?</h2>
             <div className="flex justify-center gap-4">
-               <Button size="lg" variant="plum">Get Started</Button>
+               <Button size="lg" variant="cyan">Get Started</Button>
                <Button size="lg" variant="outline">View API Docs</Button>
             </div>
           </motion.div>

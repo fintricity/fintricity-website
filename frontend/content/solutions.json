@@ -1,59 +1,87 @@
 {
   "_index": {
     "hero": {
-      "badge": "Enterprise Solutions",
-      "title": "Translate Autonomy into Economic Outcomes",
-      "subtitle": "Defend, Extend, and Upend your enterprise operations. Discover how our agentic solutions drive efficiency, optimization, and transformation."
+      "badge": "Expert AI Solutions",
+      "title": "We Build AI That Works.",
+      "subtitle": "Transform your business with production-ready AI systems built for regulated industries. From strategy to systems, we deliver breakthrough outcomes that scale."
     },
-    "solutionsByFunction": [
+    "solutionsList": [
       {
-        "icon": "💻",
-        "title": "Autonomous Engineering",
-        "desc": "Scale software development with agentic coders and automated migration.",
-        "slug": "/solutions/engineering"
+        "title": "AI Strategy & Roadmap",
+        "desc": "From opportunity assessment to 18-month transformation plan.",
+        "slug": "ai-strategy",
+        "icon": "🎯"
       },
       {
-        "icon": "⚡",
-        "title": "Intelligent Operations",
-        "desc": "Automate complex logistics, supply chain reasoning, and generative BI.",
-        "slug": "/solutions/operations"
+        "title": "AI Architecture & Modernization",
+        "desc": "Legacy modernization, data governance, and infrastructure design.",
+        "slug": "ai-architecture",
+        "icon": "🏗️"
       },
       {
-        "icon": "✅",
-        "title": "Compliance & Risk",
-        "desc": "Real-time monitoring and automated regulatory reporting.",
-        "slug": "/solutions/compliance"
+        "title": "ML Engineering & MLOps",
+        "desc": "Production ML systems, monitoring, and continuous deployment.",
+        "slug": "ai-engineering",
+        "icon": "⚙️"
+      },
+      {
+        "title": "Data Science & Analytics",
+        "desc": "Custom models, analytics platforms, and insights engines.",
+        "slug": "data-science",
+        "icon": "📊"
+      },
+      {
+        "title": "Agentic AI & Automation",
+        "desc": "Multi-agent orchestration and autonomous workflows.",
+        "slug": "agentic-ai",
+        "icon": "🤖"
+      },
+      {
+        "title": "Compliance & Governance",
+        "desc": "Regulatory frameworks, audit-readiness, and risk frameworks.",
+        "slug": "ai-governance",
+        "icon": "🛡️"
       }
     ],
-    "solutionsByIndustry": [
-      { "icon": "🏦", "title": "Financial Services", "desc": "Autonomous AML investigations.", "slug": "/industries/financial-services" },
-      { "icon": "🧪", "title": "Life Sciences", "desc": "Accelerate drug discovery.", "slug": "/industries/healthcare" },
-      { "icon": "🏭", "title": "Manufacturing", "desc": "Supply chain optimization.", "slug": "/industries/industrial" }
-    ],
     "economicImpact": {
-      "title": "Economic Imperative",
-      "subtitle": "Transforming cost centers into profit drivers. Our ROI framework highlights tangible business value.",
-      "roiFormula": "ROI = (Value Generated - Cost of Ownership) / Cost of Ownership",
-      "pricingModel": "Outcome-Based Pricing: Don't pay for effort; pay for impact.",
+      "title": "Measured Outcomes",
+      "subtitle": "We track ROI and continuous improvement to ensure your AI investments deliver tangible value.",
+      "roiFormula": "ROI = (Value Generated - AI Spend) / AI Spend",
+      "pricingModel": "Outcome-Based Pricing: We align our success with yours.",
       "cta": {
-        "primaryButton": "Calculate Your ROI",
-        "secondaryButton": "Explore Pricing Models"
+        "primaryButton": "Schedule Assessment",
+        "secondaryButton": "Our Methodology"
       }
     }
   },
-  "engineering": {
-    "title": "Autonomous Engineering",
-    "badge": "R&D Acceleration",
-    "description": "Scale software development with agentic coders. Kendra Labs provides a suite of specialized agents that can read, write, and refactor code autonomously, achieving 89% code equivalence in legacy migration tasks."
+  "ai-strategy": {
+    "title": "AI Strategy & Roadmap",
+    "badge": "Strategy",
+    "description": "Strategic planning and AI opportunity assessment to define your roadmap for the next 18 months."
   },
-  "operations": {
-    "title": "Intelligent Operations",
-    "badge": "Generative BI",
-    "description": "Replace static dashboards with real-time analysis. Our Analyst Agents connect directly to your data warehouse to answer complex queries, generate reports, and optimize supply chain logistics without human intervention."
+  "ai-architecture": {
+    "title": "AI Architecture & Modernization",
+    "badge": "Architecture",
+    "description": "System design, integration, and data governance to build a robust foundation for AI."
   },
-  "compliance": {
-    "title": "Compliance & Risk",
-    "badge": "Fincrime Guardian",
-    "description": "Deploy the 'Fincrime Guardian' to autonomously investigate AML alerts. It constructs knowledge graphs, analyzes transaction patterns, and drafts Suspicious Activity Reports (SARs) for human review, reducing investigation time by 40%."
+  "ai-engineering": {
+    "title": "ML Engineering & MLOps",
+    "badge": "Engineering",
+    "description": "Building production-ready ML systems with continuous deployment and monitoring."
+  },
+  "data-science": {
+    "title": "Data Science & Analytics",
+    "badge": "Data Science",
+    "description": "Custom model development and advanced analytics platforms to uncover actionable insights."
+  },
+  "agentic-ai": {
+    "title": "Agentic AI & Automation",
+    "badge": "Agentic",
+    "description": "Developing multi-agent systems and autonomous workflows for complex enterprise orchestration."
+  },
+  "ai-governance": {
+    "title": "Compliance & Governance",
+    "badge": "Governance",
+    "description": "Ensuring regulatory compliance and audit-readiness with robust AI risk management frameworks."
   }
 }

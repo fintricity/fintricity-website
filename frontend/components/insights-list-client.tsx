@@ -25,13 +25,13 @@ export function InsightsListClient({ title, subtitle, items, type }: InsightsLis
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} 
             className="max-w-3xl"
           >
-            <Badge variant="outline" className="mb-6 px-4 py-1 border-kendra-blue text-kendra-blue font-medium uppercase tracking-widest">
+            <Badge variant="outline" className="mb-6 px-4 py-1 border-fintricity-navy text-fintricity-navy font-medium uppercase tracking-widest">
               {type === 'blog' ? 'The Blueprint' : 'Newsroom'}
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-kendra-blue mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-fintricity-navy mb-8">
               {title}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
+            <p className="text-xl md:text-2xl text-fintricity-charcoal leading-relaxed max-w-2xl">
               {subtitle}
             </p>
           </motion.div>
@@ -47,7 +47,7 @@ export function InsightsListClient({ title, subtitle, items, type }: InsightsLis
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent opacity-80"></div>
                 <div className="relative z-10 max-w-3xl">
                   <div className="flex gap-4 mb-6">
-                    <Badge variant="plum" className="bg-kendra-plum text-white border-transparent uppercase tracking-wider font-bold">Featured</Badge>
+                    <Badge variant="cyan" className="bg-fintricity-teal text-white border-transparent uppercase tracking-wider font-bold">Featured</Badge>
                     <span className="text-gray-300 font-medium">{featuredItem.date}</span>
                   </div>
                   <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight group-hover:text-blue-300 transition-colors">
@@ -79,15 +79,15 @@ export function InsightsListClient({ title, subtitle, items, type }: InsightsLis
                 transition={{ duration: 0.5, delay: i * 0.1 }}
               >
                 <Link href={`/insights/${item.slug}`} className="group block h-full">
-                  <article className="flex flex-col h-full bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-kendra-blue hover:shadow-xl transition-all duration-300">
+                  <article className="flex flex-col h-full bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:border-fintricity-navy hover:shadow-xl transition-all duration-300">
                     <div className="flex justify-between items-center mb-6">
                       <span className="text-sm font-bold text-gray-400 uppercase tracking-tighter">{item.date}</span>
                       {item.readTime && <span className="text-xs text-gray-400 italic">{item.readTime} read</span>}
                     </div>
-                    <h3 className="text-2xl font-bold text-kendra-blue mb-4 group-hover:text-kendra-plum transition-colors leading-tight">
+                    <h3 className="text-2xl font-bold text-fintricity-navy mb-4 group-hover:text-fintricity-teal transition-colors leading-tight">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
+                    <p className="text-fintricity-charcoal leading-relaxed mb-8 flex-grow">
                       {item.excerpt}
                     </p>
                     {item.tags && (
@@ -99,7 +99,7 @@ export function InsightsListClient({ title, subtitle, items, type }: InsightsLis
                         ))}
                       </div>
                     )}
-                    <div className="pt-6 border-t border-gray-100 text-kendra-blue font-bold flex items-center group-hover:text-kendra-plum">
+                    <div className="pt-6 border-t border-gray-100 text-fintricity-navy font-bold flex items-center group-hover:text-fintricity-teal">
                       View Story <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                     </div>
                   </article>

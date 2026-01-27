@@ -4,156 +4,67 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Pure white background */
-    --foreground: 222.2 47.4% 11.2%; /* Dark text for contrast */
-
-    --muted: 210 20% 98%; /* Very light grey for muted elements */
-    --muted-foreground: 215.4 16.3% 46.9%; /* Mid-tone grey for muted text */
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
-
-    --border: 210 20% 90%; /* Light grey border */
-    --input: 210 20% 90%; /* Light grey input border */
-
-    --primary: 203 92% 48%; /* A vibrant blue (e.g., similar to webify's blue) */
-    --primary-foreground: 0 0% 100%; /* White text on primary */
-
-    --secondary: 210 20% 98%; /* Very light grey for secondary backgrounds */
-    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on secondary */
-
-    --accent: 210 20% 98%; /* Light grey for accent backgrounds */
-    --accent-foreground: 203 92% 48%; /* Vibrant blue for accent text */
-
-    --destructive: 0 84% 60%; /* Standard red */
-    --destructive-foreground: 0 0% 100%;
-
-    --ring: 203 92% 48%; /* Vibrant blue for focus rings */
-
-    --radius: 0.5rem; /* Default radius */
-
-    /* Explicit Kendra Brand Colors (used directly for key elements) */
-    --kendra-grey: #6b7280; /* A darker grey for text/borders that isn't black */
-    --kendra-blue: #001555; /* Primary dark blue */
-    --kendra-orange: #ED9400; /* Accent orange */
-    --kendra-plum: #990045; /* Accent plum */
-    --kendra-yellow: #EDBC00; /* Accent yellow */
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    
+    /* Fintricity Design System */
+    --brand-primary: #1F3A47;   /* Navy */
+    --brand-secondary: #2A6E8F; /* Teal */
+    --brand-accent: #32B8C6;    /* Cyan */
+    --brand-emphasis: #22C55E;  /* Success Green */
+    
+    --radius: 0.5rem;
   }
-
-  .dark { /* Retain dark mode definitions if needed, but primary focus is light mode */
-    --background: 221.2 47.4% 11.2%; /* Dark background */
-    --foreground: 210 40% 98%; /* White foreground */
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.4% 65%;
-
-    --popover: 222.2 47.4% 11.2%;
-    --popover-foreground: 210 40% 98%;
-
-    --card: 222.2 47.4% 11.2%;
-    --card-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-
-    --primary: 203 92% 48%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 203 92% 48%;
-
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 217.2 32.6% 17.5%;
+  
+  .dark {
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 210 40% 98%;
   }
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  * { @apply border-gray-200; }
+  body { 
+    @apply bg-white text-fintricity-charcoal font-sans;
+    font-size: 16px;
+    line-height: 1.6;
   }
-  body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+  
+  h1 {
+    @apply text-h1-mobile md:text-h1 font-bold tracking-tighter text-fintricity-navy;
+  }
+
+  h2 {
+    @apply text-h2-mobile md:text-h2 font-semibold tracking-tight text-fintricity-navy;
+  }
+
+  h3 {
+    @apply text-h3-mobile md:text-h3 font-semibold text-fintricity-navy;
+  }
+
+  h4 {
+    @apply text-h4-mobile md:text-h4 font-medium text-fintricity-navy;
+  }
+
+  p {
+    @apply text-body-secondary md:text-body-primary mb-4;
   }
 }
 
-/* Enterprise Paper Layout Styles for Insights/News */
-.enterprise-paper h2 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 800;
-  color: #001555; /* kendra-blue */
-  margin-top: 5rem;
-  margin-bottom: 2.5rem;
-  letter-spacing: -0.025em;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.enterprise-paper h3 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  color: #001555; /* kendra-blue */
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+.animate-gradient-background {
+  background-size: 200% 200%;
+  animation: gradientBG 15s ease infinite;
 }
 
-.enterprise-paper h4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  color: #001555; /* kendra-blue */
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
-}
-
-.enterprise-paper p {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: #374151; /* gray-700 */
-  margin-bottom: 2.5rem;
-}
-
-.enterprise-paper ul {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  list-style-type: disc;
-  padding-left: 2rem;
-}
-
-.enterprise-paper li {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  color: #374151;
-  margin-bottom: 1.25rem;
-}
-
-.enterprise-paper strong {
-  font-weight: 700;
-  color: #001555;
-}
-
-.enterprise-paper hr {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  border: 0;
-  border-top: 2px solid #f3f4f6;
-}
-
-.enterprise-paper a {
-  color: #990045; /* kendra-plum */
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.enterprise-paper a:hover {
-  color: #001555;
-}
+/* Fintricity Custom Utilities */
+.text-brand-primary { color: var(--brand-primary); }
+.bg-brand-primary { background-color: var(--brand-primary); }
+.text-brand-secondary { color: var(--brand-secondary); }
+.text-brand-accent { color: var(--brand-accent); }
+.text-brand-emphasis { color: var(--brand-emphasis); }

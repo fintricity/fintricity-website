@@ -6,7 +6,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Connect with Kendra Labs to discuss autonomous AI agents, partnership opportunities, or enterprise automation.",
+  description: "Connect with Fintricity to discuss autonomous AI agents, partnership opportunities, or enterprise automation.",
 }
 
 export default async function ContactPage() {

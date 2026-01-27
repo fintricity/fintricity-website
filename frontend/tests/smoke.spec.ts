@@ -2,14 +2,14 @@ import { test, expect } from '@playwright/test';
 
 const pages = [
   '/',
-  '/platform',
+  '/services',
   '/solutions',
+  '/applied-research',
   '/industries',
   '/insights',
   '/about',
   '/contact',
   '/login',
-  '/platform/kendra-workbench',
   '/industries/financial-services',
 ];
 

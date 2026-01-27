@@ -11,16 +11,16 @@ export default function CareersPage() {
       <Header />
       
       <main className="flex-1 max-w-4xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-semibold mb-4 text-kendra-blue">Careers at Kendra Labs</h1>
+        <h1 className="text-3xl font-semibold mb-4 text-fintricity-navy">Careers at Fintricity</h1>
 
-        <p className="mb-6 text-lg text-gray-700">
+        <p className="mb-6 text-lg text-fintricity-charcoal">
           We&apos;re building an Agentic OS for the enterprise and are always interested
           in people who care about architecture, strong data foundations, and shipping
           production-grade AI systems.
         </p>
 
-        <h2 className="text-xl font-semibold mb-3 text-kendra-blue">Open applications</h2>
-        <p className="mb-4 text-gray-600">
+        <h2 className="text-xl font-semibold mb-3 text-fintricity-navy">Open applications</h2>
+        <p className="mb-4 text-fintricity-charcoal">
           Use the form below to tell us about yourself, the kind of role you&apos;re
           looking for, and share links to your work.
         </p>
@@ -28,7 +28,7 @@ export default function CareersPage() {
         <div className="rounded-lg overflow-hidden border border-zinc-200">
           <iframe
             src={NOTION_JOBS_FORM_URL}
-            title="Kendra Labs job application form"
+            title="Fintricity job application form"
             className="w-full"
             style={{ height: 900, border: "none" }}
             loading="lazy"
@@ -41,7 +41,7 @@ export default function CareersPage() {
             href={NOTION_JOBS_FORM_URL}
             target="_blank"
             rel="noreferrer"
-            className="underline text-kendra-blue"
+            className="underline text-fintricity-navy"
           >
             open it in a new tab
           </Link>

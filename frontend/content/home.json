@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "badge": "AI That Moves Faster. Engineering That Lasts.",
+    "title": "Transform Your Business with Production-Ready AI",
+    "subtitle": "We partner with regulated enterprises to architect and deploy AI systems that deliver breakthrough outcomes. From Pilots to Production.",
+    "primaryCTA": "Start Your AI Journey",
+    "secondaryCTA": "View Our Work"
+  },
+  "theProblem": {
+    "title": "You're Stuck in Pilot Hell.",
+    "points": [
+      "75% of GenAI pilots never scale.",
+      "Legacy systems lock up 80% of your IT budget.",
+      "Competing priorities. Fragmented teams. No clear path forward.",
+      "You need more than strategy. You need engineering."
+    ]
+  },
+  "theSolution": {
+    "title": "We Build AI That Works.",
+    "pillars": [
+      {
+        "title": "Strategic Clarity",
+        "desc": "AI opportunity assessment, roadmap, and prioritization."
+      },
+      {
+        "title": "Engineering Excellence",
+        "desc": "Architecture-first design and production-ready systems."
+      },
+      {
+        "title": "Measured Outcomes",
+        "desc": "ROI tracking, continuous improvement, and scale."
+      }
+    ]
+  },
+  "howWeWork": {
+    "title": "Agile Delivery Methodology",
+    "phases": [
+      {
+        "title": "Phase 1: Understand",
+        "duration": "2 weeks",
+        "desc": "AI opportunity assessment and stakeholder interviews."
+      },
+      {
+        "title": "Phase 2: Design",
+        "duration": "4 weeks",
+        "desc": "Architecture, data governance, and risk frameworks."
+      },
+      {
+        "title": "Phase 3: Build",
+        "duration": "8-12 weeks",
+        "desc": "MVP development and MLOps infrastructure."
+      },
+      {
+        "title": "Phase 4: Scale",
+        "duration": "Ongoing",
+        "desc": "Production deployment and continuous improvement."
+      }
+    ]
+  },
+  "proofPoints": {
+    "metrics": [
+      { "value": "40%", "label": "Fraud Investigation Time Reduction" },
+      { "value": "3-6", "label": "Months to Production" },
+      { "value": "20%", "label": "IT Budget Freed" },
+      { "value": "50%", "label": "Faster Audit Cycles" }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business with AI?",
+    "subtitle": "Schedule a conversation with one of our AI strategists to discuss your roadmap.",
+    "primaryButton": "Schedule a Strategy Call",
+    "secondaryButton": "Explore Solutions"
+  }
+}

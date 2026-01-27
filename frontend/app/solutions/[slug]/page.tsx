@@ -1,60 +1,44 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
-import { GenericPageClient } from "@/components/generic-page-client"
-import { notFound } from "next/navigation"
+import { SolutionDetailClient } from "@/components/solution-detail-client"
 import { Metadata } from "next"
-
-type Props = {
-  params: Promise<{ slug: string }>
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const allSolutions = await getContent('solutions');
-  const solution = allSolutions ? allSolutions[slug] : null;
-
-  if (!solution) return { title: "Solution Not Found" };
-
-  return {
-    title: solution.title,
-    description: solution.description,
-    openGraph: {
-      title: `${solution.title} | Kendra Labs Solutions`,
-      description: solution.description,
-    }
-  }
-}
+import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
-  const content = await getContent('solutions');
-  if (!content) return [];
-  
-  return Object.keys(content)
-    .filter(key => key !== '_index')
-    .map((slug) => ({
-      slug: slug,
-    }))
+  const content = await getContent('solutions')
+  if (!content) return []
+  return Object.keys(content).filter(k => k !== '_index').map((slug) => ({
+    slug,
+  }))
 }
 
-export default async function SolutionPage({ params }: Props) {
-  const { slug } = await params;
-  
-  const allSolutions = await getContent('solutions');
-  const solutionContent = allSolutions ? allSolutions[slug] : null;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const content = await getContent('solutions')
+  const solution = content?.[slug]
 
-  if (!solutionContent) {
-    notFound();
+  if (!solution) return { title: 'Solution Not Found' }
+
+  return {
+    title: `${solution.title} | Fintricity`,
+    description: solution.description,
   }
+}
+
+export default async function SolutionPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const content = await getContent('solutions')
+  const solution = content?.[slug]
+
+  if (!solution) notFound()
 
   return (
-    <div className="flex min-h-screen flex-col bg-white text-foreground">
+    <div className="flex min-h-screen flex-col bg-white">
       <Header />
-      
       <main className="flex-1">
-        <GenericPageClient content={solutionContent} />
+        <SolutionDetailClient content={solution} />
       </main>
-
       <Footer />
     </div>
   )

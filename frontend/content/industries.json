@@ -1,61 +1,75 @@
 {
   "_index": {
-    "badge": "Industry Solutions",
-    "title": "Transforming Every Sector with Autonomous Intelligence",
-    "subtitle": "Kendra Labs delivers specialized agentic architectures tailored to the unique regulatory, data, and operational needs of your industry."
+    "badge": "Industries We Serve",
+    "title": "Deep Industry Expertise",
+    "subtitle": "We partner with regulated enterprises to architect and deploy AI solutions that are production-ready, compliant, and measured."
   },
   "financial-services": {
     "title": "Financial Services",
+    "slug": "financial-services",
+    "description": "AI-powered fraud detection, decision support, RegTech, and wealth management.",
     "hero": {
-      "badge": "Finance AI",
-      "title": "Autonomous Finance",
-      "subtitle": "Revolutionize banking, insurance, and asset management with compliant, high-speed agentic workflows."
+      "badge": "Finance",
+      "title": "AI That Passes the Audit.",
+      "subtitle": "Transform operations while maintaining compliance, control, and competitive edge."
     },
-    "description": "Secure, compliant, and high-frequency autonomous agents for the financial sector."
+    "keySolutions": [
+      "AI-Powered Fraud Detection & Prevention",
+      "Intelligent Customer Service & Analytics",
+      "RegTech & Compliance Automation",
+      "Trade & Risk Intelligence",
+      "Wealth Management Personalization"
+    ]
+  },
+  "insurance": {
+    "title": "Insurance",
+    "slug": "insurance",
+    "description": "Intelligent underwriting, claims processing, and risk modeling.",
+    "hero": {
+      "badge": "Insurance",
+      "title": "Underwrite the Future. Intelligently.",
+      "subtitle": "AI-powered underwriting, claims, and risk management that improve accuracy and speed."
+    },
+    "keySolutions": [
+      "Intelligent Underwriting Platforms",
+      "AI-Driven Claims Processing",
+      "Predictive Risk Modeling",
+      "Customer Experience & Retention",
+      "Fraud Detection & Prevention"
+    ]
   },
   "healthcare": {
-    "title": "Healthcare & Life Sciences",
+    "title": "Healthcare",
+    "slug": "healthcare",
+    "description": "EMR interoperability, clinical AI, and patient engagement.",
     "hero": {
-      "badge": "HealthTech",
-      "title": "Accelerating Discovery",
-      "subtitle": "From drug discovery to patient care, deploy agents that understand complex biological and medical data."
+      "badge": "Healthcare",
+      "title": "Care Decisions That Are Faster. Safer. Smarter.",
+      "subtitle": "Clinical AI that respects privacy and improves outcomes."
     },
-    "description": "Accelerating drug discovery and improving patient outcomes with AI."
+    "keySolutions": [
+      "EMR Integration & Interoperability",
+      "Clinical Decision Support",
+      "Predictive Analytics & Outcomes",
+      "Patient Engagement Platforms",
+      "Administrative Automation"
+    ]
   },
-  "technology": {
-    "title": "Technology & Software",
+  "industrials": {
+    "title": "Industrials",
+    "slug": "industrials",
+    "description": "Demand forecasting, predictive maintenance, and supply chain optimization.",
     "hero": {
-      "badge": "Tech",
-      "title": "Self-Evolving Code",
-      "subtitle": "Automate devops, code generation, and QA with agents that understand your codebase."
+      "badge": "Industrials",
+      "title": "Your Supply Chain Sees Around Corners.",
+      "subtitle": "Demand forecasting, predictive maintenance, and autonomous coordination."
     },
-    "description": "Next-gen DevOps and autonomous software engineering."
-  },
-  "retail": {
-    "title": "Retail & E-Commerce",
-    "hero": {
-      "badge": "Commerce",
-      "title": "Hyper-Personalized Retail",
-      "subtitle": "Orchestrate supply chains and customer experiences with predictive autonomous agents."
-    },
-    "description": "Supply chain optimization and personalized shopping experiences."
-  },
-  "media": {
-    "title": "Media & Telecommunications",
-    "hero": {
-      "badge": "Media",
-      "title": "Content at Scale",
-      "subtitle": "Automate content generation, moderation, and network optimization."
-    },
-    "description": "Automated content creation and network optimization."
-  },
-  "industrial": {
-    "title": "Industrial",
-    "hero": {
-      "badge": "Industry 4.0",
-      "title": "Autonomous Manufacturing",
-      "subtitle": "Predictive maintenance and autonomous factory operations powered by edge AI."
-    },
-    "description": "Smart manufacturing and predictive maintenance."
+    "keySolutions": [
+      "Demand Forecasting & Planning",
+      "Predictive Maintenance & IoT",
+      "Supply Chain Optimization",
+      "Manufacturing Operations",
+      "Agentic Automation"
+    ]
   }
 }

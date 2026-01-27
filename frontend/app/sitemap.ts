@@ -5,7 +5,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.kendralabs.com'
 
   // Main pages
-  const routes = ['', '/platform', '/solutions', '/industries', '/insights', '/about', '/contact', '/login'].map(
+  const routes = ['', '/services', '/solutions', '/applied-research', '/industries', '/insights', '/about', '/contact', '/login', '/case-studies'].map(
     (route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),
@@ -14,16 +14,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })
   )
 
-  // Dynamic products
-  const products = await getContent('products')
-  const productRoutes = products ? Object.keys(products).map((slug) => ({
-    url: `${baseUrl}/platform/${slug}`,
+  // Dynamic solutions
+  const solutions = await getContent('solutions')
+  const solutionRoutes = solutions ? Object.keys(solutions).filter(k => k !== '_index').map((slug) => ({
+    url: `${baseUrl}/solutions/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   })) : []
-
-  // Dynamic industries
   const industries = await getContent('industries')
   const industryRoutes = industries ? Object.keys(industries).filter(k => k !== '_index').map((slug) => ({
     url: `${baseUrl}/industries/${slug}`,
@@ -41,5 +39,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   })) : []
 
-  return [...routes, ...productRoutes, ...industryRoutes, ...insightRoutes]
+  return [...routes, ...solutionRoutes, ...industryRoutes, ...insightRoutes]
 }

@@ -1,10 +1,16 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
-import { PricingClient } from "@/components/pricing-client"
+import { AppliedResearchClient } from "@/components/applied-research-client"
+import { Metadata } from "next"
 
-export default async function PricingPage() {
-  const content = await getContent('pricing');
+export const metadata: Metadata = {
+  title: "Applied Research",
+  description: "Pushing the boundaries of Agentic AI.",
+}
+
+export default async function AppliedResearchPage() {
+  const content = await getContent('applied-research');
 
   if (!content) return (
     <div className="min-h-screen flex items-center justify-center bg-white">
@@ -17,7 +23,7 @@ export default async function PricingPage() {
       <Header />
       
       <main className="flex-1">
-        <PricingClient content={content} />
+        <AppliedResearchClient content={content._index} />
       </main>
 
       <Footer />

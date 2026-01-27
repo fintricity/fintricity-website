@@ -1,0 +1,26 @@
+{
+  "_index": {
+    "hero": {
+      "badge": "Strategic Consulting",
+      "title": "Expert Services for the AI Era",
+      "subtitle": "We guide enterprises through the complexities of AI adoption, from strategy to implementation."
+    },
+    "servicesList": [
+      {
+        "icon": "🧠",
+        "title": "AI Strategy",
+        "desc": "Define your AI roadmap and identify high-impact use cases aligned with business goals."
+      },
+      {
+        "icon": "⚙️",
+        "title": "Implementation",
+        "desc": "End-to-end delivery of AI agents and systems, ensuring robust performance and scalability."
+      },
+      {
+        "icon": "🎓",
+        "title": "Enablement",
+        "desc": "Training and upskilling your workforce to leverage AI tools effectively."
+      }
+    ]
+  }
+}

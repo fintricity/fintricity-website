@@ -14,14 +14,14 @@ export default function NotFound() {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <div className="text-9xl font-bold text-kendra-blue/10">404</div>
+          <div className="text-9xl font-bold text-fintricity-navy/10">404</div>
         </motion.div>
         
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-3xl font-bold text-kendra-blue mb-4"
+          className="text-3xl font-bold text-fintricity-navy mb-4"
         >
           Agent Lost in the Mesh
         </motion.h2>
@@ -30,7 +30,7 @@ export default function NotFound() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg text-gray-600 mb-8"
+          className="text-lg text-fintricity-charcoal mb-8"
         >
           It seems the page you are looking for has been hallucin.. err, temporarily displaced. Our autonomous agents are currently conducting a search and rescue operation.
         </motion.p>
@@ -41,7 +41,7 @@ export default function NotFound() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex justify-center gap-4"
         >
-          <Button asChild variant="plum" size="lg">
+          <Button asChild variant="cyan" size="lg">
             <Link href="/">Return to Base (Home)</Link>
           </Button>
           <Button asChild variant="outline" size="lg">

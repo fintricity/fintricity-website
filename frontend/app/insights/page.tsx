@@ -6,7 +6,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Insights & Research",
-  description: "Exploring the frontiers of Agentic AI. Technical deep dives, research hub, and lab notes from Kendra Labs.",
+  description: "Exploring the frontiers of Agentic AI. Technical deep dives, research hub, and lab notes from Fintricity.",
 }
 
 export default async function InsightsPage() {

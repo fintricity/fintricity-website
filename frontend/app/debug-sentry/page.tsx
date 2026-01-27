@@ -5,16 +5,16 @@ import { Button } from "@/components/button"
 export default function DebugSentry() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-24 bg-white">
-      <h1 className="text-4xl font-bold text-kendra-blue mb-8">Sentry Debug Page</h1>
-      <p className="text-lg text-gray-600 mb-12 text-center max-w-xl">
+      <h1 className="text-4xl font-bold text-fintricity-navy mb-8">Sentry Debug Page</h1>
+      <p className="text-lg text-fintricity-charcoal mb-12 text-center max-w-xl">
         Use this page to verify that Sentry is correctly integrated and capturing errors. 
         Note: You must have a valid SENTRY_DSN configured in your environment.
       </p>
       
       <Button 
-        variant="plum"
+        variant="cyan"
         onClick={() => {
-          throw new Error("Kendra Labs Sentry Test Error: " + new Date().toISOString());
+          throw new Error("Fintricity Sentry Test Error: " + new Date().toISOString());
         }}
       >
         Trigger Frontend Error

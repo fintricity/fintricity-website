@@ -25,7 +25,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex w-full">
       
       {/* Left Side: Kendra Fabric Brand Experience */}
-      <div className="hidden lg:flex w-1/2 bg-kendra-blue relative flex-col justify-between p-16 text-white overflow-hidden">
+      <div className="hidden lg:flex w-1/2 bg-fintricity-navy relative flex-col justify-between p-16 text-white overflow-hidden">
         
         {/* Background Texture */}
         <div className="absolute inset-0 opacity-10">
@@ -39,10 +39,10 @@ export default function LoginPage() {
         <div className="relative z-10 flex items-center gap-3">
           <img 
             src="/logo.svg" 
-            alt="Kendra Labs" 
+            alt="Fintricity" 
             className="h-12 w-auto brightness-0 invert" 
           />
-          <span className="text-2xl font-bold tracking-tight">Kendra Labs</span>
+          <span className="text-2xl font-bold tracking-tight">Fintricity</span>
         </div>
 
         {/* Kendra Fabric Description */}
@@ -52,7 +52,7 @@ export default function LoginPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-kendra-orange uppercase bg-kendra-orange/10 rounded-full border border-kendra-orange/20">
+            <div className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-wider text-fintricity-cyan uppercase bg-fintricity-cyan/10 rounded-full border border-fintricity-cyan/20">
               System Access
             </div>
             <h1 className="text-5xl font-bold mb-6 leading-tight">
@@ -77,7 +77,7 @@ export default function LoginPage() {
 
         {/* Footer info */}
         <div className="relative z-10 text-sm text-blue-300/60">
-          © {new Date().getFullYear()} Kendra Labs Inc. All systems operational.
+          © {new Date().getFullYear()} Fintricity Inc. All systems operational.
         </div>
       </div>
 
@@ -86,13 +86,13 @@ export default function LoginPage() {
         <div className="w-full max-w-md bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
           
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-kendra-blue mb-2">Welcome back</h2>
+            <h2 className="text-3xl font-bold text-fintricity-navy mb-2">Welcome back</h2>
             <p className="text-gray-500">Sign in to access your Workbench</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label htmlFor="email" className="block text-sm font-medium text-fintricity-charcoal mb-1">
                 Work Email
               </label>
               <input
@@ -100,7 +100,7 @@ export default function LoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-kendra-blue focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-fintricity-navy focus:border-transparent outline-none transition-all"
                 placeholder="name@company.com"
                 required
               />
@@ -108,10 +108,10 @@ export default function LoginPage() {
 
             <div>
               <div className="flex justify-between items-center mb-1">
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="password" className="block text-sm font-medium text-fintricity-charcoal">
                   Password
                 </label>
-                <Link href="#" className="text-sm text-kendra-blue hover:text-kendra-plum font-medium">
+                <Link href="#" className="text-sm text-fintricity-navy hover:text-fintricity-teal font-medium">
                   Forgot password?
                 </Link>
               </div>
@@ -120,7 +120,7 @@ export default function LoginPage() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-kendra-blue focus:border-transparent outline-none transition-all"
+                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-fintricity-navy focus:border-transparent outline-none transition-all"
                 placeholder="••••••••"
                 required
               />
@@ -161,7 +161,7 @@ export default function LoginPage() {
                   <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.84z" fill="#FBBC05" />
                   <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                 </svg>
-                <span className="text-sm font-medium text-gray-700">Google</span>
+                <span className="text-sm font-medium text-fintricity-charcoal">Google</span>
               </button>
               <button className="flex items-center justify-center w-full px-4 py-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
                 <svg className="h-5 w-5 mr-2" viewBox="0 0 23 23">
@@ -171,13 +171,13 @@ export default function LoginPage() {
                   <path fill="#05a6f0" d="M1 12h10v10H1z"/>
                   <path fill="#ffba08" d="M12 12h10v10H12z"/>
                 </svg>
-                <span className="text-sm font-medium text-gray-700">Microsoft</span>
+                <span className="text-sm font-medium text-fintricity-charcoal">Microsoft</span>
               </button>
             </div>
           </div>
           
           <div className="mt-8 text-center text-xs text-gray-400">
-            <Link href="/" className="hover:text-kendra-blue underline">Back to Website</Link>
+            <Link href="/" className="hover:text-fintricity-navy underline">Back to Website</Link>
           </div>
 
         </div>

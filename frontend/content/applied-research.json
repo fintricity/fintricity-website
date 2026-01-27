@@ -1,0 +1,31 @@
+{
+  "_index": {
+    "hero": {
+      "badge": "Fintricity Labs",
+      "title": "Inventing the Future of Work.",
+      "subtitle": "We don't wait for the future; we build it. Our labs focus on the frontier of Agentic AI and Complex Adaptive Systems, bridging the gap between academic breakthrough and enterprise ROI."
+    },
+    "researchAreas": [
+      {
+        "title": "Multi-Agent Collaboration",
+        "desc": "Building frameworks where agents can debate, vote, and collaborate to solve non-deterministic problems.",
+        "icon": "🤝"
+      },
+      {
+        "title": "Long-Horizon Planning",
+        "desc": "Engineering agents that can execute tasks requiring weeks of duration without losing context.",
+        "icon": "⏳"
+      },
+      {
+        "title": "Governance & Alignment",
+        "desc": "Creating 'Constitutional AI' frameworks that ensure autonomous agents obey regulatory boundaries.",
+        "icon": "🛡️"
+      },
+      {
+        "title": "AI Economics",
+        "desc": "Modeling the P&L impact of replacing human labor with compute cost in specific verticals.",
+        "icon": "📈"
+      }
+    ]
+  }
+}

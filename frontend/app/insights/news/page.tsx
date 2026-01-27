@@ -15,7 +15,7 @@ export default async function NewsPage() {
       <main className="flex-1">
         <InsightsListClient 
           title="Newsroom" 
-          subtitle="Latest updates and announcements from the Kendra Labs ecosystem." 
+          subtitle="Latest updates and announcements from the Fintricity ecosystem." 
           items={content._index.newsEntries}
           type="news"
         />

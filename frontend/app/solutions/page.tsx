@@ -6,7 +6,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Solutions",
-  description: "Translate autonomy into economic outcomes. Discover agentic solutions for autonomous engineering, intelligent operations, and compliance.",
+  description: "Production-ready AI systems built for regulated industries.",
 }
 
 export default async function SolutionsPage() {
