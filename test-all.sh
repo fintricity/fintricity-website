@@ -3,7 +3,7 @@
 # Exit immediately if a command exits with a non-zero status
 set -e
 
-echo "🚀 Starting Kendra Labs Full Test Suite..."
+echo "🚀 Starting Fintricity Full Test Suite..."
 
 cd frontend
 
