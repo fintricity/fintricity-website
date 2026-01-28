@@ -13,7 +13,7 @@ const pages = [
   '/industries/financial-services',
 ];
 
-test.describe('Kendra Labs Smoke Tests', () => {
+test.describe('Fintricity Smoke Tests', () => {
   for (const path of pages) {
     test(`should load page: ${path}`, async ({ page }) => {
       const response = await page.goto(path);
@@ -21,8 +21,8 @@ test.describe('Kendra Labs Smoke Tests', () => {
       // Ensure page returns 200
       expect(response?.status()).toBe(200);
       
-      // Ensure the logo is present (using alt text)
-      await expect(page.getByAltText('Kendra Labs Logo')).toBeVisible();
+      // Ensure the logo text is present
+      await expect(page.getByText('Fintricity', { exact: true }).first()).toBeVisible();
       
       // Ensure no 404 text is visible
       const content = await page.textContent('body');

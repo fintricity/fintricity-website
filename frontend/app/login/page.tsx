@@ -24,7 +24,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex w-full">
       
-      {/* Left Side: Kendra Fabric Brand Experience */}
+      {/* Left Side: Fintricity Brand Experience */}
       <div className="hidden lg:flex w-1/2 bg-fintricity-navy relative flex-col justify-between p-16 text-white overflow-hidden">
         
         {/* Background Texture */}
@@ -45,7 +45,7 @@ export default function LoginPage() {
           <span className="text-2xl font-bold tracking-tight">Fintricity</span>
         </div>
 
-        {/* Kendra Fabric Description */}
+        {/* Brand Description */}
         <div className="relative z-10 max-w-xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -56,20 +56,20 @@ export default function LoginPage() {
               System Access
             </div>
             <h1 className="text-5xl font-bold mb-6 leading-tight">
-              Enter the <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">Kendra Fabric</span>
+              Enter the <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-200">Fintricity Platform</span>
             </h1>
             <p className="text-lg text-blue-100 leading-relaxed mb-8">
-              The Unified Nervous System for Enterprise AI. Connect disparate agents into a shared intelligence network where they share memory, tools, and goals.
+              The Unified Operating System for the Agentic Enterprise. Build, deploy, and govern autonomous AI agents that reason, collaborate, and execute at scale.
             </p>
             
             <div className="grid grid-cols-2 gap-6 pt-8 border-t border-white/10">
               <div>
-                <h3 className="font-bold text-white mb-1">Unified Memory</h3>
+                <h3 className="font-bold text-white mb-1">Unified Intelligence</h3>
                 <p className="text-sm text-blue-200">Contextual state persistence across long-running workflows.</p>
               </div>
               <div>
-                <h3 className="font-bold text-white mb-1">Agentic Mesh</h3>
-                <p className="text-sm text-blue-200">Protocol-agnostic communication via MCP.</p>
+                <h3 className="font-bold text-white mb-1">Modern Delivery</h3>
+                <p className="text-sm text-blue-200">AI-augmented pods for rapid modernization.</p>
               </div>
             </div>
           </motion.div>
@@ -129,7 +129,7 @@ export default function LoginPage() {
             <Button 
               type="submit" 
               className="w-full py-6 text-lg" 
-              variant="default" // Using default which is Kendra Blue
+              variant="default" // Using default which is Navy
               disabled={isLoading}
             >
               {isLoading ? (
@@ -138,7 +138,7 @@ export default function LoginPage() {
                   Authenticating...
                 </div>
               ) : (
-                "Sign In to Fabric"
+                "Sign In to Platform"
               )}
             </Button>
           </form>

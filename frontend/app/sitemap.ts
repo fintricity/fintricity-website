@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getContent } from '@/lib/content'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.kendralabs.com'
+  const baseUrl = 'https://www.fintricity.com'
 
   // Main pages
   const routes = ['', '/services', '/solutions', '/applied-research', '/industries', '/insights', '/about', '/contact', '/login', '/case-studies'].map(

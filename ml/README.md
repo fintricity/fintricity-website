@@ -1,6 +1,6 @@
 # Agentic Behavioral Cloning ML Workflows
 
-This directory contains the machine learning components for Kendra Labs' agentic behavioral cloning research.
+This directory contains the machine learning components for Fintricity's agentic behavioral cloning research.
 
 ## 🚀 Overview
 

@@ -1,10 +1,10 @@
-# Kendra Labs Website
+# Fintricity Website
 
-The Operating System for the Agentic Enterprise. This repository contains the source code for the official Kendra Labs website, featuring a modern, light-themed design inspired by architectural precision and engineered for technical clarity.
+The Operating System for the Agentic Enterprise. This repository contains the source code for the official Fintricity website, featuring a modern, sleek design inspired by architectural precision and engineered for technical clarity.
 
 ## 🚀 Overview
 
-Kendra Labs is building the unified nervous system for autonomous AI agents. The website is designed to reflect this "Pragmatic Visionary" tone, moving away from AI hype toward systems engineering reliability.
+Fintricity is building the unified nervous system for autonomous AI agents. The website is designed to reflect this "Pragmatic Visionary" tone, moving away from AI hype toward systems engineering reliability.
 
 ## 🛠️ Tech Stack
 
@@ -55,10 +55,10 @@ Kendra Labs is building the unified nervous system for autonomous AI agents. The
 
 ## 🏗️ Core Components
 
-*   **Architecture Hub (/platform):** A comprehensive overview of the Kendra Fabric thesis and its eight core pillars.
-*   **Product Deep Dives:** Dedicated pages for Workbench, Fabric, Identity, Mesh, Data Fabric, Model Management, Evaluation, and Build.
-*   **Industry Solutions:** Dynamic routes (`/industries/[slug]`) tailoring agentic solutions for Finance, Healthcare, Retail, and more.
-*   **Insights & Research:** A hub for technical white papers, Lab Notes, and strategic blueprints.
+*   **Solutions Hub (/solutions):** A comprehensive overview of Fintricity's capabilities across AI Strategy, Architecture, Engineering, and more.
+*   **Industry Solutions:** Dynamic routes (`/industries/[slug]`) tailoring agentic solutions for Financial Services, Healthcare, Insurance, and Industrials.
+*   **Applied Research:** A hub for technical white papers, Lab Notes, and strategic blueprints from Fintricity Labs.
+*   **Insights & Blog:** Expert commentary on the transition from generative to agentic enterprise.
 *   **Contact & Lead Capture:** Integrated with HubSpot and protected by Cloudflare Turnstile.
 
 ## 📝 How Content Works
@@ -66,7 +66,7 @@ Kendra Labs is building the unified nervous system for autonomous AI agents. The
 The website uses a **Data-Driven Architecture**. All text, labels, and feature lists are stored in `frontend/content/*.json`. 
 
 *   **Adding an Industry:** Simply add a new key to `industries.json`. The dynamic route `/industries/[new-key]` will be generated automatically.
-*   **Updating Products:** Edit `products.json` to update features or deep-dive descriptions.
+*   **Updating Solutions:** Edit `solutions.json` to update capabilities or deep-dive descriptions.
 
 This decoupled approach allows for rapid content iteration without modifying the underlying UI components.
 
@@ -81,8 +81,8 @@ From the root directory, run the executable script:
 ```bash
 ./start-dev.sh
 ```
-The site will be available at **http://localhost:3001**.
+The site will be available at **http://localhost:4001**.
 
 ---
 
-© 2026 Kendra Labs. Built with precision for the agentic era.
+© 2026 Fintricity. Built with precision for the agentic era.

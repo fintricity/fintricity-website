@@ -1,6 +1,6 @@
-# Kendra Labs Website: Architectural & Deployment Documentation
+# Fintricity Website: Architectural & Deployment Documentation
 
-This document provides a detailed technical overview of how the Kendra Labs website is structured, built, and deployed to Hostinger.
+This document provides a detailed technical overview of how the Fintricity website is structured, built, and deployed to Hostinger.
 
 ## 🏗 Architecture
 
@@ -85,4 +85,4 @@ Hostinger's automated monitors may occasionally kill long-running processes if t
 
 ---
 
-© 2026 Kendra Labs Engineering.
+© 2026 Fintricity Engineering.

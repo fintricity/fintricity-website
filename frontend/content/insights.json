@@ -39,7 +39,7 @@
         "date": "Jan 17, 2026",
         "excerpt": "How we architected, built, and deployed an enterprise-grade platform ecosystem in hours using the collaborative human-AI loop.",
         "slug": "built-with-ai",
-        "author": "Kendra Architect",
+        "author": "Fintricity Architect",
         "tags": ["AI Engineering", "Productivity", "kBuild"],
         "readTime": "12 min"
       },
@@ -153,7 +153,7 @@
   "built-with-ai": {
     "title": "Built with AI: A High-Speed Engineering Case Study",
     "badge": "Engineering Journey",
-    "author": "Kendra Architect",
+    "author": "Fintricity Architect",
     "date": "Jan 17, 2026",
     "readTime": "12 min",
     "tags": ["AI Engineering", "Productivity", "kBuild", "Next.js"],
@@ -177,7 +177,7 @@
     "date": "Jan 15, 2026",
     "tags": ["Product", "Launch"],
     "description": "Fintricity officially launches its core platform to address the shift from experimental 'Chat' to production-grade 'Agency.'",
-    "content": "<p>Today, Fintricity introduced the <strong>Kendra Fabric</strong>, the industry's first unified nervous system for autonomous AI agents.</p><p>Key launch components include the <strong>Kendra Workbench</strong> and <strong>SHIELD Governance</strong>, providing the deterministic guardrails required for enterprise scale.</p>"
+    "content": "<p>Today, Fintricity introduced its new AI-first delivery methodology, the industry's first unified framework for autonomous AI agents.</p><p>Key components include high-speed delivery pods and production-ready governance, providing the deterministic guardrails required for enterprise scale.</p>"
   },
   "agentic-os-alpha": {
     "title": "Engineering the Agentic OS: From Vision to Alpha-Stage Reliability",

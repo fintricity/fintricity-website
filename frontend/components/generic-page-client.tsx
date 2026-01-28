@@ -35,7 +35,7 @@ export function GenericPageClient({ content }: { content: any }) {
                   </div>
                   <div>
                     <div className="text-sm font-bold text-fintricity-navy">{content.author}</div>
-                    <div className="text-xs text-gray-400">Kendra Labs Team</div>
+                    <div className="text-xs text-gray-400">Fintricity Team</div>
                   </div>
                 </div>
               )}

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     template: "%s | Fintricity"
   },
   description: "Move beyond chatbots. Build, deploy, and govern autonomous AI agents that reason, collaborate, and execute at scale.",
-  keywords: ["Agentic AI", "Autonomous Agents", "Enterprise AI", "Kendra Fabric", "AI Governance", "Agentic Mesh"],
+  keywords: ["Agentic AI", "Autonomous Agents", "Enterprise AI", "AI Governance", "Digital Engineering"],
   authors: [{ name: "Fintricity" }],
   creator: "Fintricity",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.kendralabs.com",
+    url: "https://www.fintricity.com",
     siteName: "Fintricity",
     title: "Fintricity | The Operating System for the Agentic Enterprise",
     description: "The unified nervous system for autonomous AI agents. Production-grade infrastructure for the next era of industrial intelligence.",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/logo.svg",
   },
-  metadataBase: new URL("https://www.kendralabs.com"),
+  metadataBase: new URL("https://www.fintricity.com"),
 };
 
 export default function RootLayout({

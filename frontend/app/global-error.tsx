@@ -24,7 +24,7 @@ export default function GlobalError({
           </div>
           <h1 className="text-4xl font-bold mb-4">A critical system error occurred.</h1>
           <p className="text-xl text-fintricity-charcoal mb-12 max-w-lg">
-            Our autonomous agents have been notified and are investigating the issue within the Kendra Fabric.
+            Our autonomous agents have been notified and are investigating the issue.
           </p>
           <Button 
             variant="cyan" 

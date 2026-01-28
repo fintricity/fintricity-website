@@ -55,7 +55,7 @@ export function ContactClient({ content }: { content: any }) {
               })),
               {
                 name: 'lead_source', // Standard field name, ensure this exists in your HubSpot form
-                value: 'KendraLabs Website' 
+                value: 'Fintricity Website' 
               }
             ],
             context: {

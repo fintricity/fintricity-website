@@ -32,7 +32,7 @@ const config: Config = {
         foreground: "hsl(var(--foreground))",
 
         primary: {
-          DEFAULT: "hsl(var(--primary))", // Maps to Kendra Blue or a vibrant utility blue
+          DEFAULT: "hsl(var(--primary))", // Maps to Primary Blue or a vibrant utility blue
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
