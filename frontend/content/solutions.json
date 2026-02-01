@@ -26,9 +26,15 @@
       },
       {
         "title": "Data Science & Analytics",
-        "desc": "Custom models, analytics platforms, and insights engines.",
+        "desc": "Custom model development and advanced analytics platforms to uncover actionable insights.",
         "slug": "data-science",
         "icon": "📊"
+      },
+      {
+        "title": "Applied AI Research",
+        "desc": "Cutting-edge research translating into practical AI solutions.",
+        "slug": "applied-ai-research",
+        "icon": "🔬"
       },
       {
         "title": "Agentic AI & Automation",
@@ -41,6 +47,24 @@
         "desc": "Regulatory frameworks, audit-readiness, and risk frameworks.",
         "slug": "ai-governance",
         "icon": "🛡️"
+      },
+      {
+        "title": "Implementation & Delivery",
+        "desc": "Agile methodology, rapid deployment, and MLOps.",
+        "slug": "implementation-delivery",
+        "icon": "🚀"
+      },
+      {
+        "title": "Training & Education",
+        "desc": "Upskill your team with expert-led AI training and enablement.",
+        "slug": "training-education",
+        "icon": "🎓"
+      },
+      {
+        "title": "AI First Services",
+        "desc": "Re-imagining your enterprise with AI at its core for unparalleled efficiency and innovation.",
+        "slug": "ai-first-services",
+        "icon": "✨"
       }
     ],
     "economicImpact": {
@@ -74,6 +98,266 @@
     "badge": "Data Science",
     "description": "Custom model development and advanced analytics platforms to uncover actionable insights."
   },
+  "applied-ai-research": {
+    "title": "Applied AI Research",
+    "badge": "Research",
+    "description": "Cutting-edge research translating into practical AI solutions. We actively research emerging AI methodologies and architect production systems that harness breakthrough insights.",
+    "hero": {
+      "title": "Translate Cutting-Edge Research into Business Results.",
+      "subtitle": "Bridge the gap between AI innovation and practical, production-ready solutions.",
+      "cta": "Explore Our Research Capabilities"
+    },
+    "overview": {
+      "title": "Applied AI Research at Fintricity",
+      "commentary": "The most valuable AI innovations aren't published in top conferences or preprint servers—they're embedded in production systems that solve real business problems. Our Applied AI Research team bridges the gap between academic research and enterprise value. We don't just implement known techniques. We actively research emerging AI methodologies, evaluate their applicability to regulated industries, and architect production systems that harness breakthrough insights. This allows our clients to access cutting-edge AI capabilities 12-18 months ahead of general market adoption.",
+      "keyDifferentiators": [
+        "Research-to-Production Pipeline – Systematic process for evaluating, testing, and deploying novel AI techniques",
+        "Industry-Specific Adaptation – Customizing research insights for financial services, insurance, healthcare, and industrial contexts",
+        "Governance-First Approach – Ensuring all research innovations meet regulatory requirements and governance standards before deployment",
+        "Risk Assessment & Validation – Rigorous testing protocols to understand limitations and risks of emerging techniques",
+        "Collaborative Innovation – Partnerships with leading AI research institutions and academic labs"
+      ]
+    },
+    "researchFocusAreas": [
+      {
+        "title": "Large Language Models & Foundation Models for Enterprise",
+        "commentary": "While ChatGPT dominates consumer attention, significant enterprise value lies in fine-tuning, prompt engineering, and domain-specific LLMs. We research:",
+        "bulletPoints": [
+          "Fine-tuning strategies for regulated industry data",
+          "Retrieval-augmented generation (RAG) for enterprise knowledge systems",
+          "Prompt engineering frameworks for compliance-sensitive applications",
+          "Hallucination detection and mitigation",
+          "Privacy-preserving LLM deployments for sensitive data"
+        ],
+        "exampleApplication": "Financial services firms deploying LLMs for customer service while maintaining regulatory compliance and preventing AI-generated misinformation in regulatory communications.",
+        "industryFocus": "Financial Services, Insurance, Healthcare",
+        "keyBenefit": "Deploy LLMs that generate measurable business value without regulatory risk",
+        "ctaLink": "/contact",
+        "ctaText": "Explore Enterprise LLM Solutions"
+      },
+      {
+        "title": "Causal AI & Explainability for Regulated Industries",
+        "commentary": "Regulators increasingly demand not just predictions but explanations. We research causal inference techniques that enable:",
+        "bulletPoints": [
+          "Causal discovery from observational data",
+          "Counterfactual reasoning for 'what-if' scenarios",
+          "Causal forests for heterogeneous treatment effects",
+          "Explainable AI frameworks aligned with DORA, EU AI Act requirements",
+          "Bias detection and mitigation through causal analysis"
+        ],
+        "exampleApplication": "Insurance underwriting systems that explain decisions in human-understandable causal terms ('applicants with X condition and Y history have Z claim probability because...'), supporting both regulatory compliance and customer trust.",
+        "industryFocus": "Financial Services, Insurance, Healthcare",
+        "keyBenefit": "Build AI systems that are inherently explainable and audit-ready",
+        "ctaLink": "/contact",
+        "ctaText": "Explore Causal AI & Explainability"
+      },
+      {
+        "title": "Federated Learning & Privacy-Preserving AI",
+        "commentary": "Regulatory pressures (GDPR, HIPAA, CCPA) and data fragmentation create opportunities for privacy-preserving AI techniques:",
+        "bulletPoints": [
+          "Federated learning across institutional boundaries",
+          "Differential privacy for training data protection",
+          "Secure multi-party computation for joint model building",
+          "Synthetic data generation maintaining statistical properties",
+          "Privacy impact assessments integrated into AI development"
+        ],
+        "exampleApplication": "Healthcare consortium where hospitals collaboratively train diagnostic AI models without sharing raw patient data across institutional firewalls, dramatically improving model accuracy while maintaining privacy compliance.",
+        "industryFocus": "Healthcare, Financial Services, Insurance",
+        "keyBenefit": "Extract value from fragmented data without privacy risks",
+        "ctaLink": "/contact",
+        "ctaText": "Explore Privacy-Preserving AI Solutions"
+      },
+      {
+        "title": "Agentic AI & Multi-Agent Systems for Enterprise Orchestration",
+        "commentary": "Beyond single-model AI, agentic systems represent the next frontier—autonomous agents that collaborate, negotiate, and adapt in real-time:",
+        "bulletPoints": [
+          "Multi-agent coordination frameworks for supply chain optimization",
+          "Agent-based digital twins for manufacturing simulation",
+          "Autonomous decision-making with human-in-the-loop oversight",
+          "Agent communication protocols and coordination mechanisms",
+          "Scalable agent infrastructure and monitoring"
+        ],
+        "exampleApplication": "Industrial supply chain with autonomous agents representing different suppliers, manufacturers, and logistics providers that continuously negotiate, rebalance, and optimize in response to demand signals, disruptions, and constraints—reducing coordination overhead by 70% while improving responsiveness.",
+        "industryFocus": "Industrials, Financial Services, Healthcare",
+        "keyBenefit": "Achieve autonomous coordination across complex operational systems",
+        "ctaLink": "/contact",
+        "ctaText": "Explore Agentic AI Systems"
+      },
+      {
+        "title": "Time-Series AI & Predictive Optimization",
+        "commentary": "Temporal patterns are critical in regulated industries but underexploited. We research advanced time-series techniques:",
+        "bulletPoints": [
+          "Temporal point processes for event prediction",
+          "Graph neural networks capturing temporal dependencies",
+          "Physics-informed neural networks for physical systems",
+          "Sequence-to-sequence models for multi-step forecasting",
+          "Uncertainty quantification in temporal predictions"
+        ],
+        "exampleApplication": "Predictive maintenance system combining IoT sensor data, maintenance history, and operational patterns to predict equipment failures 10-30 days in advance with quantified uncertainty—enabling cost-effective planned maintenance while preventing unplanned downtime.",
+        "industryFocus": "Industrials, Financial Services, Insurance",
+        "keyBenefit": "Predict future states with quantified uncertainty for better planning",
+        "ctaLink": "/contact",
+        "ctaText": "Explore Predictive Optimization Solutions"
+      },
+      {
+        "title": "Fairness, Bias, and Ethical AI",
+        "commentary": "Regulatory frameworks increasingly mandate fairness assessments. We research:",
+        "bulletPoints": [
+          "Algorithmic fairness definitions and tradeoffs",
+          "Bias detection across model and data dimensions",
+          "Fair representation learning",
+          "Fairness-aware feature engineering",
+          "Ethical AI frameworks aligned with EU AI Act classification",
+          "Ongoing monitoring for fairness drift in production"
+        ],
+        "exampleApplication": "Credit decisioning system tested against fairness metrics across demographics, identifying and mitigating algorithmic bias while maintaining predictive performance—enabling compliant lending decisions and reducing discrimination risk.",
+        "industryFocus": "Financial Services, Insurance, Healthcare",
+        "keyBenefit": "Build AI systems that are demonstrably fair and regulatory-compliant",
+        "ctaLink": "/contact",
+        "ctaText": "Explore Fairness & Ethical AI Solutions"
+      }
+    ],
+    "researchMethodology": {
+      "phases": [
+        {
+          "title": "Landscape Scanning (Ongoing)",
+          "desc": "Monitor academic preprints, conference proceedings, industry research; Track emerging techniques and their applicability to regulated industries; Evaluate open-source implementations and tooling maturity.",
+          "duration": "Ongoing"
+        },
+        {
+          "title": "Industry Applicability Assessment",
+          "desc": "Identify specific business problems where emerging techniques offer advantages; Assess regulatory and governance implications; Estimate business value and implementation complexity.",
+          "duration": "2-4 weeks"
+        },
+        {
+          "title": "Proof-of-Concept Development",
+          "desc": "Prototype new techniques using representative client data (anonymized); Compare against baseline approaches; Identify implementation challenges and risk areas.",
+          "duration": "4-8 weeks"
+        },
+        {
+          "title": "Production Readiness Evaluation",
+          "desc": "Assess scalability and performance requirements; Evaluate regulatory and governance alignment; Design audit and monitoring frameworks.",
+          "duration": "2-4 weeks"
+        },
+        {
+          "title": "Client Deployment (Ongoing)",
+          "desc": "Implement in production client environments; Monitor performance, robustness, and compliance; Iterate and optimize based on real-world results.",
+          "duration": "Ongoing"
+        }
+      ]
+    },
+    "researchPartnerships": {
+      "commentary": "We collaborate with leading academic and research institutions to stay at the forefront of AI innovation:",
+      "bulletPoints": [
+        "University Partnerships – Joint research projects with AI research labs",
+        "Industry Consortia – Participation in industry-specific AI working groups",
+        "Conference Engagement – Active presentation and participation in top-tier AI conferences",
+        "Open Source Contributions – Contributing to and maintaining research-focused open-source projects",
+        "Talent Development – Hosting research internships and postdoctoral positions"
+      ]
+    },
+    "successMetrics": {
+      "categories": [
+        {
+          "title": "Research Quality:",
+          "metrics": [
+            "Papers published in peer-reviewed venues",
+            "Patent filings for novel techniques",
+            "Open-source contributions and adoption",
+            "Academic collaborations and citations"
+          ]
+        },
+        {
+          "title": "Business Value:",
+          "metrics": [
+            "Time-to-market advantage: Industry average adoption lag (months/years)",
+            "Client differentiation: Unique capabilities not available from competitors",
+            "Revenue impact: Projects enabled by research innovations",
+            "Talent attraction: Research reputation enabling recruitment"
+          ]
+        },
+        {
+          "title": "Regulatory & Governance:",
+          "metrics": [
+            "Compliance certifications maintained across innovations",
+            "Zero regulatory issues from research deployments",
+            "Industry framework contributions (standards, best practices)",
+            "Governance maturity of production systems"
+          ]
+        }
+      ]
+    },
+    "researchCaseStudies": [
+      {
+        "industry": "Financial Services",
+        "title": "LLM-Based Customer Service for Financial Services",
+        "challenge": "Large bank needed to reduce customer service cost while improving satisfaction, but couldn't deploy consumer-grade LLMs due to regulatory constraints.",
+        "researchInnovation": "Fine-tuned private LLM with retrieval-augmented generation (RAG) over internal knowledge base.",
+        "result": "60% reduction in customer service costs, 15% improvement in satisfaction scores, 100% regulatory compliance maintained.",
+        "competitiveEdge": "Deployed 8 months before competitors adopted similar approach."
+      },
+      {
+        "industry": "Insurance",
+        "title": "Causal AI for Insurance Underwriting",
+        "challenge": "Insurer needed to explain underwriting decisions to regulators and customers in human-understandable terms, not just predictions.",
+        "researchInnovation": "Causal forest models revealing specific factors driving risk assessment.",
+        "result": "Fair lending compliance certification, 25% improvement in underwriting transparency, regulatory commendations.",
+        "competitiveEdge": "Only insurer in region with causal AI underwriting approach."
+      },
+      {
+        "industry": "Healthcare",
+        "title": "Federated Learning for Healthcare Consortium",
+        "challenge": "Multiple hospitals wanted collaborative diagnostic AI without sharing raw patient data across institutions.",
+        "researchInnovation": "Federated learning framework enabling joint model training across institutional boundaries.",
+        "result": "40% more accurate diagnostic models than single-institution approach, 100% privacy compliance, patient data never leaves institutional systems.",
+        "competitiveEdge": "First federated AI diagnostic system deployed in healthcare sector."
+      }
+    ],
+    "pricingEngagementModel": {
+      "types": [
+        {
+          "title": "Research Assessment ($25-50K, 4-6 weeks)",
+          "description": "Evaluate applicability of emerging AI techniques to client's specific challenges.",
+          "details": [
+            "Prototype proof-of-concept demonstrating potential value",
+            "Recommend research track and implementation roadmap"
+          ]
+        },
+        {
+          "title": "Research-Driven Solution Development ($150-500K, 12-20 weeks)",
+          "description": "Develop custom AI solution incorporating novel research insights.",
+          "details": [
+            "Include full production readiness, governance, and compliance",
+            "Comprehensive documentation and training"
+          ]
+        },
+        {
+          "title": "Research Partnership (Annual engagement)",
+          "description": "Ongoing access to Fintricity's AI research capabilities.",
+          "details": [
+            "Priority evaluation of emerging techniques for client's industry",
+            "Quarterly research briefings and recommendations",
+            "Access to research publications and frameworks"
+          ]
+        }
+      ]
+    }
+  },
+  "ai-architecture": {
+    "title": "AI Architecture & Modernization",
+    "badge": "Architecture",
+    "description": "System design, integration, and data governance to build a robust foundation for AI."
+  },
+  "ai-engineering": {
+    "title": "ML Engineering & MLOps",
+    "badge": "Engineering",
+    "description": "Building production-ready ML systems with continuous deployment and monitoring."
+  },
+  "data-science": {
+    "title": "Data Science & Analytics",
+    "badge": "Data Science",
+    "description": "Custom model development and advanced analytics platforms to uncover actionable insights."
+  },
   "agentic-ai": {
     "title": "Agentic AI & Automation",
     "badge": "Agentic",
@@ -83,5 +367,81 @@
     "title": "Compliance & Governance",
     "badge": "Governance",
     "description": "Ensuring regulatory compliance and audit-readiness with robust AI risk management frameworks."
+  },
+  "implementation-delivery": {
+    "title": "Implementation & Delivery",
+    "badge": "Delivery",
+    "description": "Agile methodology, rapid deployment, and MLOps to bring AI solutions to production quickly and efficiently.",
+    "htmlContent": "<p>Fintricity’s Implementation & Delivery services are focused on bringing your AI strategy to life, from concept to production. We combine agile methodologies with deep AI engineering expertise to build and deploy robust, scalable, and secure AI solutions.</p><p>We believe in iterative development, continuous feedback, and rapid prototyping to ensure your AI investments deliver measurable business value quickly. Our teams are equipped with proprietary tools and AI-augmented processes to accelerate your project timelines and reduce risk.</p>",
+    "keyOfferings": [
+      {
+        "title": "AI-First Project Management",
+        "desc": "Agile project management tailored for AI initiatives, ensuring alignment with business goals and technical feasibility."
+      },
+      {
+        "title": "Full-Stack AI Engineering",
+        "desc": "From data pipelines to model deployment, our engineers build end-to-end AI solutions that are production-ready and scalable."
+      },
+      {
+        "title": "MLOps & DevOps Integration",
+        "desc": "Automate the lifecycle of your machine learning models, ensuring continuous integration, delivery, and monitoring in regulated environments."
+      },
+      {
+        "title": "Platform Integration",
+        "desc": "Seamlessly integrate new AI solutions with your existing enterprise systems and data infrastructure."
+      }
+    ]
+  },
+  "training-education": {
+    "title": "Training & Education",
+    "badge": "Enablement",
+    "description": "Comprehensive training programs designed to empower your workforce with the skills needed to navigate and excel in the AI-native enterprise.",
+    "htmlContent": "<p>The shift to an AI-native enterprise requires a skilled workforce. Fintricity’s Training & Education programs are designed to upskill your teams, from leadership to technical practitioners, ensuring they have the knowledge and capabilities to leverage AI effectively and responsibly.</p><p>Our curriculum is built on real-world implementation experience and cutting-edge research, providing practical insights and hands-on learning. We offer customized programs tailored to your organization's specific needs and maturity level.</p>",
+    "keyOfferings": [
+      {
+        "title": "AI Strategy for Executives",
+        "desc": "Understand the strategic implications of AI, identify opportunities, and lead your organization's AI transformation."
+      },
+      {
+        "title": "AI Engineering for Developers",
+        "desc": "Hands-on training in MLOps, AI model development, and integration best practices for production systems."
+      },
+      {
+        "title": "Responsible AI & Governance",
+        "desc": "Learn to implement ethical AI frameworks, ensure compliance, and mitigate risks in regulated industries."
+      },
+      {
+        "title": "Custom Workshops & Bootcamps",
+        "desc": "Tailored training programs to address specific skill gaps or project requirements within your team."
+      }
+    ]
+  },
+  "ai-first-services": {
+    "title": "AI First Services",
+    "badge": "Paradigm Shift",
+    "description": "Embrace a new operating model where AI is not just a tool, but the core of every business function, driving unparalleled efficiency and innovation.",
+    "htmlContent": "<p>In today's rapidly evolving landscape, an <strong>AI-First Services</strong> approach is no longer a luxury, but a necessity for enterprise survival and growth. At Fintricity, we help organizations re-architect their core services around artificial intelligence, moving beyond mere AI adoption to full AI integration.</p><p>This paradigm shift embeds AI into every layer of your operations – from strategic decision-making and customer engagement to backend processes and regulatory compliance. The result is a more agile, intelligent, and efficient enterprise capable of continuous innovation.</p>",
+    "keyOfferings": [
+      {
+        "title": "AI-Driven Business Model Transformation",
+        "desc": "Re-imagine and re-engineer existing business models to leverage AI for competitive advantage, new revenue streams, and optimized value delivery."
+      },
+      {
+        "title": "Intelligent Process Automation (IPA)",
+        "desc": "Automate complex, knowledge-intensive tasks using advanced AI techniques, freeing human capital for strategic initiatives and higher-value work."
+      },
+      {
+        "title": "Predictive & Prescriptive Operations",
+        "desc": "Shift from reactive to proactive operations by integrating AI for real-time insights, predictive analytics, and prescriptive recommendations across all business functions."
+      },
+      {
+        "title": "Continuous Innovation Loops",
+        "desc": "Establish feedback mechanisms where AI continuously learns and improves, driving perpetual innovation and adaptation within your service offerings."
+      },
+      {
+        "title": "Ethical AI & Governance Integration",
+        "desc": "Embed robust ethical AI frameworks and governance into every AI-first service, ensuring responsible, transparent, and compliant operations from the outset."
+      }
+    ]
   }
 }

@@ -1,11 +1,20 @@
 {
-  "hero": {
-    "badge": "AI That Moves Faster. Engineering That Lasts.",
-    "title": "Transform Your Business with Production-Ready AI",
-    "subtitle": "We partner with regulated enterprises to architect and deploy AI systems that deliver breakthrough outcomes. From Pilots to Production.",
-    "primaryCTA": "Start Your AI Journey",
-    "secondaryCTA": "View Our Work"
-  },
+  "heroBanners": [
+    {
+      "badge": "AI That Moves Faster. Engineering That Lasts.",
+      "title": "Transform Your Business with Production-Ready AI Systems Built for Regulated Industries.",
+      "subtitle": "We combine strategic insight with engineering excellence to deliver breakthrough outcomes that scale.",
+      "primaryCTA": "Start Your AI Journey",
+      "secondaryCTA": "View Our Work"
+    },
+    {
+      "badge": "Innovation at Speed",
+      "title": "Rewriting the Enterprise with AI-First Services.",
+      "subtitle": "Leverage advanced AI and agentic systems to redefine what's possible in your organization.",
+      "primaryCTA": "Discover Our Approach",
+      "secondaryCTA": "Explore Case Studies"
+    }
+  ],
   "theProblem": {
     "title": "You're Stuck in Pilot Hell.",
     "points": [
@@ -20,44 +29,124 @@
     "pillars": [
       {
         "title": "Strategic Clarity",
-        "desc": "AI opportunity assessment, roadmap, and prioritization."
+        "desc": "AI opportunity assessment, roadmap, prioritization."
       },
       {
         "title": "Engineering Excellence",
-        "desc": "Architecture-first design and production-ready systems."
+        "desc": "Architecture-first design, production-ready systems."
       },
       {
         "title": "Measured Outcomes",
-        "desc": "ROI tracking, continuous improvement, and scale."
+        "desc": "ROI tracking, continuous improvement, scale."
+      }
+    ]
+  },
+  "capabilities": {
+    "title": "Our Capabilities",
+    "subtitle": "From strategy to robust production systems, we cover the full AI lifecycle.",
+    "cards": [
+      {
+        "title": "AI Strategy & Roadmap",
+        "desc": "From opportunity assessment to 18-month transformation plan.",
+        "href": "/solutions/ai-strategy",
+        "icon": "💡"
+      },
+      {
+        "title": "AI Architecture & Modernization",
+        "desc": "Legacy modernization, data governance, infrastructure.",
+        "href": "/solutions/ai-architecture",
+        "icon": "🔗"
+      },
+      {
+        "title": "ML Engineering & MLOps",
+        "desc": "Production ML systems, monitoring, continuous deployment.",
+        "href": "/solutions/ai-engineering",
+        "icon": "⚙️"
+      },
+      {
+        "title": "Data Science & Analytics",
+        "desc": "Custom models, analytics platforms, insights engines.",
+        "href": "/solutions/data-science",
+        "icon": "📊"
+      },
+      {
+        "title": "Applied AI Research",
+        "desc": "Cutting-edge research translating into practical AI solutions.",
+        "href": "/solutions/applied-ai-research",
+        "icon": "🔬"
+      },
+      {
+        "title": "Agentic AI & Automation",
+        "desc": "Multi-agent orchestration, autonomous workflows.",
+        "href": "/solutions/agentic-ai",
+        "icon": "🤖"
+      },
+      {
+        "title": "Compliance & Governance",
+        "desc": "Regulatory frameworks, audit-readiness, risk frameworks.",
+        "href": "/solutions/ai-governance",
+        "icon": "🛡️"
+      }
+    ]
+  },
+  "industriesWeServe": {
+    "title": "Industries We Serve",
+    "subtitle": "Tailored AI solutions for complex, regulated environments.",
+    "cards": [
+      {
+        "title": "Financial Services",
+        "desc": "Fraud detection, decision support, RegTech, wealth management.",
+        "href": "/industries/financial-services",
+        "icon": "🏦"
+      },
+      {
+        "title": "Insurance",
+        "desc": "Intelligent underwriting, claims processing, risk modeling.",
+        "href": "/industries/insurance",
+        "icon": "🏥"
+      },
+      {
+        "title": "Healthcare",
+        "desc": "EMR interoperability, clinical AI, patient engagement.",
+        "href": "/industries/healthcare",
+        "icon": "🩺"
+      },
+      {
+        "title": "Industrials",
+        "desc": "Demand forecasting, predictive maintenance, supply chain optimization.",
+        "href": "/industries/industrials",
+        "icon": "🏭"
       }
     ]
   },
   "howWeWork": {
-    "title": "Agile Delivery Methodology",
+    "title": "How We Work",
+    "subtitle": "Our agile methodology ensures rapid deployment and measurable impact.",
     "phases": [
       {
         "title": "Phase 1: Understand",
         "duration": "2 weeks",
-        "desc": "AI opportunity assessment and stakeholder interviews."
+        "desc": "AI opportunity assessment, stakeholder interviews, ROI projections."
       },
       {
         "title": "Phase 2: Design",
         "duration": "4 weeks",
-        "desc": "Architecture, data governance, and risk frameworks."
+        "desc": "Architecture, data governance, risk frameworks, compliance roadmap."
       },
       {
         "title": "Phase 3: Build",
         "duration": "8-12 weeks",
-        "desc": "MVP development and MLOps infrastructure."
+        "desc": "MVP development, MLOps infrastructure, model training & validation."
       },
       {
         "title": "Phase 4: Scale",
         "duration": "Ongoing",
-        "desc": "Production deployment and continuous improvement."
+        "desc": "Production deployment, performance monitoring, continuous optimization."
       }
     ]
   },
   "proofPoints": {
+    "title": "Measured Impact. Real Outcomes.",
     "metrics": [
       { "value": "40%", "label": "Fraud Investigation Time Reduction" },
       { "value": "3-6", "label": "Months to Production" },
@@ -65,7 +154,25 @@
       { "value": "50%", "label": "Faster Audit Cycles" }
     ]
   },
-  "cta": {
+  "featuredCaseStudy": {
+    "title": "From Fragmented Data to Real-Time Intelligence",
+    "subtitle": "How a major financial institution reduced fraud investigation time by 40% and enabled real-time decision support.",
+    "cta": "Read Full Case Study",
+    "href": "/case-studies"
+  },
+  "insightsAndThoughtLeadership": {
+    "title": "Insights & Thought Leadership",
+    "subtitle": "Stay ahead of the curve with our latest research and expert commentary.",
+    "cta": "View All Resources",
+    "href": "/insights"
+  },
+  "teamAndCulture": {
+    "title": "Exceptional People. Exceptional Results.",
+    "subtitle": "Our team of AI strategists, architects, and engineers are passionate about transforming enterprises.",
+    "cta": "Join Our Team",
+    "href": "/about/careers"
+  },
+  "finalCTA": {
     "title": "Ready to Transform Your Business with AI?",
     "subtitle": "Schedule a conversation with one of our AI strategists to discuss your roadmap.",
     "primaryButton": "Schedule a Strategy Call",

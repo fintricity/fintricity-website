@@ -9,7 +9,7 @@ export const Badge = ({ children, className = "", variant, ...props }: any) => {
     secondary: "border-transparent bg-fintricity-teal text-white",
     outline: "border-fintricity-navy/30 text-fintricity-navy bg-fintricity-navy/5",
     teal: "border-transparent bg-fintricity-teal/10 text-fintricity-teal",
-    cyan: "border-transparent bg-fintricity-cyan/10 text-fintricity-teal",
+    cyan: "border-transparent bg-fintricity-cyan/10 text-fintricity-cyan", // Changed text color
   };
   const classes = `${baseClasses} ${variants[variant || "default"]} ${className}`;
   return <div className={classes} {...props}>{children}</div>;

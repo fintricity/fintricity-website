@@ -9,56 +9,58 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Fintricity Design System (Updated)
-        "fintricity-navy": "#1F3A47",   // Primary: Trust, stability
-        "fintricity-teal": "#2A6E8F",   // Secondary: Innovation
-        "fintricity-cyan": "#32B8C6",   // Accent: Energy
-        "fintricity-light-gray": "#F5F5F5", // Supporting: Backgrounds
-        "fintricity-charcoal": "#333333", // Supporting: Text
-        "fintricity-success": "#22C55E", // Status: Success
-        "fintricity-alert": "#EA580C",   // Status: Alert
+        // Core Fintricity Brand Palette (simplified mapping to granular definitions)
+        'fintricity-navy': 'var(--fintricity-navy-base)',           // Deep Navy Blue: #1F3A47
+        'fintricity-teal': 'var(--fintricity-blue-2-base)',           // Teal/Innovation Blue: #2A6E8F (mapped to blue-2)
+        'fintricity-cyan': 'var(--fintricity-teal-green-base)',           // Bright Cyan: #32B8C6 (mapped to teal-green)
+        'fintricity-charcoal': 'var(--fintricity-neutral-4)',       // Dark Gray: #333333 (mapped to neutral-4 for similar shade)
+        'fintricity-light-gray': 'var(--fintricity-neutral-1)',     // Light Gray: #F5F5F5 (mapped to neutral-1 for similar shade)
+        
+        // Functional & Secondary Colors (simplified mapping)
+        'fintricity-success-green': '#22C55E',  // Status Green
+        'fintricity-alert-orange': '#EA580C',   // Alert Orange
+        'fintricity-medium-gray': 'var(--fintricity-neutral-3)',    // Medium Gray: #666666 (mapped to neutral-3 for similar shade)
+        'fintricity-card-border': 'var(--fintricity-neutral-2)',    // Light Gray (Card Border/Grid): #E0E0E0 (mapped to neutral-2 for similar shade)
+        'fintricity-cyan-dark': '#1F9BA5',      // Darker Cyan (Primary CTA Hover)
+        'fintricity-very-light-teal': '#F0F8FA',// Very light Teal (Card Hover, Metric Callout)
 
-        // Semantic Brand Colors (Mapped to new palette)
-        "brand-primary": "var(--brand-primary)",
-        "brand-secondary": "var(--brand-secondary)",
-        "brand-accent": "var(--brand-accent)",
-        "brand-emphasis": "var(--brand-emphasis)",
+        // New Fintricity Brand Colors from Design System CSS (granular definitions)
+        'fintricity-blue-1-base': '#4B5FAE',
+        'fintricity-blue-1-1': '#D9DEF0',
+        'fintricity-blue-1-2': '#B5BEE0',
+        'fintricity-blue-1-3': '#909ED1',
+        'fintricity-blue-1-4': '#4B5FAE',
+        'fintricity-blue-1-5': '#384782',
+        
+        'fintricity-blue-2-base': '#2A6E8F', // Original Teal/Innovation Blue from user's request
+        'fintricity-blue-2-1': '#DAEDEF',
+        'fintricity-blue-2-2': '#B6DBDF',
+        'fintricity-blue-2-3': '#91C9D0',
+        'fintricity-blue-2-4': '#36A2DE',
+        'fintricity-blue-2-5': '#2E7C86',
+        
+        'fintricity-teal-green-base': '#32B8C6', // Original Bright Cyan from user's request
+        'fintricity-teal-green-1': '#E0F2F4',
+        'fintricity-teal-green-2': '#B3DFE3',
+        'fintricity-teal-green-3': '#32B8C6',
+        'fintricity-teal-green-4': '#358A93',
+        'fintricity-teal-green-5': '#2A6E76',
+        
+        'fintricity-navy-base': '#1F3A47', // Deep Navy Blue: #1F3A47 (Primary)
+        'fintricity-navy-1': '#9492D1', // Mapped from original CSS snippet, but keeping primary #1F3A47
+        'fintricity-navy-2': '#615BB9',
+        'fintricity-navy-3': '#1F3A47', // Ensuring Deep Navy Blue is #1F3A47
+        'fintricity-navy-4': '#1A1738',
+        'fintricity-navy-5': '#0D0B1C',
+        
+        'fintricity-neutral-base': '#B1BACC',
+        'fintricity-neutral-1': '#E5E8EE', // Matches #F5F5F5 closest
+        'fintricity-neutral-2': '#CAD1DD', // Matches #E0E0E0 closest
+        'fintricity-neutral-3': '#666666', // Matches #666666
+        'fintricity-neutral-4': '#333333', // Matches #333333
+        'fintricity-neutral-5': '#2A3342',
 
-        // Tailwind HSL vars, derived from globals.css for light theme
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-
-        primary: {
-          DEFAULT: "hsl(var(--primary))", // Maps to Primary Blue or a vibrant utility blue
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        // Removed default HSL colors as they are now mapped directly in global CSS
       },
       fontSize: { 
         // Brand Typography

@@ -1,5 +1,8 @@
 "use client"
 
+import ScienceIcon from '@mui/icons-material/Science';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+
 import Link from "next/link"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -17,6 +20,9 @@ import FactoryIcon from '@mui/icons-material/Factory';
 import ArticleIcon from '@mui/icons-material/Article';
 import DescriptionIcon from '@mui/icons-material/Description';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
+import SchoolIcon from '@mui/icons-material/School';
+
+
 
 const menuItems = {
   solutions: [
@@ -24,8 +30,11 @@ const menuItems = {
     { title: "AI Architecture", href: "/solutions/ai-architecture", icon: BuildIcon, desc: "Build a robust foundation for scalable AI systems." },
     { title: "ML Engineering", href: "/solutions/ai-engineering", icon: CodeIcon, desc: "Production-grade MLOps and model deployment." },
     { title: "Data Science", href: "/solutions/data-science", icon: BarChartIcon, desc: "Uncover insights with advanced custom models." },
+    { title: "Applied AI Research", href: "/solutions/applied-ai-research", icon: ScienceIcon, desc: "Cutting-edge research translating into practical AI solutions." },
     { title: "Agentic AI", href: "/solutions/agentic-ai", icon: ExtensionIcon, desc: "Multi-agent systems and autonomous workflows." },
     { title: "Compliance", href: "/solutions/ai-governance", icon: ShieldIcon, desc: "Ensure your AI is audit-ready and compliant." },
+    { title: "Implementation & Delivery", href: "/solutions/implementation-delivery", icon: RocketLaunchIcon, desc: "Agile methodology, rapid deployment, and MLOps." },
+    { title: "Training & Education", href: "/solutions/training-education", icon: SchoolIcon, desc: "Upskill your team for the AI-native enterprise." },
   ],
   industries: [
     { title: "Financial Services", href: "/industries/financial-services", icon: AccountBalanceIcon, desc: "Fraud detection, decision support, and RegTech." },
@@ -48,7 +57,7 @@ function Megamenu({ items, isOpen, onClose, onMouseEnter }: { items: any[], isOp
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}
-          className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-gray-100 z-50 py-16"
+          className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-fintricity-card-border z-50 py-16"
           onMouseEnter={onMouseEnter}
           onMouseLeave={onClose}
         >
@@ -94,21 +103,23 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-200">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-fintricity-card-border">
       <div className="container mx-auto flex h-20 items-center justify-between px-6 relative">
         <div className="flex items-center gap-2">
-          <Link href="/" className="text-2xl font-bold text-brand-primary tracking-tight">
+          <Link href="/" className="text-2xl font-bold text-fintricity-navy tracking-tight">
             Fintricity
           </Link>
         </div>
 
         <nav className="hidden md:flex items-center gap-10">
+          <Link href="/services" className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors">Services</Link>
+
           <div 
             className="relative h-20 flex items-center"
             onMouseEnter={() => handleMouseEnter('solutions')}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors flex items-center gap-1">
+            <button className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors flex items-center gap-1">
               Solutions <span className="text-xs opacity-50">▼</span>
             </button>
           </div>
@@ -118,7 +129,7 @@ export function Header() {
             onMouseEnter={() => handleMouseEnter('industries')}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors flex items-center gap-1">
+            <button className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors flex items-center gap-1">
               Industries <span className="text-xs opacity-50">▼</span>
             </button>
           </div>
@@ -128,12 +139,12 @@ export function Header() {
             onMouseEnter={() => handleMouseEnter('insights')}
             onMouseLeave={handleMouseLeave}
           >
-            <button className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors flex items-center gap-1">
+            <button className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors flex items-center gap-1">
               Insights <span className="text-xs opacity-50">▼</span>
             </button>
           </div>
 
-          <Link href="/about" className="text-sm font-bold text-fintricity-charcoal hover:text-brand-primary transition-colors">About</Link>
+          <Link href="/about" className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors">About</Link>
         </nav>
 
         <div className="flex items-center gap-4">

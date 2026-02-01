@@ -44,14 +44,14 @@ const footerLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16 px-4">
+    <footer className="bg-fintricity-navy text-white py-16 px-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-6 text-2xl font-bold text-white tracking-tight">
               Fintricity
             </Link>
-            <p className="text-gray-400 max-w-sm mb-6">
+            <p className="text-fintricity-light-gray max-w-sm mb-6">
               The Operating System for the Agentic Enterprise. Build, deploy, and govern autonomous AI agents that reason, collaborate, and execute at scale.
             </p>
           </div>
@@ -61,7 +61,7 @@ export function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-gray-400 hover:text-fintricity-teal transition-colors text-sm">
+                    <Link href={link.href} className="text-fintricity-light-gray hover:text-fintricity-teal transition-colors text-sm">
                       {link.label}
                     </Link>
                   </li>
@@ -70,12 +70,12 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+        <div className="border-t border-fintricity-charcoal pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-fintricity-medium-gray">
           <p>© {new Date().getFullYear()} Fintricity. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="/" className="hover:text-white">LinkedIn</Link>
-            <Link href="/" className="hover:text-white">Twitter</Link>
-            <Link href="/" className="hover:text-white">GitHub</Link>
+            <Link href="/" className="hover:text-fintricity-cyan">LinkedIn</Link>
+            <Link href="/" className="hover:text-fintricity-cyan">Twitter</Link>
+            <Link href="/" className="hover:text-fintricity-cyan">GitHub</Link>
           </div>
         </div>
       </div>

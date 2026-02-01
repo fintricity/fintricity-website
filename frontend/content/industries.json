@@ -13,13 +13,121 @@
       "title": "AI That Passes the Audit.",
       "subtitle": "Transform operations while maintaining compliance, control, and competitive edge."
     },
-    "keySolutions": [
-      "AI-Powered Fraud Detection & Prevention",
-      "Intelligent Customer Service & Analytics",
-      "RegTech & Compliance Automation",
-      "Trade & Risk Intelligence",
-      "Wealth Management Personalization"
-    ]
+    "challenge": {
+      "title": "The Financial Services Paradox",
+      "points": [
+        "75% of GenAI pilots in banking never scale.",
+        "Legacy systems lock up nearly 80% of IT budgets.",
+        "Competitive pressures mount while risk frameworks tighten.",
+        "You need AI-driven innovation without sacrificing audit-readiness."
+      ]
+    },
+    "solutionsHub": [
+      {
+        "title": "AI-Powered Fraud Detection & Prevention",
+        "benefits": "40% reduction in fraud investigation time, real-time anomaly detection, reduced false positives.",
+        "useCases": "Payment fraud, account takeover, wire transfer monitoring, cross-channel correlation.",
+        "regulatoryFocus": "FCPA, AML, BSA compliance.",
+        "cta": "Explore Fraud AI"
+      },
+      {
+        "title": "Intelligent Customer Service & Analytics",
+        "benefits": "60% reduction in resolution time, predictive churn, personalized engagement.",
+        "useCases": "Intelligent chatbots, predictive dashboards, sentiment analysis, cross-sell optimization.",
+        "regulatoryFocus": "Consumer protection, fair lending.",
+        "cta": "Explore Customer AI"
+      },
+      {
+        "title": "RegTech & Compliance Automation",
+        "benefits": "Real-time regulatory monitoring, automated reporting, reduced audit time.",
+        "useCases": "Regulatory monitoring, policy enforcement, compliance reporting, risk assessment.",
+        "regulatoryFocus": "DORA, GDPR, regulatory reporting.",
+        "cta": "Explore RegTech Solutions"
+      },
+      {
+        "title": "Trade & Risk Intelligence",
+        "benefits": "Faster risk assessment, improved decision support, scenario modeling.",
+        "useCases": "Quantitative modeling, market intelligence, trade surveillance, portfolio optimization.",
+        "regulatoryFocus": "Market abuse regulations, position limits.",
+        "cta": "Explore Risk Solutions"
+      },
+      {
+        "title": "Wealth Management Personalization",
+        "benefits": "Personalized strategies, improved retention, faster onboarding.",
+        "useCases": "Robo-advisory, propensity modeling, portfolio rebalancing, KYC/AML automation.",
+        "regulatoryFocus": "Fiduciary duty, fair dealing.",
+        "cta": "Explore Wealth AI"
+      },
+      {
+        "title": "Data Governance & Architecture Modernization",
+        "benefits": "Unified data view, regulatory compliance, foundation for AI.",
+        "useCases": "Data lakes, master data management, data lineage, governance automation.",
+        "regulatoryFocus": "BCBS 239, GDPR data handling.",
+        "cta": "Explore Data Architecture"
+      }
+    ],
+    "successMetrics": [
+      { "value": "40%", "label": "Fraud Investigation Time Reduction" },
+      { "value": "3-6", "label": "Months to Production" },
+      { "value": "20%", "label": "IT Budget Freed" },
+      { "value": "50%", "label": "Faster Audit Cycles" }
+    ],
+    "featuredCaseStudies": [
+      "From Fragmented Data to Real-Time Fraud Detection",
+      "Automating Compliance Reporting at Scale",
+      "AI-Driven Risk Modeling for Portfolio Management",
+      "Scaling RegTech Infrastructure"
+    ],
+    "complianceAndSecurity": {
+      "title": "Compliance & Security",
+      "points": [
+        "SOC 2 Type II certified",
+        "HIPAA-ready (where applicable)",
+        "GDPR compliant data handling",
+        "Explainable AI frameworks",
+        "Audit-ready governance"
+      ]
+    },
+    "regulatoryFramework": {
+      "title": "Regulatory Framework",
+      "keyComplianceAreas": [
+        "DORA (Digital Operational Resilience Act)",
+        "EU AI Act compliance",
+        "BCBS 239 (data governance)",
+        "PCI-DSS, SOX, MiFID II",
+        "Local regulatory requirements"
+      ],
+      "downloadCta": "FS AI Compliance Playbook"
+    },
+    "implementationApproach": {
+      "phases": [
+        {
+          "title": "Phase 1: Opportunity Assessment",
+          "duration": "2 weeks",
+          "desc": "AI maturity assessment, use case prioritization, risk & compliance assessment, ROI projections."
+        },
+        {
+          "title": "Phase 2: Architecture & Governance Design",
+          "duration": "4 weeks",
+          "desc": "System architecture design, data governance framework, compliance roadmap, team structure & roles."
+        },
+        {
+          "title": "Phase 3: MVP Development & MLOps",
+          "duration": "8-12 weeks",
+          "desc": "Rapid prototyping, model training & validation, MLOps infrastructure setup, pilot deployment."
+        },
+        {
+          "title": "Phase 4: Scale & Optimization",
+          "duration": "Ongoing",
+          "desc": "Full production deployment, performance monitoring, continuous improvement cycles, governance enforcement."
+        }
+      ]
+    },
+    "callToAction": {
+      "title": "Ready to Transform Your Financial Institution?",
+      "subtitle": "Let's discuss your AI strategy and opportunities.",
+      "ctaText": "Schedule a Strategy Call"
+    }
   },
   "insurance": {
     "title": "Insurance",
@@ -28,15 +136,104 @@
     "hero": {
       "badge": "Insurance",
       "title": "Underwrite the Future. Intelligently.",
-      "subtitle": "AI-powered underwriting, claims, and risk management that improve accuracy and speed."
+      "subtitle": "AI-powered underwriting, claims, and risk intelligence that improve accuracy and speed."
     },
-    "keySolutions": [
-      "Intelligent Underwriting Platforms",
-      "AI-Driven Claims Processing",
+    "challenge": {
+      "title": "Insurance at the Inflection Point",
+      "points": [
+        "Claims backlogs slow customer experience and drain margins.",
+        "Manual underwriting delays competitiveness.",
+        "Legacy systems can't keep pace with emerging risks.",
+        "You need intelligent systems that improve accuracy while reducing cycle times."
+      ]
+    },
+    "solutionsHub": [
+      {
+        "title": "Intelligent Underwriting Platforms",
+        "benefits": "50% faster underwriting, improved accuracy, reduced manual review.",
+        "useCases": "Personal lines, commercial, specialty risk assessment.",
+        "regulatoryFocus": "Fair lending, discrimination prevention.",
+        "cta": "Explore Underwriting AI"
+      },
+      {
+        "title": "AI-Driven Claims Processing",
+        "benefits": "60% faster processing, reduced fraud, better experience.",
+        "useCases": "First notice of loss, assessment automation, settlement optimization.",
+        "regulatoryFocus": "Consumer protection, claims handling regulations.",
+        "cta": "Explore Claims AI"
+      },
+      {
+        "title": "Predictive Risk Modeling",
+        "benefits": "Improved pricing accuracy, better reserves, competitive advantage.",
+        "useCases": "Catastrophe modeling, pricing optimization, reserve forecasting.",
+        "regulatoryFocus": "Actuarial standards, solvency requirements.",
+        "cta": "Explore Risk Modeling"
+      },
+      {
+        "title": "Customer Experience & Retention",
+        "benefits": "Improved retention, better experience, increased loyalty.",
+        "useCases": "Propensity modeling, personalized communications, loyalty programs.",
+        "regulatoryFocus": "Consumer fair dealing, transparency.",
+        "cta": "Explore Customer Experience AI"
+      },
+      {
+        "title": "Fraud Detection & Prevention",
+        "benefits": "40% improvement in detection, faster investigation, cost savings.",
+        "useCases": "Claims fraud, application fraud, organized fraud rings.",
+        "regulatoryFocus": "Anti-fraud regulations, investigation standards.",
+        "cta": "Explore Fraud Detection"
+      }
+    ],
+    "successMetrics": [
+      { "value": "60%", "label": "Claims Processing Speed" },
+      { "value": "50%", "label": "Underwriting Efficiency" },
+      { "value": "40%", "label": "Fraud Prevention" },
+      { "value": "15-25%", "label": "Customer Satisfaction NPS" }
+    ],
+    "featuredCaseStudies": [
+      "Accelerating Claims Processing by 60%",
+      "Intelligent Underwriting at Scale",
       "Predictive Risk Modeling",
-      "Customer Experience & Retention",
-      "Fraud Detection & Prevention"
-    ]
+      "Fraud Detection Network"
+    ],
+    "complianceAndGovernance": {
+      "title": "Compliance & Governance",
+      "points": [
+        "Fair lending & discrimination prevention built-in",
+        "Explainable AI for audit readiness",
+        "Claims handling regulation compliance"
+      ],
+      "downloadCta": "Insurance AI Governance Guide"
+    },
+    "implementationApproach": {
+      "phases": [
+        {
+          "title": "Phase 1: Opportunity Assessment",
+          "duration": "2 weeks",
+          "desc": "AI maturity assessment, use case prioritization, risk & compliance assessment, ROI projections."
+        },
+        {
+          "title": "Phase 2: Architecture & Governance Design",
+          "duration": "4 weeks",
+          "desc": "System architecture design, data governance framework, compliance roadmap, team structure & roles."
+        },
+        {
+          "title": "Phase 3: MVP Development & MLOps",
+          "duration": "8-12 weeks",
+          "desc": "Rapid prototyping, model training & validation, MLOps infrastructure setup, pilot deployment."
+        },
+        {
+          "title": "Phase 4: Scale & Optimization",
+          "duration": "Ongoing",
+          "desc": "Full production deployment, performance monitoring, continuous improvement cycles, governance enforcement."
+        }
+      ]
+    },
+    "callToAction": {
+      "title": "Ready to Transform Your Insurance Business?",
+      "subtitle": "Let's discuss your AI strategy and opportunities.",
+      "ctaText": "Schedule an Insurance AI Strategy Call"
+    }
   },
   "healthcare": {
     "title": "Healthcare",
@@ -45,15 +242,105 @@
     "hero": {
       "badge": "Healthcare",
       "title": "Care Decisions That Are Faster. Safer. Smarter.",
-      "subtitle": "Clinical AI that respects privacy and improves outcomes."
+      "subtitle": "Clinical AI that respects privacy and improves patient outcomes."
     },
-    "keySolutions": [
-      "EMR Integration & Interoperability",
-      "Clinical Decision Support",
-      "Predictive Analytics & Outcomes",
-      "Patient Engagement Platforms",
-      "Administrative Automation"
-    ]
+    "challenge": {
+      "title": "Modern Healthcare Demands Intelligent Systems",
+      "points": [
+        "Patient data sits in silos—EMRs don't talk to each other.",
+        "Clinical teams drown in administrative work.",
+        "Outcomes depend on data integration and real-time insights.",
+        "You need AI that improves care without compromising privacy."
+      ]
+    },
+    "solutionsHub": [
+      {
+        "title": "EMR Integration & Interoperability",
+        "benefits": "Complete patient view, reduced duplication, better coordination.",
+        "useCases": "Cross-system integration, master patient indices, care continuity.",
+        "regulatoryFocus": "HIPAA, HL7 standards, state privacy laws.",
+        "cta": "Explore EMR Integration"
+      },
+      {
+        "title": "Clinical Decision Support",
+        "benefits": "Improved diagnostic accuracy, better planning, reduced variations.",
+        "useCases": "Diagnostic assistance, treatment optimization, readmission prevention.",
+        "regulatoryFocus": "FDA regulations, practice standards.",
+        "cta": "Explore Clinical AI"
+      },
+      {
+        "title": "Predictive Analytics & Outcomes",
+        "benefits": "Early intervention, resource optimization, better outcomes.",
+        "useCases": "Readmission risk, sepsis prediction, deterioration alerts.",
+        "regulatoryFocus": "Fairness in healthcare AI, bias mitigation.",
+        "cta": "Explore Predictive Analytics"
+      },
+      {
+        "title": "Patient Engagement Platforms",
+        "benefits": "Better engagement, improved compliance, better outcomes.",
+        "useCases": "Smart portals, medication adherence, wellness programs.",
+        "regulatoryFocus": "HIPAA, 21st Century Cures Act.",
+        "cta": "Explore Patient Engagement"
+      },
+      {
+        "title": "Administrative Automation",
+        "benefits": "Reduced burden, faster processing, cost savings.",
+        "useCases": "Insurance verification, prior auth automation, billing optimization.",
+        "regulatoryFocus": "Healthcare regulations, compliance automation.",
+        "cta": "Explore Administrative Automation"
+      }
+    ],
+    "successMetrics": [
+      { "value": "40%", "label": "Care Coordination Time Improvement" },
+      { "value": "50%", "label": "Administrative Efficiency Reduction" },
+      { "value": "Improved", "label": "Patient Outcomes" },
+      { "value": "Complete", "label": "Data Integration View" }
+    ],
+    "featuredCaseStudies": [
+      "Unified Patient Data, Better Care Outcomes",
+      "Clinical Decision Support at Scale",
+      "Patient Portal Reimagined",
+      "Automating Prior Authorization"
+    ],
+    "complianceAndPrivacy": {
+      "title": "HIPAA & Privacy by Design",
+      "points": [
+        "HIPAA Business Associate Agreement provided",
+        "Encryption and access controls throughout",
+        "Privacy impact assessments for every AI system",
+        "Patient consent and transparency frameworks"
+      ],
+      "downloadCta": "Healthcare AI Privacy & Security Guide"
+    },
+    "implementationApproach": {
+      "phases": [
+        {
+          "title": "Phase 1: Opportunity Assessment",
+          "duration": "2 weeks",
+          "desc": "AI maturity assessment, use case prioritization, risk & compliance assessment, ROI projections."
+        },
+        {
+          "title": "Phase 2: Architecture & Governance Design",
+          "duration": "4 weeks",
+          "desc": "System architecture design, data governance framework, compliance roadmap, team structure & roles."
+        },
+        {
+          "title": "Phase 3: MVP Development & MLOps",
+          "duration": "8-12 weeks",
+          "desc": "Rapid prototyping, model training & validation, MLOps infrastructure setup, pilot deployment."
+        },
+        {
+          "title": "Phase 4: Scale & Optimization",
+          "duration": "Ongoing",
+          "desc": "Full production deployment, performance monitoring, continuous improvement cycles, governance enforcement."
+        }
+      ]
+    },
+    "callToAction": {
+      "title": "Ready to Transform Healthcare with AI?",
+      "subtitle": "Let's discuss your AI strategy and opportunities.",
+      "ctaText": "Schedule a Healthcare AI Strategy Call"
+    }
   },
   "industrials": {
     "title": "Industrials",
@@ -64,12 +351,92 @@
       "title": "Your Supply Chain Sees Around Corners.",
       "subtitle": "Demand forecasting, predictive maintenance, and autonomous coordination."
     },
-    "keySolutions": [
-      "Demand Forecasting & Planning",
-      "Predictive Maintenance & IoT",
-      "Supply Chain Optimization",
-      "Manufacturing Operations",
-      "Agentic Automation"
-    ]
+    "challenge": {
+      "title": "Industrial Enterprises Demand Intelligent Systems",
+      "points": [
+        "Supply chain disruptions cascade without visibility.",
+        "Reactive maintenance drains budgets and disrupts production.",
+        "Manual coordination across factories and suppliers is inefficient.",
+        "You need systems that anticipate demand, prevent failures, and coordinate autonomously."
+      ]
+    },
+    "solutionsHub": [
+      {
+        "title": "Demand Forecasting & Planning",
+        "benefits": "35% improvement in forecast accuracy, inventory optimization, cost reduction.",
+        "useCases": "Demand sensing, production planning, inventory optimization, pricing.",
+        "businessImpact": "Reduced holding, better response.",
+        "cta": "Explore Demand Forecasting"
+      },
+      {
+        "title": "Predictive Maintenance & IoT",
+        "benefits": "30-40% reduction in downtime, planned maintenance, extended asset life.",
+        "useCases": "Equipment monitoring, failure prediction, maintenance scheduling.",
+        "businessImpact": "Reduced unplanned downtime, extended equipment life.",
+        "cta": "Explore Predictive Maintenance"
+      },
+      {
+        "title": "Supply Chain Optimization",
+        "benefits": "Visibility across network, risk identification, cost optimization.",
+        "useCases": "Supplier optimization, logistics planning, risk monitoring.",
+        "businessImpact": "Reduced disruption, lower logistics costs.",
+        "cta": "Explore Supply Chain AI"
+      },
+      {
+        "title": "Manufacturing Operations",
+        "benefits": "Production efficiency, quality enhancement, cost reduction.",
+        "useCases": "Production scheduling, quality control, asset utilization.",
+        "businessImpact": "Higher throughput, better quality, lower costs.",
+        "cta": "Explore Manufacturing AI"
+      },
+      {
+        "title": "Agentic Automation & Orchestration",
+        "benefits": "Faster decision cycles, 24/7 coordination, human oversight.",
+        "useCases": "Supply chain orchestration, dynamic resource allocation, cross-functional coordination.",
+        "businessImpact": "Faster response, improved resilience.",
+        "cta": "Explore Agentic AI"
+      }
+    ],
+    "successMetrics": [
+      { "value": "35%", "label": "Forecast Accuracy Improvement" },
+      { "value": "30-40%", "label": "Equipment Downtime Reduction" },
+      { "value": "Complete", "label": "Supply Chain Visibility" },
+      { "value": "15-25%", "label": "Operational Efficiency Improvement" }
+    ],
+    "featuredCaseStudies": [
+      "Demand Forecasting Accuracy Improved 35%",
+      "Predictive Maintenance Reduces Downtime",
+      "Supply Chain Visibility at Scale",
+      "Autonomous Supply Chain Coordination"
+    ],
+    "implementationApproach": {
+      "phases": [
+        {
+          "title": "Phase 1: Opportunity Assessment",
+          "duration": "2 weeks",
+          "desc": "AI maturity assessment, use case prioritization, risk & compliance assessment, ROI projections."
+        },
+        {
+          "title": "Phase 2: Architecture & Governance Design",
+          "duration": "4 weeks",
+          "desc": "System architecture design, data governance framework, compliance roadmap, team structure & roles."
+        },
+        {
+          "title": "Phase 3: MVP Development & MLOps",
+          "duration": "8-12 weeks",
+          "desc": "Rapid prototyping, model training & validation, MLOps infrastructure setup, pilot deployment."
+        },
+        {
+          "title": "Phase 4: Scale & Optimization",
+          "duration": "Ongoing",
+          "desc": "Full production deployment, performance monitoring, continuous improvement cycles, governance enforcement."
+        }
+      ]
+    },
+    "callToAction": {
+      "title": "Ready to Optimize Your Industrial Operations with AI?",
+      "subtitle": "Let's discuss your AI strategy and opportunities.",
+      "ctaText": "Schedule an Industrial AI Strategy Call"
+    }
   }
 }

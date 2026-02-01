@@ -1,34 +1,85 @@
 {
   "hero": {
-    "badge": "The Pragmatic Visionary",
-    "title": "Rewire Your Business for the Age of Autonomous Intelligence.",
-    "subtitle": "Fintricity is the AI-first consulting and engineering firm for enterprises that can't afford to experiment. We partner with regulated industries to architect and deploy AI systems that deliver breakthrough outcomes."
+    "badge": "Our Story & Vision",
+    "title": "Redefining Enterprise with AI-First Innovation Since 2001.",
+    "subtitle": "From digital transformation pioneers to leaders in autonomous intelligence, Fintricity has consistently pushed the boundaries of what's possible in regulated industries.",
+    "cta": "Explore Our Journey"
   },
-  "pillars": [
-    {
-      "title": "Leading Delivery",
-      "desc": "We've redefined the SDLC. Using our proprietary AI-augmented pods, we deliver software at unprecedented speed and precision, moving from pilots to production in months."
-    },
-    {
-      "title": "Applied Research",
-      "desc": "We don't wait for the future; we build it. Our research division focuses on multi-agent orchestration, cognitive architectures, and AI economics to keep you on the frontier."
-    },
-    {
-      "title": "Asset-Based Consulting",
-      "desc": "Stop building the plumbing. We leverage our proven AI engines and industry accelerators to solve the 'Last Mile' problem instantly, aligning our pricing with your impact."
-    }
-  ],
-  "story": {
-    "title": "Engineering That Lasts.",
+  "ourStory": {
+    "title": "Two Decades of Pioneering Digital Transformation",
     "paragraphs": [
-      "Fintricity was born in the data era, but we were built for the AI era. While others were retrofitting chatbots onto legacy systems, we were researching the fundamentals of Agentic Architectures.",
-      "We realized that the future of business isn't about 'human-in-the-loop'—it's about 'human-on-the-loop.' We exist to help visionary leaders rewire their organizations for this new reality, providing the engineering peace of mind to deploy autonomous systems at scale."
+      "Founded in 2001, Fintricity began its journey at the dawn of digital transformation, initially focusing on bringing innovative technology solutions to complex business challenges, particularly within the financial services industry. Our early success was built on a deep understanding of business needs combined with a relentless pursuit of technological excellence.",
+      "Over the years, our expertise evolved, embracing data-driven strategies and advanced analytics. As the landscape shifted towards Artificial Intelligence, so did Fintricity. We recognized early on that AI would not just be another tool, but the fundamental operating system for future enterprises. This led us to pivot our focus, transitioning from traditional digital consulting to specializing in AI-First Services and autonomous intelligence.",
+      "Today, we stand as a leader in architecting, developing, and governing production-ready AI systems for regulated industries. Our journey is a testament to continuous innovation, adapting to and shaping the technological frontier to deliver unparalleled value to our clients."
     ]
   },
-  "values": [
-    { "title": "Engineering Excellence", "desc": "Clean architecture, scalable systems, no shortcuts." },
-    { "title": "Measured Impact", "desc": "ROI-focused, outcome-driven, outcome-accountable." },
-    { "title": "Agile Delivery", "desc": "Speed without sacrificing quality or compliance." },
-    { "title": "Trusted Partnership", "desc": "Deep industry knowledge, ethical practices, transparency." }
-  ]
+  "ourMission": {
+    "title": "Our Mission: Architecting the Future of Intelligent Enterprises",
+    "description": "To empower regulated enterprises to harness the full potential of AI by delivering cutting-edge research, strategic consulting, and robust engineering solutions that drive efficiency, foster innovation, and ensure compliant, ethical growth. We aim to make AI the core of every business function, creating truly intelligent and autonomous operations."
+  },
+  "ourValues": {
+    "title": "Values That Guide Our Every Endeavor",
+    "items": [
+      {
+        "icon": "IntegrityIcon", // Placeholder, will map to MUI icon or similar
+        "title": "Integrity & Trust",
+        "description": "Upholding the highest ethical standards, ensuring transparency, and building enduring trust with our clients and partners."
+      },
+      {
+        "icon": "CollaborationIcon", // Placeholder
+        "title": "Collaboration & Partnership",
+        "description": "Working hand-in-hand with our clients, fostering a spirit of mutual growth and shared success, and valuing diverse perspectives."
+      },
+      {
+        "icon": "InnovationIcon", // Placeholder
+        "title": "Continuous Learning & Innovation",
+        "description": "Relentlessly pursuing new knowledge, embracing emerging technologies, and constantly refining our approaches to deliver superior solutions."
+      },
+      {
+        "icon": "IndependenceIcon", // Placeholder
+        "title": "Independent & Objective",
+        "description": "Providing unbiased advice and solutions, always prioritizing our clients' best interests over external influences."
+      },
+      {
+        "icon": "BusinessFirstIcon", // Placeholder
+        "title": "Business-First Approach",
+        "description": "Grounding all technological solutions in tangible business value, ensuring AI drives strategic outcomes and measurable ROI."
+      }
+    ]
+  },
+  "leadershipTeam": {
+    "title": "Meet Our Visionary Leaders",
+    "subtitle": "Our leadership team combines deep industry expertise with unparalleled AI foresight.",
+    "members": [
+      {
+        "name": "Alpesh Doshi",
+        "title": "Founder & CEO",
+        "bio": "A seasoned pioneer in financial technology and digital transformation, Alpesh founded Fintricity in 2001. He now leads the company's vision in architecting AI-First enterprises for regulated industries.",
+        "image": "/images/team/alpesh.jpg"
+      },
+      {
+        "name": "Dr. Sarah Chen",
+        "title": "Chief AI Architect",
+        "bio": "With a Ph.D. in AI and extensive experience building large-scale intelligent systems, Sarah spearheads our advanced AI architecture and research initiatives.",
+        "image": "/images/team/sarah.jpg"
+      },
+      {
+        "name": "Richard Hilsley",
+        "title": "Head of Strategic Partnerships",
+        "bio": "Richard leverages decades of experience to forge powerful collaborations, expanding Fintricity's reach and delivering integrated client solutions.",
+        "image": "/images/team/richard.jpg"
+      },
+      {
+        "name": "Maria Rodriguez",
+        "title": "Head of Regulatory Affairs",
+        "bio": "Maria ensures all Fintricity's AI deployments are fully compliant with global regulatory standards, providing ethical and audit-ready AI governance.",
+        "image": "/images/team/maria.jpg"
+      }
+    ]
+  },
+  "callToAction": {
+    "title": "Ready to Partner with an AI Pioneer?",
+    "subtitle": "Connect with us to explore how Fintricity can accelerate your journey to an AI-First enterprise.",
+    "ctaText": "Contact Our Experts"
+  }
 }

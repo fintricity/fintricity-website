@@ -4,15 +4,9 @@
 
 @layer base {
   :root {
+    /* Standard Tailwind HSL variables */
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
-    
-    /* Fintricity Design System */
-    --brand-primary: #1F3A47;   /* Navy */
-    --brand-secondary: #2A6E8F; /* Teal */
-    --brand-accent: #32B8C6;    /* Cyan */
-    --brand-emphasis: #22C55E;  /* Success Green */
-    
     --radius: 0.5rem;
   }
   
@@ -23,11 +17,8 @@
 }
 
 @layer base {
-  * { @apply border-gray-200; }
   body { 
-    @apply bg-white text-fintricity-charcoal font-sans;
-    font-size: 16px;
-    line-height: 1.6;
+    @apply bg-fintricity-light-gray text-fintricity-charcoal font-sans;
   }
   
   h1 {
@@ -47,7 +38,7 @@
   }
 
   p {
-    @apply text-body-secondary md:text-body-primary mb-4;
+    @apply text-body-secondary md:text-body-primary mb-4 text-fintricity-charcoal leading-normal;
   }
 }
 
@@ -61,10 +52,3 @@
   background-size: 200% 200%;
   animation: gradientBG 15s ease infinite;
 }
-
-/* Fintricity Custom Utilities */
-.text-brand-primary { color: var(--brand-primary); }
-.bg-brand-primary { background-color: var(--brand-primary); }
-.text-brand-secondary { color: var(--brand-secondary); }
-.text-brand-accent { color: var(--brand-accent); }
-.text-brand-emphasis { color: var(--brand-emphasis); }
