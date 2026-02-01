@@ -7,6 +7,7 @@
     /* Standard Tailwind HSL variables */
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
+    
     --radius: 0.5rem;
   }
   
@@ -41,6 +42,8 @@
     @apply text-body-secondary md:text-body-primary mb-4 text-fintricity-charcoal leading-normal;
   }
 }
+
+/* Removed diagnostic rule for .bg-fintricity-navy to test Tailwind class alone */
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }

@@ -9,18 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Core Fintricity Brand Palette (simplified mapping to granular definitions)
-        'fintricity-navy': 'var(--fintricity-navy-base)',           // Deep Navy Blue: #1F3A47
-        'fintricity-teal': 'var(--fintricity-blue-2-base)',           // Teal/Innovation Blue: #2A6E8F (mapped to blue-2)
-        'fintricity-cyan': 'var(--fintricity-teal-green-base)',           // Bright Cyan: #32B8C6 (mapped to teal-green)
-        'fintricity-charcoal': 'var(--fintricity-neutral-4)',       // Dark Gray: #333333 (mapped to neutral-4 for similar shade)
-        'fintricity-light-gray': 'var(--fintricity-neutral-1)',     // Light Gray: #F5F5F5 (mapped to neutral-1 for similar shade)
+        // Core Fintricity Brand Palette (now direct hex values for top-level names)
+        'fintricity-navy': '#1F3A47',           // Primary: Deep Navy Blue
+        'fintricity-teal': '#2A6E8F',           // Secondary: Teal/Innovation Blue
+        'fintricity-cyan': '#32B8C6',           // Accent: Bright Cyan
+        'fintricity-charcoal': '#333333',       // Supporting: Dark Gray (Body Text)
+        'fintricity-light-gray': '#F5F5F5',     // Supporting: Light Gray (Section Backgrounds)
         
-        // Functional & Secondary Colors (simplified mapping)
+        // Functional & Secondary Colors (now direct hex values)
         'fintricity-success-green': '#22C55E',  // Status Green
         'fintricity-alert-orange': '#EA580C',   // Alert Orange
-        'fintricity-medium-gray': 'var(--fintricity-neutral-3)',    // Medium Gray: #666666 (mapped to neutral-3 for similar shade)
-        'fintricity-card-border': 'var(--fintricity-neutral-2)',    // Light Gray (Card Border/Grid): #E0E0E0 (mapped to neutral-2 for similar shade)
+        'fintricity-medium-gray': '#666666',    // Medium Gray
+        'fintricity-card-border': '#E0E0E0',    // Light Gray (Card Border/Grid)
         'fintricity-cyan-dark': '#1F9BA5',      // Darker Cyan (Primary CTA Hover)
         'fintricity-very-light-teal': '#F0F8FA',// Very light Teal (Card Hover, Metric Callout)
 
@@ -47,20 +47,18 @@ const config: Config = {
         'fintricity-teal-green-5': '#2A6E76',
         
         'fintricity-navy-base': '#1F3A47', // Deep Navy Blue: #1F3A47 (Primary)
-        'fintricity-navy-1': '#9492D1', // Mapped from original CSS snippet, but keeping primary #1F3A47
+        'fintricity-navy-1': '#9492D1', 
         'fintricity-navy-2': '#615BB9',
         'fintricity-navy-3': '#1F3A47', // Ensuring Deep Navy Blue is #1F3A47
         'fintricity-navy-4': '#1A1738',
         'fintricity-navy-5': '#0D0B1C',
         
         'fintricity-neutral-base': '#B1BACC',
-        'fintricity-neutral-1': '#E5E8EE', // Matches #F5F5F5 closest
-        'fintricity-neutral-2': '#CAD1DD', // Matches #E0E0E0 closest
-        'fintricity-neutral-3': '#666666', // Matches #666666
-        'fintricity-neutral-4': '#333333', // Matches #333333
+        'fintricity-neutral-1': '#E5E8EE', 
+        'fintricity-neutral-2': '#CAD1DD', 
+        'fintricity-neutral-3': '#666666', 
+        'fintricity-neutral-4': '#333333', 
         'fintricity-neutral-5': '#2A3342',
-
-        // Removed default HSL colors as they are now mapped directly in global CSS
       },
       fontSize: { 
         // Brand Typography
@@ -87,7 +85,8 @@ const config: Config = {
         sm: "calc(0.75rem - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "system-run", "sans-serif"], // Inter for headings and body
+        mono: ["'JetBrains Mono'", "monospace"], // JetBrains Mono for code/data
       },
     },
   },

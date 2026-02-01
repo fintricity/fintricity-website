@@ -101,8 +101,10 @@ function HeroBanner({ banners }: { banners: any[] }) {
 
   return (
     <section 
-      className="relative py-24 md:py-40 overflow-hidden bg-fintricity-navy text-white bg-mesh-gradient animate-gradient-background" 
+      className="relative py-24 md:py-40 overflow-hidden bg-fintricity-navy text-white" 
+      // Removed inline style as we're testing Tailwind class application
     >
+      {/* Removed overlay classes to isolate bg-fintricity-navy */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatePresence mode="wait">
