@@ -101,10 +101,11 @@ function HeroBanner({ banners }: { banners: any[] }) {
 
   return (
     <section 
-      className="relative py-24 md:py-40 overflow-hidden bg-fintricity-navy text-white" 
-      // Removed inline style as we're testing Tailwind class application
+      className="relative py-24 md:py-40 overflow-hidden text-white" 
+      // Using inline style for direct color application as a final diagnostic
+      style={{ backgroundColor: '#1F3A47' }} 
     >
-      {/* Removed overlay classes to isolate bg-fintricity-navy */}
+      {/* Removed Tailwind classes related to background for isolation */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatePresence mode="wait">

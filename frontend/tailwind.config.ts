@@ -85,7 +85,7 @@ const config: Config = {
         sm: "calc(0.75rem - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-run", "sans-serif"], // Inter for headings and body
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"], // Inter for headings and body
         mono: ["'JetBrains Mono'", "monospace"], // JetBrains Mono for code/data
       },
     },
