@@ -3,7 +3,7 @@ import { Button } from "@/components/button" // Import Button from its new locat
 
 const footerLinks = [
   {
-    title: "Solutions",
+    title: "Services",
     links: [
       { label: "AI Strategy", href: "/solutions/ai-strategy" },
       { label: "AI Architecture", href: "/solutions/ai-architecture" },

@@ -64,7 +64,7 @@ export function SolutionsClient({ content }: { content: any }) {
                   <h3 className="text-xl font-bold text-fintricity-navy mb-3">{solution.title}</h3>
                   <p className="text-fintricity-charcoal leading-relaxed mb-6 flex-grow">{solution.desc}</p>
                   <Link href={`/solutions/${solution.slug}`} className="text-fintricity-teal font-bold text-sm hover:text-fintricity-cyan transition-colors flex items-center group">
-                    Explore Solution <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                    Explore Service <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
                   </Link>
                 </GlassCard>
               </motion.div>

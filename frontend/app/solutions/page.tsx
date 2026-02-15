@@ -1,11 +1,9 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
 import { SolutionsClient } from "@/components/solutions-client"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Solutions",
+  title: "Services",
   description: "Production-ready AI systems built for regulated industries.",
 }
 
@@ -20,13 +18,13 @@ export default async function SolutionsPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-foreground">
-      <Header />
+
       
       <main className="flex-1">
         <SolutionsClient content={content._index} />
       </main>
 
-      <Footer />
+
     </div>
   )
 }

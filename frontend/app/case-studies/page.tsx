@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Metadata } from "next"
 import { GlassCard } from "@/components/glass-card"
 import { Badge } from "@/components/badge"
@@ -33,7 +31,7 @@ const cases = [
 export default function CaseStudiesPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white text-fintricity-charcoal">
-      <Header />
+
       <main className="flex-1">
         <section className="py-24 bg-mesh-gradient border-b border-gray-100">
           <div className="container mx-auto px-4 text-center">
@@ -59,7 +57,7 @@ export default function CaseStudiesPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </div>
   )
 }

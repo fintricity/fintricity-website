@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
 import { IndustriesIndexClient } from "@/components/industries-index-client"
 import { Metadata } from "next"
@@ -24,13 +22,13 @@ export default async function IndustriesPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-foreground">
-      <Header />
+
       
       <main className="flex-1">
         <IndustriesIndexClient content={content._index} industries={industries} />
       </main>
 
-      <Footer />
+
     </div>
   )
 }

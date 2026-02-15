@@ -1,7 +1,7 @@
 {
   "_index": {
     "hero": {
-      "badge": "Expert AI Solutions",
+      "badge": "Expert AI Services",
       "title": "We Build AI That Works.",
       "subtitle": "Transform your business with production-ready AI systems built for regulated industries. From strategy to systems, we deliver breakthrough outcomes that scale."
     },
@@ -17,12 +17,6 @@
         "desc": "Legacy modernization, data governance, and infrastructure design.",
         "slug": "ai-architecture",
         "icon": "🏗️"
-      },
-      {
-        "title": "ML Engineering & MLOps",
-        "desc": "Production ML systems, monitoring, and continuous deployment.",
-        "slug": "ai-engineering",
-        "icon": "⚙️"
       },
       {
         "title": "Data Science & Analytics",
@@ -87,11 +81,6 @@
     "title": "AI Architecture & Modernization",
     "badge": "Architecture",
     "description": "System design, integration, and data governance to build a robust foundation for AI."
-  },
-  "ai-engineering": {
-    "title": "ML Engineering & MLOps",
-    "badge": "Engineering",
-    "description": "Building production-ready ML systems with continuous deployment and monitoring."
   },
   "data-science": {
     "title": "Data Science & Analytics",

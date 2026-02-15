@@ -1,5 +1,5 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+
+
 import { getContent } from "@/lib/content"
 import { AppliedAIResearchDetailClient } from "@/components/applied-ai-research-detail-client"
 import { Metadata } from "next"
@@ -25,11 +25,11 @@ export default async function AppliedAIResearchPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      <Header />
+
       <main className="flex-1">
         <AppliedAIResearchDetailClient content={pageContent} />
       </main>
-      <Footer />
+
     </div>
   )
 }

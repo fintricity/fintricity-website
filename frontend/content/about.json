@@ -21,27 +21,27 @@
     "title": "Values That Guide Our Every Endeavor",
     "items": [
       {
-        "icon": "IntegrityIcon", // Placeholder, will map to MUI icon or similar
+        "icon": "IntegrityIcon",
         "title": "Integrity & Trust",
         "description": "Upholding the highest ethical standards, ensuring transparency, and building enduring trust with our clients and partners."
       },
       {
-        "icon": "CollaborationIcon", // Placeholder
+        "icon": "CollaborationIcon",
         "title": "Collaboration & Partnership",
         "description": "Working hand-in-hand with our clients, fostering a spirit of mutual growth and shared success, and valuing diverse perspectives."
       },
       {
-        "icon": "InnovationIcon", // Placeholder
+        "icon": "InnovationIcon",
         "title": "Continuous Learning & Innovation",
         "description": "Relentlessly pursuing new knowledge, embracing emerging technologies, and constantly refining our approaches to deliver superior solutions."
       },
       {
-        "icon": "IndependenceIcon", // Placeholder
+        "icon": "IndependenceIcon",
         "title": "Independent & Objective",
         "description": "Providing unbiased advice and solutions, always prioritizing our clients' best interests over external influences."
       },
       {
-        "icon": "BusinessFirstIcon", // Placeholder
+        "icon": "BusinessFirstIcon",
         "title": "Business-First Approach",
         "description": "Grounding all technological solutions in tangible business value, ensuring AI drives strategic outcomes and measurable ROI."
       }

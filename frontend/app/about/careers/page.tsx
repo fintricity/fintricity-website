@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+
+
 
 // Replace this with your actual Notion form URL
 const NOTION_JOBS_FORM_URL = "https://tally.so/r/w7NE9L"; 
@@ -8,7 +8,7 @@ const NOTION_JOBS_FORM_URL = "https://tally.so/r/w7NE9L";
 export default function CareersPage() {
 	return (
     <div className="flex min-h-screen flex-col bg-white text-foreground">
-      <Header />
+
       
       <main className="flex-1 max-w-4xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-semibold mb-4 text-fintricity-navy">Careers at Fintricity</h1>
@@ -49,7 +49,7 @@ export default function CareersPage() {
         </p>
       </main>
 
-      <Footer />
+
     </div>
 	);
 }

@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
 import { GenericPageClient } from "@/components/generic-page-client"
 import { notFound } from "next/navigation"
@@ -50,13 +48,13 @@ export default async function InsightsSubPage({ params }: Props) {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-foreground">
-      <Header />
+
       
       <main className="flex-1">
         <GenericPageClient content={insightContent} />
       </main>
 
-      <Footer />
+
     </div>
   )
 }

@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
 import { AppliedResearchClient } from "@/components/applied-research-client"
 import { Metadata } from "next"
@@ -20,13 +18,13 @@ export default async function AppliedResearchPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-foreground">
-      <Header />
+
       
       <main className="flex-1">
         <AppliedResearchClient content={content._index} />
       </main>
 
-      <Footer />
+
     </div>
   )
 }

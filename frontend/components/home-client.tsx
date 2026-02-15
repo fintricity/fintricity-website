@@ -20,56 +20,9 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import FactoryIcon from '@mui/icons-material/Factory';
 import ScienceIcon from '@mui/icons-material/Science';
 
-function AccordionItem({ title, content, isOpen, onClick }: { title: string, content: string, isOpen: boolean, onClick: () => void }) {
-  return (
-    <div className="border-b border-gray-200">
-      <button 
-        className="w-full py-6 flex justify-between items-left group"
-        onClick={onClick}
-      >
-        <span className={`text-xl font-bold transition-colors ${isOpen ? 'text-fintricity-navy' : 'text-fintricity-charcoal group-hover:text-fintricity-navy'}`}>
-          {title}
-        </span>
-        <span className={`text-2xl transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
-          ↓
-        </span>
-      </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden"
-          >
-            <div className="pb-6 text-fintricity-charcoal leading-relaxed text-lg">
-              {content}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  )
-}
-
-const iconMap: { [key: string]: any } = {
-  "💡": LightbulbIcon,
-  "🔗": BuildIcon,
-  "⚙️": CodeIcon,
-  "📊": BarChartIcon,
-  "🔬": ScienceIcon,
-  "🤖": ExtensionIcon,
-  "🛡️": ShieldIcon,
-  "🏦": AccountBalanceIcon,
-  "🏥": BusinessCenterIcon,
-  "🩺": LocalHospitalIcon,
-  "🏭": FactoryIcon,
-};
-
 // Custom hook for interval
 function useInterval(callback: () => void, delay: number | null) {
-  const savedCallback = useRef<() => void>();
+  const savedCallback = useRef<() => void>(undefined);
 
   useEffect(() => {
     savedCallback.current = callback;
@@ -101,10 +54,9 @@ function HeroBanner({ banners }: { banners: any[] }) {
 
   return (
     <section 
-      className="relative py-24 md:py-40 overflow-hidden text-white" 
-      style={{ backgroundColor: '#1F3A47' }} // Inline style for direct color application
+      className="relative py-24 md:py-40 overflow-hidden bg-fintricity-navy text-white" 
     >
-      {/* Removed all Tailwind background classes for maximum isolation */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <AnimatePresence mode="wait">
@@ -120,11 +72,11 @@ function HeroBanner({ banners }: { banners: any[] }) {
                   {currentBanner.badge}
                 </Badge>
               )}
-              <h1 className="text-h1-mobile md:text-h1 text-white">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
                 {currentBanner.title}
               </h1>
               {currentBanner.subtitle && (
-                <p className="mb-12 max-w-2xl mx-auto text-fintricity-light-gray font-medium text-body-primary">
+                <p className="mb-12 max-w-2xl mx-auto text-gray-300 font-medium text-lg md:text-xl">
                   {currentBanner.subtitle}
                 </p>
               )}
@@ -150,38 +102,32 @@ function HeroBanner({ banners }: { banners: any[] }) {
   );
 }
 
-
 export function HomeClient({ content }: { content: any }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   return (
     <>
-      {/* Hero Section - now a rotating banner */}
-      {content.heroBanners && content.heroBanners.length > 0 && (
-        <HeroBanner banners={content.heroBanners} />
-      )}
-      
-      {/* The Problem Section (Impact Section) */}
-      <section className="py-32 bg-fintricity-navy text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h2 
-              initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
-              className="text-white mb-12"
-            >
-              {content.theProblem?.title}
-            </motion.h2>
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              {content.theProblem?.points?.map((point: string, i: number) => (
+      <HeroBanner banners={content.heroBanners} />
+
+      {/* The Problem Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-fintricity-navy mb-12 text-center">
+              {content.theProblem.title}
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              {content.theProblem.points.map((point: string, i: number) => (
                 <motion.div 
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 border border-white/10"
+                  className="flex items-start gap-4 p-6 rounded-xl bg-fintricity-light-gray/50 border border-gray-100"
                 >
-                  <div className="text-fintricity-cyan text-2xl font-bold">0{i+1}</div>
-                  <p className="text-gray-300 font-medium text-body-primary mb-0">{point}</p>
+                  <div className="w-6 h-6 rounded-full bg-fintricity-navy text-white flex items-center justify-center flex-shrink-0 mt-1 text-sm font-bold">
+                    !
+                  </div>
+                  <p className="text-fintricity-charcoal font-medium">{point}</p>
                 </motion.div>
               ))}
             </div>
@@ -190,22 +136,31 @@ export function HomeClient({ content }: { content: any }) {
       </section>
 
       {/* The Solution Section */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-20">{content.theSolution?.title}</h2>
-          <div className="grid md:grid-cols-3 gap-10">
-            {content.theSolution?.pillars?.map((pillar: any, i: number) => (
+      <section className="py-24 bg-fintricity-navy text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fintricity-cyan to-fintricity-teal"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              {content.theSolution.title}
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {content.theSolution.pillars.map((pillar: any, i: number) => (
               <motion.div 
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2 }}
+                className="text-center"
               >
-                <GlassCard className="border-0 shadow-xl bg-fintricity-light-gray/30">
-                  <div className="w-12 h-1 bg-fintricity-cyan mb-6 mx-auto rounded-full"></div>
-                  <h3 className="mb-4">{pillar.title}</h3>
-                  <p className="text-fintricity-charcoal text-body-primary">{pillar.desc}</p>
-                </GlassCard>
+                <div className="w-20 h-20 rounded-2xl bg-white/10 flex items-center justify-center mx-auto mb-8 border border-white/20">
+                  {i === 0 && <LightbulbIcon className="text-fintricity-cyan text-4xl" />}
+                  {i === 1 && <BuildIcon className="text-fintricity-cyan text-4xl" />}
+                  {i === 2 && <BarChartIcon className="text-fintricity-cyan text-4xl" />}
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{pillar.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -213,234 +168,173 @@ export function HomeClient({ content }: { content: any }) {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-32 bg-fintricity-light-gray/50 border-y border-gray-100">
+      <section className="py-24 bg-fintricity-light-gray/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="mb-6">{content.capabilities?.title}</h2>
-            <p className="max-w-2xl mx-auto text-fintricity-charcoal text-body-primary leading-relaxed">
-              {content.capabilities?.subtitle}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-fintricity-navy mb-6">
+              {content.capabilities.title}
+            </h2>
+            <p className="text-fintricity-charcoal text-lg max-w-2xl mx-auto">
+              {content.capabilities.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {content.capabilities?.cards?.map((card: any, i: number) => {
-              const IconComponent = iconMap[card.icon];
-              return (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <GlassCard className="h-full border-0 shadow-sm bg-white/80 backdrop-blur-sm">
-                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-fintricity-cyan bg-fintricity-cyan/10 text-3xl mb-6">
-                      {IconComponent && <IconComponent fontSize="inherit" />}
-                      {!IconComponent && card.icon}
-                    </div>
-                    <h3 className="mb-4">{card.title}</h3>
-                    <p className="text-fintricity-charcoal text-body-primary mb-6">{card.desc}</p>
-                    <Link href={card.href} className="text-fintricity-teal font-bold text-sm tracking-wide hover:text-fintricity-cyan transition-colors flex items-center group">
-                      LEARN MORE <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-                    </Link>
-                  </GlassCard>
-                </motion.div>
-              );
-            })}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {content.capabilities.cards.map((card: any, i: number) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <GlassCard className="h-full p-8 bg-white border-0 shadow-sm hover:shadow-md transition-shadow group">
+                  <div className="text-4xl mb-6">{card.icon}</div>
+                  <h3 className="text-xl font-bold text-fintricity-navy mb-4 group-hover:text-fintricity-teal transition-colors">
+                    {card.title}
+                  </h3>
+                  <p className="text-fintricity-charcoal text-sm leading-relaxed mb-6">
+                    {card.desc}
+                  </p>
+                  <Link 
+                    href={card.href} 
+                    className="text-fintricity-teal font-bold text-xs uppercase tracking-widest hover:text-fintricity-navy transition-colors flex items-center"
+                  >
+                    Explore <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                  </Link>
+                </GlassCard>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Industries We Serve Section */}
-      <section className="py-32 bg-white">
+      {/* Industries Section */}
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="mb-6">{content.industriesWeServe?.title}</h2>
-            <p className="max-w-2xl mx-auto text-fintricity-charcoal text-body-primary leading-relaxed">
-              {content.industriesWeServe?.subtitle}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-fintricity-navy mb-6">
+              {content.industriesWeServe.title}
+            </h2>
+            <p className="text-fintricity-charcoal text-lg max-w-2xl mx-auto">
+              {content.industriesWeServe.subtitle}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {content.industriesWeServe?.cards?.map((card: any, i: number) => {
-              const IconComponent = iconMap[card.icon];
-              return (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                >
-                  <GlassCard className="h-full border-0 shadow-sm bg-fintricity-light-gray/30 backdrop-blur-sm">
-                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-fintricity-teal bg-fintricity-teal/10 text-3xl mb-6">
-                      {IconComponent && <IconComponent fontSize="inherit" />}
-                      {!IconComponent && card.icon}
-                    </div>
-                    <h3 className="mb-4">{card.title}</h3>
-                    <p className="text-fintricity-charcoal text-body-primary mb-6">{card.desc}</p>
-                    <Link href={card.href} className="text-fintricity-teal font-bold text-sm tracking-wide hover:text-fintricity-cyan transition-colors flex items-center group">
-                      EXPLORE <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-                    </Link>
-                  </GlassCard>
-                </motion.div>
-              );
-            })}
+            {content.industriesWeServe.cards.map((card: any, i: number) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group cursor-pointer"
+              >
+                <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-fintricity-navy flex items-center justify-center p-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-fintricity-navy to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                  <div className="relative z-10 text-center">
+                    <div className="text-5xl mb-6 transform group-hover:scale-110 transition-transform duration-500">{card.icon}</div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{card.title}</h3>
+                    <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                      {card.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* How We Work Section */}
-      <section className="py-32 bg-fintricity-light-gray/50 border-y border-gray-100">
+      <section className="py-24 bg-fintricity-light-gray/50">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="mb-6">{content.howWeWork?.title}</h2>
-            <p className="max-w-2xl mx-auto text-fintricity-charcoal text-body-primary leading-relaxed">
-              {content.howWeWork?.subtitle}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-fintricity-navy mb-6">
+              {content.howWeWork.title}
+            </h2>
+            <p className="text-fintricity-charcoal text-lg max-w-2xl mx-auto">
+              {content.howWeWork.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {content.howWeWork?.phases?.map((phase: any, i: number) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="relative p-6 rounded-xl bg-white/80 border border-gray-100 shadow-sm"
-              >
-                <div className="mb-4 text-fintricity-teal font-bold text-xs uppercase tracking-widest">
-                  Phase {i + 1}: {phase.duration}
-                </div>
-                <h3 className="mb-3">{phase.title}</h3>
-                <p className="text-fintricity-charcoal text-body-primary text-sm">{phase.desc}</p>
-                {i < content.howWeWork.phases.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-12 text-gray-300 text-5xl transform -translate-y-1/2">→</div>
+          <div className="grid md:grid-cols-4 gap-8">
+            {content.howWeWork.phases.map((phase: any, i: number) => (
+              <div key={i} className="relative">
+                {i < 3 && (
+                  <div className="hidden md:block absolute top-10 left-full w-full h-[2px] bg-gray-200 z-0 -translate-x-10"></div>
                 )}
-              </motion.div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 rounded-full bg-white border-4 border-fintricity-cyan flex items-center justify-center text-fintricity-navy font-bold text-xl mb-8 mx-auto md:mx-0">
+                    {i + 1}
+                  </div>
+                  <h3 className="text-xl font-bold text-fintricity-navy mb-2">{phase.title}</h3>
+                  <div className="text-fintricity-teal font-bold text-sm uppercase tracking-widest mb-4">{phase.duration}</div>
+                  <p className="text-fintricity-charcoal text-sm leading-relaxed">{phase.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Proof Points / Metrics Section */}
-      <section className="py-32 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-20">{content.proofPoints?.title}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
-            {content.proofPoints?.metrics?.map((metric: any, i: number) => (
-              <motion.div 
-                key={i}
-                initial={{ scale: 0.9, opacity: 0 }}
-                whileInView={{ opacity: 1, y: 1 }}
-                transition={{ delay: i * 0.1 }}
-              >
-                <div className="text-5xl md:text-6xl font-bold text-fintricity-navy mb-2">{metric.value}</div>
-                <div className="text-xs font-bold text-fintricity-teal uppercase tracking-widest">{metric.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Case Study Section */}
-      <section className="py-32 bg-fintricity-navy text-white relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-white mb-6">{content.featuredCaseStudy?.title}</h2>
-            <p className="text-fintricity-light-gray text-body-primary mb-10">
-              {content.featuredCaseStudy?.subtitle}
-            </p>
-            <Button size="lg" variant="cyan" asChild className="shadow-xl shadow-fintricity-cyan/20">
-              <Link href={content.featuredCaseStudy?.href}>{content.featuredCaseStudy?.cta}</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Insights & Thought Leadership Section */}
-      <section className="py-32 bg-white">
+      {/* Proof Points Section */}
+      <section className="py-24 bg-fintricity-navy text-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-20">
-            <h2 className="mb-6">{content.insightsAndThoughtLeadership?.title}</h2>
-            <p className="max-w-2xl mx-auto text-fintricity-charcoal text-body-primary leading-relaxed">
-              {content.insightsAndThoughtLeadership?.subtitle}
-            </p>
-          </div>
-          {/* Placeholder for actual insights cards - would dynamically load blogPosts from insights.json */}
-          <div className="grid md:grid-cols-3 gap-8">
-            <GlassCard className="border-0 shadow-sm bg-fintricity-light-gray/30">
-              <h3 className="mb-3">Latest Article</h3>
-              <p className="text-fintricity-charcoal text-sm mb-4">
-                Why Agentic AI is the Future for Enterprise.
-              </p>
-              <Link href="/insights" className="text-fintricity-teal font-bold text-sm tracking-wide hover:text-fintricity-cyan transition-colors">
-                Read More →
-              </Link>
-            </GlassCard>
-            <GlassCard className="border-0 shadow-sm bg-fintricity-light-gray/30">
-              <h3 className="mb-3">New Research Report</h3>
-              <p className="text-fintricity-charcoal text-sm mb-4">
-                The Architectures of Autonomy: A Deep Dive.
-              </p>
-              <Link href="/insights" className="text-fintricity-teal font-bold text-sm tracking-wide hover:text-fintricity-cyan transition-colors">
-                Download Report →
-              </Link>
-            </GlassCard>
-            <GlassCard className="border-0 shadow-sm bg-fintricity-light-gray/30">
-              <h3 className="mb-3">Expert Webinar</h3>
-              <p className="text-fintricity-charcoal text-sm mb-4">
-                Navigating Compliance in the AI Era.
-              </p>
-              <Link href="/insights" className="text-fintricity-teal font-bold text-sm tracking-wide hover:text-fintricity-cyan transition-colors">
-                Watch Now →
-              </Link>
-            </GlassCard>
-          </div>
-          <div className="text-center mt-20">
-            <Button size="lg" variant="outline" asChild>
-              <Link href={content.insightsAndThoughtLeadership?.href}>
-                {content.insightsAndThoughtLeadership?.cta}
-              </Link>
-            </Button>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+            {content.proofPoints.metrics.map((metric: any, i: number) => (
+              <div key={i} className="text-center">
+                <div className="text-4xl md:text-6xl font-bold text-fintricity-cyan mb-4">{metric.value}</div>
+                <div className="text-sm md:text-base text-gray-400 font-medium uppercase tracking-widest">{metric.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Team & Culture Section */}
-      <section className="py-32 bg-fintricity-light-gray/50 border-y border-gray-100">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6">{content.teamAndCulture?.title}</h2>
-          <p className="max-w-2xl mx-auto text-fintricity-charcoal text-body-primary leading-relaxed mb-10">
-            {content.teamAndCulture?.subtitle}
-          </p>
-          <Button size="lg" variant="cyan" asChild className="shadow-xl shadow-fintricity-cyan/20">
-            <Link href={content.teamAndCulture?.href}>{content.teamAndCulture?.cta}</Link>
-          </Button>
-        </div>
-      </section>
-
-      {/* Final Call to Action Section */}
-      <section className="py-24 bg-white px-4">
-        <div className="container mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-fintricity-navy rounded-[2.5rem] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl"
-          >
-            {/* Decorative Glow */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-fintricity-teal/20 blur-[120px] rounded-full -mr-48 -mt-48"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-fintricity-cyan/10 blur-[120px] rounded-full -ml-48 -mb-48"></div>
-
-            <h2 className="text-white mb-8 relative z-10 max-w-3xl mx-auto">{content.finalCTA?.title}</h2>
-            <p className="text-fintricity-light-gray/70 mb-12 max-w-xl mx-auto relative z-10 text-body-primary">
-              {content.finalCTA?.subtitle}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center relative z-10">
-              <Button size="lg" variant="cyan" className="px-12 py-7 text-lg" asChild>
-                <Link href="/contact">{content.finalCTA?.primaryButton}</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-12 py-7 text-lg" asChild>
-                <Link href="/solutions">{content.finalCTA?.secondaryButton}</Link>
+      {/* Featured Case Study */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="bg-fintricity-light-gray rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+            <div className="lg:w-1/2 p-12 md:p-20 flex flex-col justify-center">
+              <Badge variant="outline" className="mb-8 w-fit border-fintricity-teal text-fintricity-teal">Featured Case Study</Badge>
+              <h2 className="text-3xl md:text-5xl font-bold text-fintricity-navy mb-8">
+                {content.featuredCaseStudy.title}
+              </h2>
+              <p className="text-lg text-fintricity-charcoal mb-12 leading-relaxed">
+                {content.featuredCaseStudy.subtitle}
+              </p>
+              <Button size="lg" variant="default" className="w-fit" asChild>
+                <Link href={content.featuredCaseStudy.href}>
+                  {content.featuredCaseStudy.cta}
+                </Link>
               </Button>
             </div>
-          </motion.div>
+            <div className="lg:w-1/2 bg-fintricity-navy/10 relative min-h-[400px]">
+              {/* Placeholder for case study image */}
+              <div className="absolute inset-0 flex items-center justify-center text-fintricity-navy/20 font-bold text-2xl">
+                [Case Study Visualization]
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 bg-fintricity-cyan text-fintricity-navy text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8">
+            {content.finalCTA.title}
+          </h2>
+          <p className="text-xl md:text-2xl font-medium mb-12 max-w-3xl mx-auto opacity-80">
+            {content.finalCTA.subtitle}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button size="lg" variant="default" className="px-12 py-8 text-xl" asChild>
+              <Link href="/contact">{content.finalCTA.primaryButton}</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="px-12 py-8 text-xl border-fintricity-navy text-fintricity-navy hover:bg-fintricity-navy hover:text-white" asChild>
+              <Link href="/solutions">{content.finalCTA.secondaryButton}</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>

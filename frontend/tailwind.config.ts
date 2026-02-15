@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         // Core Fintricity Brand Palette (now direct hex values for top-level names)
-        'fintricity-navy': '#1F3A47',           // Primary: Deep Navy Blue
+        'fintricity-navy': '#1E3A5F',           // Primary: Deep Navy Blue
         'fintricity-teal': '#2A6E8F',           // Secondary: Teal/Innovation Blue
         'fintricity-cyan': '#32B8C6',           // Accent: Bright Cyan
         'fintricity-charcoal': '#333333',       // Supporting: Dark Gray (Body Text)
@@ -46,7 +46,7 @@ const config: Config = {
         'fintricity-teal-green-4': '#358A93',
         'fintricity-teal-green-5': '#2A6E76',
         
-        'fintricity-navy-base': '#1F3A47', // Deep Navy Blue: #1F3A47 (Primary)
+        'fintricity-navy-base': '#1E3A5F', // Deep Navy Blue: #1E3A5F (Primary)
         'fintricity-navy-1': '#9492D1', 
         'fintricity-navy-2': '#615BB9',
         'fintricity-navy-3': '#1F3A47', // Ensuring Deep Navy Blue is #1F3A47

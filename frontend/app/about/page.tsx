@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
 import { AboutClient } from "@/components/about-client"
 
@@ -14,13 +12,13 @@ export default async function AboutPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-white text-foreground">
-      <Header />
+
       
       <main className="flex-1">
         <AboutClient content={content} />
       </main>
 
-      <Footer />
+
     </div>
   )
 }

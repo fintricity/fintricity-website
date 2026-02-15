@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { getContent } from "@/lib/content"
 import { IndustryClient } from "@/components/industry-client"
 import { Metadata } from "next"
@@ -35,11 +33,11 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="flex min-h-screen flex-col bg-white">
-      <Header />
+
       <main className="flex-1">
         <IndustryClient content={industry} />
       </main>
-      <Footer />
+
     </div>
   )
 }

@@ -25,7 +25,7 @@ import SchoolIcon from '@mui/icons-material/School';
 
 
 const menuItems = {
-  solutions: [
+  services: [
     { title: "AI Strategy & Roadmap", href: "/solutions/ai-strategy", icon: LightbulbIcon, desc: "Define your path from opportunity to production." },
     { title: "AI Architecture", href: "/solutions/ai-architecture", icon: BuildIcon, desc: "Build a robust foundation for scalable AI systems." },
     { title: "ML Engineering", href: "/solutions/ai-engineering", icon: CodeIcon, desc: "Production-grade MLOps and model deployment." },
@@ -50,57 +50,48 @@ const menuItems = {
 }
 
 function Megamenu({ items, isOpen, onClose, onMouseEnter }: { items: any[], isOpen: boolean, onClose: () => void, onMouseEnter: () => void }) {
+  if (!isOpen) return null;
+
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 10 }}
-          className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-fintricity-card-border z-50 py-16"
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onClose}
-        >
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-3 gap-8">
-              {items.map((item) => (
-                <Link 
-                  key={item.href + item.title} 
-                  href={item.href}
-                  className="flex items-start gap-4 p-4 rounded-xl hover:bg-fintricity-light-gray transition-colors group"
-                  onClick={onClose}
-                >
-		  <div className="text-3xl"><item.icon /></div>
-                  <div>
-                    <div className="font-bold text-fintricity-navy group-hover:text-fintricity-teal transition-colors">
-                      {item.title}
-                    </div>
-                    {item.desc && <div className="text-sm text-fintricity-charcoal mt-1">{item.desc}</div>}
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div
+      className="absolute top-full left-0 w-full bg-white shadow-2xl border-t border-fintricity-card-border z-50 py-16"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onClose}
+    >
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-3 gap-8">
+          {items.map((item) => (
+            <Link 
+              key={item.href + item.title} 
+              href={item.href}
+              className="flex items-start gap-4 p-4 rounded-xl hover:bg-fintricity-light-gray transition-colors group"
+              onClick={onClose}
+            >
+              <div className="text-3xl"><item.icon /></div>
+              <div>
+                <div className="font-bold text-fintricity-navy group-hover:text-fintricity-teal transition-colors">
+                  {item.title}
+                </div>
+                {item.desc && <div className="text-sm text-fintricity-charcoal mt-1">{item.desc}</div>}
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   )
 }
 
 export function Header() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
-  let timeoutId: any = null;
 
-  const handleMouseEnter = (menu: string) => {
-    if (timeoutId) clearTimeout(timeoutId);
-    setActiveMenu(menu);
+  const toggleMenu = (menu: string) => {
+    setActiveMenu(prevMenu => (prevMenu === menu ? null : menu));
   };
 
-  const handleMouseLeave = () => {
-    timeoutId = setTimeout(() => {
-      setActiveMenu(null);
-    }, 100);
-  };
+  const closeMegamenu = () => {
+    setActiveMenu(null);
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-fintricity-card-border">
@@ -112,22 +103,18 @@ export function Header() {
         </div>
 
         <nav className="hidden md:flex items-center gap-10">
-          <Link href="/services" className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors">Services</Link>
-
           <div 
             className="relative h-20 flex items-center"
-            onMouseEnter={() => handleMouseEnter('solutions')}
-            onMouseLeave={handleMouseLeave}
+            onClick={() => toggleMenu('services')}
           >
             <button className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors flex items-center gap-1">
-              Solutions <span className="text-xs opacity-50">▼</span>
+              Services <span className="text-xs opacity-50">▼</span>
             </button>
           </div>
 
           <div 
             className="relative h-20 flex items-center"
-            onMouseEnter={() => handleMouseEnter('industries')}
-            onMouseLeave={handleMouseLeave}
+            onClick={() => toggleMenu('industries')}
           >
             <button className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors flex items-center gap-1">
               Industries <span className="text-xs opacity-50">▼</span>
@@ -136,8 +123,7 @@ export function Header() {
 
           <div 
             className="relative h-20 flex items-center"
-            onMouseEnter={() => handleMouseEnter('insights')}
-            onMouseLeave={handleMouseLeave}
+            onClick={() => toggleMenu('insights')}
           >
             <button className="text-sm font-bold text-fintricity-charcoal hover:text-fintricity-teal transition-colors flex items-center gap-1">
               Insights <span className="text-xs opacity-50">▼</span>
@@ -156,10 +142,8 @@ export function Header() {
         <Megamenu 
           items={activeMenu ? (menuItems as any)[activeMenu] : []} 
           isOpen={!!activeMenu} 
-          onClose={handleMouseLeave}
-          onMouseEnter={() => {
-            if (timeoutId) clearTimeout(timeoutId);
-          }}
+          onClose={closeMegamenu}
+          onMouseEnter={() => {}}
         />
       </div>
     </header>

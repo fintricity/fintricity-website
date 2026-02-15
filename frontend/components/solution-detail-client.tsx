@@ -39,7 +39,7 @@ export function SolutionDetailClient({ content }: { content: any }) {
               <Link href="/contact">Book a Strategy Session</Link>
             </Button>
             <Button size="lg" variant="outline" className="px-10 border-white text-white hover:bg-white/10" asChild>
-              <Link href="/solutions">View All Solutions</Link>
+              <Link href="/solutions">View All Services</Link>
             </Button>
           </motion.div>
         </div>
